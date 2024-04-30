@@ -33,6 +33,18 @@
 		3F1E08832BE0CD7E00BAD404 /* CommunityProfileFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */; };
 		3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */; };
 		3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08862BE0F32000BAD404 /* KicksUIView.swift */; };
+		3F1E088A2BE1102600BAD404 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08892BE1102600BAD404 /* User.swift */; };
+		3F1E088C2BE1103000BAD404 /* Listings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E088B2BE1103000BAD404 /* Listings.swift */; };
+		3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E088D2BE1104000BAD404 /* SellerDetails.swift */; };
+		3F1E08902BE1105900BAD404 /* Sneaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E088F2BE1105900BAD404 /* Sneaker.swift */; };
+		3F1E08922BE1106000BAD404 /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08912BE1106000BAD404 /* Community.swift */; };
+		3F1E08942BE1106A00BAD404 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08932BE1106A00BAD404 /* Post.swift */; };
+		3F1E08962BE1107400BAD404 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08952BE1107400BAD404 /* Reviews.swift */; };
+		3F1E08982BE1107F00BAD404 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08972BE1107F00BAD404 /* Orders.swift */; };
+		3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08992BE1108900BAD404 /* BidsCard.swift */; };
+		3F1E089C2BE1109000BAD404 /* Bid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089B2BE1109000BAD404 /* Bid.swift */; };
+		3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089D2BE1109700BAD404 /* Payments.swift */; };
+		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +75,18 @@
 		3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileFilter.swift; sourceTree = "<group>"; };
 		3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOnboarding.swift; sourceTree = "<group>"; };
 		3F1E08862BE0F32000BAD404 /* KicksUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksUIView.swift; sourceTree = "<group>"; };
+		3F1E08892BE1102600BAD404 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F1E088B2BE1103000BAD404 /* Listings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listings.swift; sourceTree = "<group>"; };
+		3F1E088D2BE1104000BAD404 /* SellerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerDetails.swift; sourceTree = "<group>"; };
+		3F1E088F2BE1105900BAD404 /* Sneaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneaker.swift; sourceTree = "<group>"; };
+		3F1E08912BE1106000BAD404 /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		3F1E08932BE1106A00BAD404 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3F1E08952BE1107400BAD404 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		3F1E08972BE1107F00BAD404 /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		3F1E08992BE1108900BAD404 /* BidsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsCard.swift; sourceTree = "<group>"; };
+		3F1E089B2BE1109000BAD404 /* Bid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bid.swift; sourceTree = "<group>"; };
+		3F1E089D2BE1109700BAD404 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
+		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +119,7 @@
 		3F1E08432BE0C40200BAD404 /* Sneakult-App */ = {
 			isa = PBXGroup;
 			children = (
+				3F1E08882BE1101400BAD404 /* Models */,
 				3F1E08582BE0C4C200BAD404 /* Profile */,
 				3F1E08572BE0C4BA00BAD404 /* Onboarding */,
 				3F1E08562BE0C4AC00BAD404 /* Kicks */,
@@ -189,6 +214,25 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		3F1E08882BE1101400BAD404 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08892BE1102600BAD404 /* User.swift */,
+				3F1E088B2BE1103000BAD404 /* Listings.swift */,
+				3F1E088D2BE1104000BAD404 /* SellerDetails.swift */,
+				3F1E088F2BE1105900BAD404 /* Sneaker.swift */,
+				3F1E08912BE1106000BAD404 /* Community.swift */,
+				3F1E08932BE1106A00BAD404 /* Post.swift */,
+				3F1E08952BE1107400BAD404 /* Reviews.swift */,
+				3F1E08972BE1107F00BAD404 /* Orders.swift */,
+				3F1E08992BE1108900BAD404 /* BidsCard.swift */,
+				3F1E089B2BE1109000BAD404 /* Bid.swift */,
+				3F1E089D2BE1109700BAD404 /* Payments.swift */,
+				3F1E089F2BE110A400BAD404 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,28 +304,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1E08632BE0C6A500BAD404 /* SettingsView.swift in Sources */,
+				3F1E08902BE1105900BAD404 /* Sneaker.swift in Sources */,
 				3F1E08792BE0CA7900BAD404 /* FilterCardView.swift in Sources */,
 				3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */,
+				3F1E088A2BE1102600BAD404 /* User.swift in Sources */,
 				3F1E08692BE0C7D600BAD404 /* MainView.swift in Sources */,
 				3F1E087D2BE0CCBD00BAD404 /* CommunityProfileView.swift in Sources */,
 				3F1E08672BE0C79B00BAD404 /* KicksView.swift in Sources */,
 				3F1E08732BE0C97100BAD404 /* BiddingPageView.swift in Sources */,
+				3F1E08942BE1106A00BAD404 /* Post.swift in Sources */,
 				3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */,
+				3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */,
 				3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */,
 				3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */,
 				3F1E08832BE0CD7E00BAD404 /* CommunityProfileFilter.swift in Sources */,
 				3F1E08612BE0C69000BAD404 /* PaymentsView.swift in Sources */,
 				3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */,
 				3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */,
+				3F1E089C2BE1109000BAD404 /* Bid.swift in Sources */,
+				3F1E08A02BE110A400BAD404 /* Card.swift in Sources */,
+				3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */,
+				3F1E08922BE1106000BAD404 /* Community.swift in Sources */,
 				3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */,
 				3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */,
 				3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */,
+				3F1E08982BE1107F00BAD404 /* Orders.swift in Sources */,
 				3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */,
+				3F1E08962BE1107400BAD404 /* Reviews.swift in Sources */,
 				3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */,
 				3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */,
 				3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */,
 				3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */,
+				3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */,
 				3F1E08712BE0C91A00BAD404 /* BidCardView.swift in Sources */,
+				3F1E088C2BE1103000BAD404 /* Listings.swift in Sources */,
 				3F1E08772BE0C9F900BAD404 /* AnnouncementsCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

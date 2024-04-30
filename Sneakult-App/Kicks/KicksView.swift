@@ -11,6 +11,7 @@ struct KicksView: View {
     @State private var showingPopover = false
     @State private var isFilterSheetPresented = false
     
+    
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false) {

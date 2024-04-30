@@ -14,10 +14,10 @@ struct ProfileView: View {
                                 .clipShape(Circle())
                                 .padding(.trailing, 16)
                             VStack(alignment: .leading) {
-                                Text("John Attari")
+                                Text("Mathew Wade")
                                     .font(.title)
                                     .fontWeight(.semibold)
-                                Text("attarijohn@gmail.com")
+                                Text("mathewade@gmail.com")
                                     .accentColor(.gray)
                             }
 //                            Spacer()
