@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
+		3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* ContentView.swift */; };
+		3F1E08492BE0C40300BAD404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E08482BE0C40300BAD404 /* Assets.xcassets */; };
+		3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */; };
+		3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */; };
+		3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */; };
+		3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E085E2BE0C63200BAD404 /* ProfileEditView.swift */; };
+		3F1E08612BE0C69000BAD404 /* PaymentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08602BE0C69000BAD404 /* PaymentsView.swift */; };
+		3F1E08632BE0C6A500BAD404 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08622BE0C6A500BAD404 /* SettingsView.swift */; };
+		3F1E08672BE0C79B00BAD404 /* KicksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08662BE0C79B00BAD404 /* KicksView.swift */; };
+		3F1E08692BE0C7D600BAD404 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08682BE0C7D600BAD404 /* MainView.swift */; };
+		3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E086A2BE0C7F400BAD404 /* CommunityView.swift */; };
+		3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E086C2BE0C82100BAD404 /* BagView.swift */; };
+		3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E086E2BE0C82900BAD404 /* BiddingView.swift */; };
+		3F1E08712BE0C91A00BAD404 /* BidCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08702BE0C91A00BAD404 /* BidCardView.swift */; };
+		3F1E08732BE0C97100BAD404 /* BiddingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08722BE0C97100BAD404 /* BiddingPageView.swift */; };
+		3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08742BE0C9A500BAD404 /* NewArrivalCellView.swift */; };
+		3F1E08772BE0C9F900BAD404 /* AnnouncementsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08762BE0C9F900BAD404 /* AnnouncementsCellView.swift */; };
+		3F1E08792BE0CA7900BAD404 /* FilterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08782BE0CA7900BAD404 /* FilterCardView.swift */; };
+		3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E087A2BE0CCA300BAD404 /* CommunityUIViewCell.swift */; };
+		3F1E087D2BE0CCBD00BAD404 /* CommunityProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E087C2BE0CCBD00BAD404 /* CommunityProfileView.swift */; };
+		3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E087E2BE0CCE600BAD404 /* CommunityAddPostView.swift */; };
+		3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08802BE0CD0800BAD404 /* CommunityProfileEditView.swift */; };
+		3F1E08832BE0CD7E00BAD404 /* CommunityProfileFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */; };
+		3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */; };
+		3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08862BE0F32000BAD404 /* KicksUIView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakult_AppApp.swift; sourceTree = "<group>"; };
+		3F1E08462BE0C40200BAD404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F1E08482BE0C40300BAD404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSneakerListing.swift; sourceTree = "<group>"; };
+		3F1E085E2BE0C63200BAD404 /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		3F1E08602BE0C69000BAD404 /* PaymentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsView.swift; sourceTree = "<group>"; };
+		3F1E08622BE0C6A500BAD404 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3F1E08662BE0C79B00BAD404 /* KicksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksView.swift; sourceTree = "<group>"; };
+		3F1E08682BE0C7D600BAD404 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		3F1E086A2BE0C7F400BAD404 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		3F1E086C2BE0C82100BAD404 /* BagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagView.swift; sourceTree = "<group>"; };
+		3F1E086E2BE0C82900BAD404 /* BiddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiddingView.swift; sourceTree = "<group>"; };
+		3F1E08702BE0C91A00BAD404 /* BidCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidCardView.swift; sourceTree = "<group>"; };
+		3F1E08722BE0C97100BAD404 /* BiddingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiddingPageView.swift; sourceTree = "<group>"; };
+		3F1E08742BE0C9A500BAD404 /* NewArrivalCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArrivalCellView.swift; sourceTree = "<group>"; };
+		3F1E08762BE0C9F900BAD404 /* AnnouncementsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsCellView.swift; sourceTree = "<group>"; };
+		3F1E08782BE0CA7900BAD404 /* FilterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCardView.swift; sourceTree = "<group>"; };
+		3F1E087A2BE0CCA300BAD404 /* CommunityUIViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUIViewCell.swift; sourceTree = "<group>"; };
+		3F1E087C2BE0CCBD00BAD404 /* CommunityProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileView.swift; sourceTree = "<group>"; };
+		3F1E087E2BE0CCE600BAD404 /* CommunityAddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAddPostView.swift; sourceTree = "<group>"; };
+		3F1E08802BE0CD0800BAD404 /* CommunityProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileEditView.swift; sourceTree = "<group>"; };
+		3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileFilter.swift; sourceTree = "<group>"; };
+		3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOnboarding.swift; sourceTree = "<group>"; };
+		3F1E08862BE0F32000BAD404 /* KicksUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksUIView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F1E083E2BE0C40200BAD404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1E08382BE0C40200BAD404 = {
+			isa = PBXGroup;
+			children = (
+				3F1E08432BE0C40200BAD404 /* Sneakult-App */,
+				3F1E08422BE0C40200BAD404 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F1E08422BE0C40200BAD404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08412BE0C40200BAD404 /* Sneakult-App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F1E08432BE0C40200BAD404 /* Sneakult-App */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08582BE0C4C200BAD404 /* Profile */,
+				3F1E08572BE0C4BA00BAD404 /* Onboarding */,
+				3F1E08562BE0C4AC00BAD404 /* Kicks */,
+				3F1E08552BE0C4A600BAD404 /* Bidding */,
+				3F1E08542BE0C4A000BAD404 /* Bag */,
+				3F1E08532BE0C48100BAD404 /* Controllers */,
+				3F1E08522BE0C47100BAD404 /* Community */,
+				3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */,
+				3F1E08462BE0C40200BAD404 /* ContentView.swift */,
+				3F1E08482BE0C40300BAD404 /* Assets.xcassets */,
+				3F1E084A2BE0C40300BAD404 /* Preview Content */,
+				3F1E08682BE0C7D600BAD404 /* MainView.swift */,
+			);
+			path = "Sneakult-App";
+			sourceTree = "<group>";
+		};
+		3F1E084A2BE0C40300BAD404 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3F1E08522BE0C47100BAD404 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E086A2BE0C7F400BAD404 /* CommunityView.swift */,
+				3F1E087A2BE0CCA300BAD404 /* CommunityUIViewCell.swift */,
+				3F1E087C2BE0CCBD00BAD404 /* CommunityProfileView.swift */,
+				3F1E087E2BE0CCE600BAD404 /* CommunityAddPostView.swift */,
+				3F1E08802BE0CD0800BAD404 /* CommunityProfileEditView.swift */,
+				3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		3F1E08532BE0C48100BAD404 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3F1E08542BE0C4A000BAD404 /* Bag */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E086C2BE0C82100BAD404 /* BagView.swift */,
+			);
+			path = Bag;
+			sourceTree = "<group>";
+		};
+		3F1E08552BE0C4A600BAD404 /* Bidding */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E086E2BE0C82900BAD404 /* BiddingView.swift */,
+				3F1E08702BE0C91A00BAD404 /* BidCardView.swift */,
+				3F1E08722BE0C97100BAD404 /* BiddingPageView.swift */,
+			);
+			path = Bidding;
+			sourceTree = "<group>";
+		};
+		3F1E08562BE0C4AC00BAD404 /* Kicks */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08662BE0C79B00BAD404 /* KicksView.swift */,
+				3F1E08742BE0C9A500BAD404 /* NewArrivalCellView.swift */,
+				3F1E08762BE0C9F900BAD404 /* AnnouncementsCellView.swift */,
+				3F1E08782BE0CA7900BAD404 /* FilterCardView.swift */,
+				3F1E08862BE0F32000BAD404 /* KicksUIView.swift */,
+			);
+			path = Kicks;
+			sourceTree = "<group>";
+		};
+		3F1E08572BE0C4BA00BAD404 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3F1E08582BE0C4C200BAD404 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */,
+				3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */,
+				3F1E085E2BE0C63200BAD404 /* ProfileEditView.swift */,
+				3F1E08602BE0C69000BAD404 /* PaymentsView.swift */,
+				3F1E08622BE0C6A500BAD404 /* SettingsView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F1E08402BE0C40200BAD404 /* Sneakult-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1E084F2BE0C40300BAD404 /* Build configuration list for PBXNativeTarget "Sneakult-App" */;
+			buildPhases = (
+				3F1E083D2BE0C40200BAD404 /* Sources */,
+				3F1E083E2BE0C40200BAD404 /* Frameworks */,
+				3F1E083F2BE0C40200BAD404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sneakult-App";
+			productName = "Sneakult-App";
+			productReference = 3F1E08412BE0C40200BAD404 /* Sneakult-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F1E08392BE0C40200BAD404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					3F1E08402BE0C40200BAD404 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 3F1E083C2BE0C40200BAD404 /* Build configuration list for PBXProject "Sneakult-App" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F1E08382BE0C40200BAD404;
+			productRefGroup = 3F1E08422BE0C40200BAD404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F1E08402BE0C40200BAD404 /* Sneakult-App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F1E083F2BE0C40200BAD404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */,
+				3F1E08492BE0C40300BAD404 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F1E083D2BE0C40200BAD404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1E08632BE0C6A500BAD404 /* SettingsView.swift in Sources */,
+				3F1E08792BE0CA7900BAD404 /* FilterCardView.swift in Sources */,
+				3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */,
+				3F1E08692BE0C7D600BAD404 /* MainView.swift in Sources */,
+				3F1E087D2BE0CCBD00BAD404 /* CommunityProfileView.swift in Sources */,
+				3F1E08672BE0C79B00BAD404 /* KicksView.swift in Sources */,
+				3F1E08732BE0C97100BAD404 /* BiddingPageView.swift in Sources */,
+				3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */,
+				3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */,
+				3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */,
+				3F1E08832BE0CD7E00BAD404 /* CommunityProfileFilter.swift in Sources */,
+				3F1E08612BE0C69000BAD404 /* PaymentsView.swift in Sources */,
+				3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */,
+				3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */,
+				3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */,
+				3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */,
+				3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */,
+				3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */,
+				3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */,
+				3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */,
+				3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */,
+				3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */,
+				3F1E08712BE0C91A00BAD404 /* BidCardView.swift in Sources */,
+				3F1E08772BE0C9F900BAD404 /* AnnouncementsCellView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F1E084D2BE0C40300BAD404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F1E084E2BE0C40300BAD404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F1E08502BE0C40300BAD404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakult-App/Preview Content\"";
+				DEVELOPMENT_TEAM = FLP7J4H463;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jipnesh.Sneakult-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F1E08512BE0C40300BAD404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Sneakult-App/Preview Content\"";
+				DEVELOPMENT_TEAM = FLP7J4H463;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jipnesh.Sneakult-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F1E083C2BE0C40200BAD404 /* Build configuration list for PBXProject "Sneakult-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1E084D2BE0C40300BAD404 /* Debug */,
+				3F1E084E2BE0C40300BAD404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1E084F2BE0C40300BAD404 /* Build configuration list for PBXNativeTarget "Sneakult-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1E08502BE0C40300BAD404 /* Debug */,
+				3F1E08512BE0C40300BAD404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F1E08392BE0C40200BAD404 /* Project object */;
+}
