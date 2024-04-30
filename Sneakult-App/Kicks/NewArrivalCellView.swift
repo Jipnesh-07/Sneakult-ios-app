@@ -13,37 +13,39 @@ struct NewArrivalCellView: View {
     @State private var selectShoe: String = ""
 
     var body: some View {
-        NavigationLink(destination: DetailView1()) {
-            VStack(alignment: .leading) {
-                Image("New2")
-                    .resizable()
-                    .frame(width: 150, height: 150)
-                    .clipShape(Rectangle())
-                    .cornerRadius(6)
-                
-                Text("Jordan Retro 6G")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.black)
+        
+            ScrollView{
+                VStack(alignment: .leading) {
+                    Image("New2")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .clipShape(Rectangle())
+                        .cornerRadius(6)
                     
-                Text("By @Selena")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.gray)
-                
-                Text("₹19000")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(.accent)
-                
-                
-                
+                    Text("Jordan Retro 6G")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.black)
+                        
+                    Text("By @Selena")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.gray)
+                    
+                    Text("₹19000")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                        .foregroundColor(.accent)
+                    
+                    
+                    
+                    
+                }
                 
             }
-        }
-        .onAppear {
-            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
-        }
+        //        .onAppear {
+//            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
+//        }
     }
 }
 
