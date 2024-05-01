@@ -12,14 +12,14 @@ struct FilterCardView: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(Color.white)
-                .opacity(2)
-                .blur(radius: 10)
-                .frame(width: 300, height: 300)
+//            Rectangle()
+//                .foregroundColor(Color.white)
+//                .opacity(2)
+//                .blur(radius: 10)
+//                .frame(width: 300, height: 300)
             VStack(alignment: .leading, spacing: 1) {
                 ScrollView (showsIndicators: false){
-                    FilterSectionView(title: "Brand", options: ["Nike", "Adidas","New Balance", "Vans", "Puma", "Reebok"])
+                    FilterSectionView(title: "Brand", options: ["Nike", "Adidas","NB", "Vans", "Puma", "Reebok"])
                     FilterSectionView(title: "Color", options: ["Red", "Blue", "Green", "Black", "White", "Yellow"])
                     FilterSectionView(title: "Size", options: ["7", "8", "8.5", "9", "10", "10.5"])
                     FilterSectionView(title: "Availability", options: ["In Stock", "Out of Stock"])
