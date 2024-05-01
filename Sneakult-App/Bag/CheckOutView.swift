@@ -1,5 +1,5 @@
 //
-//  MyCart.swift
+//  Checkout.swift
 //  Sneakult1
 //
 //  Created by student on 30/04/24.
@@ -7,61 +7,72 @@
 
 import SwiftUI
 
-struct BagView: View {
+struct CheckOutView: View {
     var body: some View {
         VStack {
-            Text("My Cart")
+            Text("Checkout")
+            
                 .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
                 .font(.title)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .fontWeight(.semibold)
                 .padding(19)
             
-            Cart()
+            MycartCard()
             
-            
+            MycartCard()
             
             Spacer()
         }
+       
     }
 }
 
 #Preview {
-    BagView()
+    CheckOutView()
 }
 
 
 
-struct Cart: View {
-    @State private var quantity = 1
+struct MycartCard: View {
     
     var body: some View {
         HStack {
             Image("nike")
                 .resizable()
-                .frame(width: 135, height: 150)
+                .frame(width: 135, height : 170)
                 .cornerRadius(8)
             
-            VStack(alignment: .leading) {
+            VStack(alignment : .leading) {
                 Text("Air Jordan 1 Low")
                     .font(.title2)
                     .fontWeight(.semibold)
                 Text("Light Pink")
                     .foregroundColor(.gray)
                 
-                
                 HStack {
-                    Stepper("",value: $quantity, in: 0...130)
-                }
-//                .padding()
-              
-                           
-                        
+                    Text("Qty : 1")
+                        .foregroundColor(.gray)
+                        .padding(.trailing, 10)
+                    Text("Size : 7 UK")
+                        .foregroundColor(.gray)
                     
+                    
+                }
                 
+                
+                
+                VStack {
+                    Text("Total Amount : ₹19,695")
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                }
+                .padding(.top, 10)
             }
             .padding()
             
+            
+            
         }
+        
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary))
     }
 }

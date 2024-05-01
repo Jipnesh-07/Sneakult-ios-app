@@ -30,7 +30,6 @@
 		3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E087E2BE0CCE600BAD404 /* CommunityAddPostView.swift */; };
 		3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08802BE0CD0800BAD404 /* CommunityProfileEditView.swift */; };
 		3F1E08832BE0CD7E00BAD404 /* CommunityProfileFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */; };
-		3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */; };
 		3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08862BE0F32000BAD404 /* KicksUIView.swift */; };
 		3F1E088A2BE1102600BAD404 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08892BE1102600BAD404 /* User.swift */; };
 		3F1E088C2BE1103000BAD404 /* Listings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E088B2BE1103000BAD404 /* Listings.swift */; };
@@ -44,10 +43,16 @@
 		3F1E089C2BE1109000BAD404 /* Bid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089B2BE1109000BAD404 /* Bid.swift */; };
 		3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089D2BE1109700BAD404 /* Payments.swift */; };
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
+        
 		3FE680602BE1F7C8002D93CC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6805F2BE1F7C8002D93CC /* Login.swift */; };
 		3FE680622BE1F7D5002D93CC /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680612BE1F7D5002D93CC /* Signup.swift */; };
 		3FE680652BE1F97C002D93CC /* TopBrands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680642BE1F97C002D93CC /* TopBrands.swift */; };
 		3FE680692BE1FA09002D93CC /* TopSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680682BE1FA09002D93CC /* TopSeller.swift */; };
+
+		3FE001DE2BE1F89D00B72505 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001DD2BE1F89D00B72505 /* OnBoardingView.swift */; };
+		3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001DF2BE1F9F400B72505 /* WishListView.swift */; };
+		3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E12BE1FA0100B72505 /* CheckOutView.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +80,6 @@
 		3F1E087E2BE0CCE600BAD404 /* CommunityAddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityAddPostView.swift; sourceTree = "<group>"; };
 		3F1E08802BE0CD0800BAD404 /* CommunityProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileEditView.swift; sourceTree = "<group>"; };
 		3F1E08822BE0CD7E00BAD404 /* CommunityProfileFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileFilter.swift; sourceTree = "<group>"; };
-		3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOnboarding.swift; sourceTree = "<group>"; };
 		3F1E08862BE0F32000BAD404 /* KicksUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksUIView.swift; sourceTree = "<group>"; };
 		3F1E08892BE1102600BAD404 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3F1E088B2BE1103000BAD404 /* Listings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listings.swift; sourceTree = "<group>"; };
@@ -89,10 +93,16 @@
 		3F1E089B2BE1109000BAD404 /* Bid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bid.swift; sourceTree = "<group>"; };
 		3F1E089D2BE1109700BAD404 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+
 		3FE6805F2BE1F7C8002D93CC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3FE680612BE1F7D5002D93CC /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		3FE680642BE1F97C002D93CC /* TopBrands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBrands.swift; sourceTree = "<group>"; };
 		3FE680682BE1FA09002D93CC /* TopSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSeller.swift; sourceTree = "<group>"; };
+
+		3FE001DD2BE1F89D00B72505 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		3FE001DF2BE1F9F400B72505 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
+		3FE001E12BE1FA0100B72505 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +135,11 @@
 		3F1E08432BE0C40200BAD404 /* Sneakult-App */ = {
 			isa = PBXGroup;
 			children = (
+
 				3FE6805E2BE1F7A1002D93CC /* Userlog */,
+
+				3FFB1F222BE1F9AB00A19AAB /* Payments */,
+                
 				3F1E08882BE1101400BAD404 /* Models */,
 				3F1E08582BE0C4C200BAD404 /* Profile */,
 				3F1E08572BE0C4BA00BAD404 /* Onboarding */,
@@ -175,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				3F1E086C2BE0C82100BAD404 /* BagView.swift */,
+				3FE001DF2BE1F9F400B72505 /* WishListView.swift */,
+				3FE001E12BE1FA0100B72505 /* CheckOutView.swift */,
 			);
 			path = Bag;
 			sourceTree = "<group>";
@@ -203,9 +219,13 @@
 		3F1E08572BE0C4BA00BAD404 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+
 				3F1E08842BE0EA4500BAD404 /* MainOnboarding.swift */,
 				3FE680642BE1F97C002D93CC /* TopBrands.swift */,
 				3FE680682BE1FA09002D93CC /* TopSeller.swift */,
+
+				3FE001DD2BE1F89D00B72505 /* OnBoardingView.swift */,
+
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -241,6 +261,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+
 		3FE6805E2BE1F7A1002D93CC /* Userlog */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +269,13 @@
 				3FE680612BE1F7D5002D93CC /* Signup.swift */,
 			);
 			path = Userlog;
+
+		3FFB1F222BE1F9AB00A19AAB /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payments;
+            
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +360,7 @@
 				3F1E08942BE1106A00BAD404 /* Post.swift in Sources */,
 				3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */,
 				3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */,
+				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
 				3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */,
 				3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */,
 				3FE680622BE1F7D5002D93CC /* Signup.swift in Sources */,
@@ -346,13 +375,14 @@
 				3F1E08922BE1106000BAD404 /* Community.swift in Sources */,
 				3FE680652BE1F97C002D93CC /* TopBrands.swift in Sources */,
 				3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */,
-				3F1E08852BE0EA4500BAD404 /* MainOnboarding.swift in Sources */,
 				3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */,
+				3FE001DE2BE1F89D00B72505 /* OnBoardingView.swift in Sources */,
 				3F1E08982BE1107F00BAD404 /* Orders.swift in Sources */,
 				3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */,
 				3F1E08962BE1107400BAD404 /* Reviews.swift in Sources */,
 				3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */,
 				3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */,
+				3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */,
 				3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */,
 				3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */,
 				3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */,
