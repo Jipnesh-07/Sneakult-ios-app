@@ -9,17 +9,18 @@ import SwiftUI
 
 struct NewArrivalCellView: View {
     @State private var Seller = ""
-    @State private var shoe: [String] = ["New2", "New1", "New3", "Shoe4", "Shoe5", "Shoe6", "Shoe7", "Shoe8", "Shoe9", "Shoe10"]
+    @State private var shoe: [String] = ["New2", "New3",  "Shoe7", "Shoe8", "Shoe10","shoes"]
     @State private var selectShoe: String = ""
 
     var body: some View {
         
             ScrollView{
                 VStack(alignment: .leading) {
-                    Image("New2")
+                    Image(selectShoe)
                         .resizable()
                         .frame(width: 150, height: 150)
                         .clipShape(Rectangle())
+                        .clipped()
                         .cornerRadius(6)
                     
                     Text("Jordan Retro 6G")
@@ -43,9 +44,9 @@ struct NewArrivalCellView: View {
                 }
                 
             }
-        //        .onAppear {
-//            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
-//        }
+                .onAppear {
+            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
+        }
     }
 }
 

@@ -46,7 +46,7 @@ struct KicksUIView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(0...2, id: \.self) { _ in
+                            ForEach(0...4, id: \.self) { _ in
                                 NewArrivalCellView()
                                     .frame(width: 150,height: 230)
                             }
