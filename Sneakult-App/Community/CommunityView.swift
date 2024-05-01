@@ -17,8 +17,14 @@ struct CommunityView: View{
         NavigationStack{
             ScrollView(showsIndicators: false){
                 LazyVStack{
-                    ForEach(0...3, id: \.self){ _ in CommunityUIViewCell()
-                    }
+//                    ForEach(0...3, id: \.self){ _ in CommunityUIViewCell()
+//                    }
+                    CommunityUIViewCell()
+                    CommunityUIViewCell2()
+                    CommunityUIViewCell()
+                    CommunityUIViewCell()
+                    CommunityUIViewCell2()
+//
                 }
             }
             .navigationTitle("Community")

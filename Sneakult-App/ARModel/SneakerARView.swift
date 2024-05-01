@@ -9,7 +9,7 @@ import SwiftUI
 import SceneKit
 
 struct SneakerARView: View {
-    @State var scene: SCNScene? = .init(named: "sneaker_airforce.usdz")
+    @State var scene: SCNScene? = .init(named: "sneaker_pegasustrail.usdz")
     
     var body: some View {
         VStack {

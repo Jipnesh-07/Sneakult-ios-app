@@ -11,15 +11,18 @@ struct CommunityUIViewCell: View {
     
     // @State var post: Post
     
-    @State private var Postimage: [String] = [ "image1", "image2","image4", "image5"]
-    @State private var UserNames: [String] = ["Steve Jobs", "Mathew Wade", "Rajes Khanna", "Raghav Bakhshi"]
-    @State private var userImage: [String] = ["image1"]
+    @State private var Postimage: [String] = [ "image1","image2","image3","image4","image5","image6","image7","image8","image9","image10"]
+    @State private var UserNames: [String] = ["Steve Jobs", "Mathew Wade", "Rajes Khanna", "Raghav Bakhshi","Aryan Bhardwaj","AkashPreet","Aman Saini","Keshav Cheema","Kartik Admin","Kapil Goyal"]
+    @State private var userImage: [String] = ["image1","image2","image3","image4","image5","image6","image7","image8","image9","image10"]
+    @State private var SelectUserName: String = ""
+    @State private var SelectUserImage: String = ""
     @State private var SelectPostimage: String = ""
+    @State private var isLiked: Bool = false
     
     var body: some View {
         VStack{
             HStack(alignment: .top,spacing: 12){
-                Image("image1")
+                Image(SelectUserImage)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 40, height: 40)
@@ -28,7 +31,7 @@ struct CommunityUIViewCell: View {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack{
                         NavigationLink(destination: CommunityProfileView()) {
-                            Text("Steve Jobs")
+                            Text(SelectUserName)
                                 .font(.title3)
                                 .fontWeight(.semibold)
                         }.buttonStyle(PlainButtonStyle())
@@ -54,31 +57,28 @@ struct CommunityUIViewCell: View {
                     
                     
                     HStack(alignment: .center){
-                        Image("image1")
+                        Image(SelectPostimage)
                             .resizable()
-                            .scaledToFit()
-                            .frame(width: 250,height: 250)
+                            .scaledToFill()
+                            .frame(width: 300,height: 200)
                             .clipShape(Rectangle())
                             .cornerRadius(9.0)
                     }
                     
                     HStack(spacing: 16){
-                        Button{
-                            
-                        }label: {
-                            Image(systemName: "heart")
-                            
+                        Button(action: {
+                            // Toggle the liked state
+                            isLiked.toggle()
+                        }) {
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .foregroundColor(isLiked ? Color.red : Color.black)
                         }
                         Button{
                             
                         }label: {
                             Image(systemName: "bubble.right")
                         }
-                        Button{
-                            
-                        }label: {
-                            Image(systemName: "arrow.rectanglepath")
-                        }
+                        
                         Button{
                             
                         }label: {
@@ -88,12 +88,17 @@ struct CommunityUIViewCell: View {
                     .foregroundColor(.black)
                     .padding(.vertical, 8)
                     
-//                    Hstack2
+                    //                    Hstack2
                     
                 }
             }
             .onAppear {
                 SelectPostimage = Postimage.randomElement() ?? "defaultShoeImage"
+                
+                SelectUserName = UserNames.randomElement() ?? "defaultShoeImage"
+                
+                SelectUserImage = userImage.randomElement() ?? "defaultShoeImage"
+                
             }
             Divider()
         }
