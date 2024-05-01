@@ -23,8 +23,8 @@ struct Announcements {
 class AnnouncementsDataModel {
     var announcements : [Announcements] = []
     init () {
-        let annoucement1 = Announcements(image: "image1", text: "Highest Bid Happened", secondaryText: "₹809990")
-        let annoucement2 = Announcements(image: "iamge1", text: "Highest Bid Happened", secondaryText: "₹675957")
+        let annoucement1 = Announcements(image: "Shoe2", text: "Highest Bid Happened", secondaryText: "₹809990")
+        let annoucement2 = Announcements(image: "Shoe7", text: "New Users Onboarded", secondaryText: "6000")
         
         announcements.append(contentsOf: [annoucement1,annoucement2])
     }

@@ -37,7 +37,7 @@ struct SneakerDetailView: View {
                             Text("7")
                                 .frame(width: 24, height: 24)
                                 .foregroundColor(.white)
-                                .background(Color(.accent))
+                                .background(Color(.systemGray))
                                 .clipShape(Circle())
                             Text("8")                                .frame(width: 24, height: 24)
                                 .foregroundColor(.white)

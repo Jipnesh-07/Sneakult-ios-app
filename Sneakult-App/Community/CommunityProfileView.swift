@@ -94,7 +94,7 @@ struct CommunityProfileView: View {
                         // User content list view
                         LazyVStack {
                             ForEach(0...3, id: \.self) {_ in
-                                CommunityUIViewCell()
+                                CommunityUIViewCell2()
                             }
                         }
                     }
