@@ -45,7 +45,6 @@
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
 		3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001DF2BE1F9F400B72505 /* WishListView.swift */; };
 		3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E12BE1FA0100B72505 /* CheckOutView.swift */; };
-		3FE6806E2BE21932002D93CC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6806D2BE21932002D93CC /* Login.swift */; };
 		3FE680702BE21947002D93CC /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6806F2BE21947002D93CC /* Signup.swift */; };
 		3FE680722BE2198D002D93CC /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680712BE2198D002D93CC /* OnBoardingView.swift */; };
 		3FE680742BE219C2002D93CC /* TopBrands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680732BE219C2002D93CC /* TopBrands.swift */; };
@@ -92,7 +91,6 @@
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3FE001DF2BE1F9F400B72505 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		3FE001E12BE1FA0100B72505 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
-		3FE6806D2BE21932002D93CC /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Login.swift; path = "../../../Sneakult-ios-app1/Sneakult-App/Userlog/Login.swift"; sourceTree = "<group>"; };
 		3FE6806F2BE21947002D93CC /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		3FE680712BE2198D002D93CC /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		3FE680732BE219C2002D93CC /* TopBrands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBrands.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 		3FE6806B2BE21896002D93CC /* Userlog */ = {
 			isa = PBXGroup;
 			children = (
-				3FE6806D2BE21932002D93CC /* Login.swift */,
 				3FE6806F2BE21947002D93CC /* Signup.swift */,
 			);
 			path = Userlog;
@@ -345,7 +342,6 @@
 				3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */,
 				3F1E08922BE1106000BAD404 /* Community.swift in Sources */,
 				3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */,
-				3FE6806E2BE21932002D93CC /* Login.swift in Sources */,
 				3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */,
 				3F1E08982BE1107F00BAD404 /* Orders.swift in Sources */,
 				3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */,
