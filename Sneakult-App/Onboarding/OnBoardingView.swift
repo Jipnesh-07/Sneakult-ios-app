@@ -1,9 +1,9 @@
-////
-////  MainOnboarding.swift
-////  Sneakult
-////
-////  Created by student on 30/04/24.
-////
+//
+//  OnBoardingView.swift
+//  Sneakult
+//
+//  Created by student on 30/04/24.
+//
 
 import SwiftUI
 
@@ -115,4 +115,3 @@ struct OnBoardingView: View {
 #Preview {
     OnBoardingView()
 }
-
