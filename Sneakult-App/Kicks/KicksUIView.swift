@@ -2,7 +2,10 @@ import SwiftUI
 
 struct KicksUIView: View {
     @State private var searchText: String = ""
-    @State private var isFilterViewPresented = false // State to control the presentation of the modal view
+    @State private var isFilterViewPresented = false 
+    @State private var GridImage: [String] = [ "image1", "image2","image4", "image5"]
+    @State private var SelectGridImage: String = ""
+    
     
     var body: some View {
         NavigationView {
@@ -38,11 +41,26 @@ struct KicksUIView: View {
                 .padding(.horizontal)
                 
                 VStack(alignment: .leading){
-                    Text("New Arrival")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.black)
-                        .padding(.horizontal)
+                    HStack{
+                        Text("New Arrival")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.black)
+                            .padding(.horizontal)
+                        
+                        
+                        
+                        Button{
+                            
+                        } label:{
+                            Text("View all")
+                            
+                        }
+                        
+                        //
+                        
+                        
+                    }
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
@@ -71,7 +89,7 @@ struct KicksUIView: View {
                             }
                         }
                         .padding(.horizontal)
-//                        .padding(.bottom, 10) // Add bottom padding to the Announcements ScrollView
+                        //                        .padding(.bottom, 10) // Add bottom padding to the Announcements ScrollView
                     }
                     
                     Text("Join #SneakultFam")
@@ -82,38 +100,46 @@ struct KicksUIView: View {
                         .padding(.vertical,-5)
                     
                     
-                    HStack {
-                        
-                      
-                                    // Vertical stack for two images
-                                    VStack {
-                                        
-                                        Image("image1")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 190, height:200)
-                                            .cornerRadius(12)
-                                            .clipped()
-                                        
-                                        Image("image2")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fill)
-                                            .frame(width: 190, height:200)
-                                            .cornerRadius(12)
-                                            .clipped()
-                                    }
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack {
+                            
+                            
+                            ForEach(0..<2) { index in
+                                VStack {
                                     
-                                    // Horizontal image
-                                    Image("image3")
+                                    Image(SelectGridImage)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
-                                        .frame(maxWidth: 170, maxHeight: 600)
+                                        .frame(width: 190, height:200)
                                         .cornerRadius(12)
-//                                        .clipped()
+                                        .clipped()
+                                    
+                                    Image("image1")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 190, height:200)
+                                        .cornerRadius(12)
+                                        .clipped()
                                 }
+                                .onAppear {
+                                    SelectGridImage = GridImage.randomElement() ?? "defaultShoeImage"
+                                }
+                                
+                                // Horizontal image
+                                Image("image3")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(maxWidth: 170, maxHeight: 600)
+                                    .cornerRadius(12)
+                            }
+                            //                                        .clipped()
+                            
+                        }
+                    }
+                    
                     .padding()
-                                .edgesIgnoringSafeArea(.all)
-                                .navigationTitle("Hello John")
+                    .edgesIgnoringSafeArea(.all)
+                    .navigationTitle("Hello John")
                     
                     
                     
