@@ -45,6 +45,7 @@
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
 		3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001DF2BE1F9F400B72505 /* WishListView.swift */; };
 		3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E12BE1FA0100B72505 /* CheckOutView.swift */; };
+		3FE001E82BE21DAB00B72505 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E72BE21DAB00B72505 /* Login.swift */; };
 		3FE680702BE21947002D93CC /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE6806F2BE21947002D93CC /* Signup.swift */; };
 		3FE680722BE2198D002D93CC /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680712BE2198D002D93CC /* OnBoardingView.swift */; };
 		3FE680742BE219C2002D93CC /* TopBrands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE680732BE219C2002D93CC /* TopBrands.swift */; };
@@ -91,6 +92,7 @@
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3FE001DF2BE1F9F400B72505 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		3FE001E12BE1FA0100B72505 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
+		3FE001E72BE21DAB00B72505 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3FE6806F2BE21947002D93CC /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
 		3FE680712BE2198D002D93CC /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		3FE680732BE219C2002D93CC /* TopBrands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBrands.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				3FE6806F2BE21947002D93CC /* Signup.swift */,
+				3FE001E72BE21DAB00B72505 /* Login.swift */,
 			);
 			path = Userlog;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
 				3FE680722BE2198D002D93CC /* OnBoardingView.swift in Sources */,
 				3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */,
+				3FE001E82BE21DAB00B72505 /* Login.swift in Sources */,
 				3FE680702BE21947002D93CC /* Signup.swift in Sources */,
 				3FE680742BE219C2002D93CC /* TopBrands.swift in Sources */,
 				3F1E087F2BE0CCE600BAD404 /* CommunityAddPostView.swift in Sources */,
