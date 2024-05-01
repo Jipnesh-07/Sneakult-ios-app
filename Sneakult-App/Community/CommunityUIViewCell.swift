@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CommunityUIViewCell: View {
+    
+    // @State var post: Post
+    
     @State private var Postimage: [String] = [ "image1", "image2","image4", "image5"]
+    @State private var UserNames: [String] = ["Steve Jobs", "Mathew Wade", "Rajes Khanna", "Raghav Bakhshi"]
+    @State private var userImage: [String] = ["image1"]
     @State private var SelectPostimage: String = ""
     
     var body: some View {
@@ -29,7 +34,7 @@ struct CommunityUIViewCell: View {
                         }.buttonStyle(PlainButtonStyle())
                         
                         Spacer()
-                        Text("10m")
+                        Text("10h")
                             .font(.caption)
                             .foregroundColor(Color(.systemGray3))
                         
@@ -41,7 +46,7 @@ struct CommunityUIViewCell: View {
                         }
                         
                     }
-                    Text("Checkout my new Kicks!👟😎")
+                    Text("View These Kicks")
                         .font(.headline)
                         .fontWeight(.medium)
                         .foregroundColor(Color(.secondaryLabel))
@@ -49,7 +54,7 @@ struct CommunityUIViewCell: View {
                     
                     
                     HStack(alignment: .center){
-                        Image(SelectPostimage)
+                        Image("image1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 250,height: 250)

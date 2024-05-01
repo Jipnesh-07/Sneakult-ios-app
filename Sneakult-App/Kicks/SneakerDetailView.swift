@@ -63,7 +63,8 @@ struct SneakerDetailView: View {
                         .fontWeight(.semibold)
 
                 })
-                .frame(width: 330, height: 25)
+                .frame(width: 350, height: 25)
+                
                 .padding(12)
                 
 

@@ -8,55 +8,43 @@
 import Foundation
 
 struct Post {
-    var user: [User]
-    var time: Date
-    var image: [String]
+    var userName: String
+    var time: String
+    var image: String
     var caption: String
     var likes: Int
-    var share: URL
+    var share: String
     
     
-    init(user: [User], time: Date, image: [String], caption: String, likes: Int, share: URL) {
-        self.user = user
+    init(userName: String, time: String, image: String, caption: String, likes: Int, share: String) {
+        self.userName = userName
         self.time = time
         self.image = image
         self.caption = caption
         self.likes = likes
         self.share = share
-       
-    }
-    
-    
-    static func addPost(user: User, time: Date, image: [String], caption: String, share: URL) -> Post {
-        return Post(user: [user], time: time, image: image, caption: caption, likes: 0, share: share)
-    }
-    
-    
-    mutating func updateLikes(newLikes: Int) {
-        likes = newLikes
     }
 }
 
 
 
 class PostDataModel{
-    var post : [Post] = []
+    var posts : [Post] = []
     init(){
-        let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", image: "image1", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
+        let post1: Post = Post(userName: "User One", time: "Date()", image: "image1", caption: "Sample Caption", likes: 3, share: "")
         
-        let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", image: "image1", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
+        let post2: Post = Post(userName: "User Two", time: "Date()", image: "image2", caption: "Sample Caption 2", likes: 3, share: "")
         
-        let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", image: "image1", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
+        let post3: Post = Post(userName: "User Three", time: "Date()", image: "image3", caption: "Sample Caption 3", likes: 3, share: "")
         
-       
-        let post1 = Post(user: [user1], time: Date(), image: ["image1.jpg"], caption: "A wonderful day!", likes: 10, share: URL(string: "https://example.com/post1")!)
+        let post4: Post = Post(userName: "User Four", time: "Date()", image: "image4", caption: "Sample Caption 4", likes: 3, share: "")
         
-        let post2 = Post(user: [user2], time: Date(), image: ["image2.jpg", "image3.jpg"], caption: "Having fun!", likes: 20, share: URL(string: "https://example.com/post2")!)
+        let post5: Post = Post(userName: "User Five", time: "Date()", image: "image5", caption: "Sample Caption 5", likes: 3, share: "")
         
-        let post3 = Post(user: [user3], time: Date(), image: ["image4.jpg"], caption: "Enjoying the view.", likes: 15, share: URL(string: "https://example.com/post3")!)
-        
-        post.append(contentsOf: [post1,post2,post3])
+        posts.append(contentsOf: [post1, post2, post3, post4, post5])
     }
+    
+    func getAllPosts() -> [Post] { self.posts }
 }
 
 

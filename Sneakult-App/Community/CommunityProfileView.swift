@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CommunityProfileView: View {
+    
+//    @State var posts = PostDataModel().getAllPosts()
     @State private var selectedFilter: CommunityProfileFilter = .posts
     @State private var caption = ""
     @Environment(\.dismiss) var dismiss
@@ -91,7 +93,7 @@ struct CommunityProfileView: View {
                         
                         // User content list view
                         LazyVStack {
-                            ForEach(0...1, id: \.self) { _ in
+                            ForEach(0...3, id: \.self) {_ in
                                 CommunityUIViewCell()
                             }
                         }

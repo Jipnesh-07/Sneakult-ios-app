@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct CommunityView: View{
+    
+    @State private var allPosts = PostDataModel().getAllPosts()
     @State private var SearchTitle: String = ""
     @State private var isEditing = false
+    
     var body: some View{
         NavigationStack{
             ScrollView(showsIndicators: false){
                 LazyVStack{
-                    ForEach(0...8, id: \.self){
-                        community in CommunityUIViewCell()
+                    ForEach(0...3, id: \.self){ _ in CommunityUIViewCell()
                     }
                 }
             }
