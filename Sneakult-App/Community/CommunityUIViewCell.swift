@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CommunityUIViewCell: View {
+    @State private var Postimage: [String] = [ "image1", "image2","image4", "image5"]
+    @State private var SelectPostimage: String = ""
+    
     var body: some View {
         VStack{
             HStack(alignment: .top,spacing: 12){
@@ -46,7 +49,7 @@ struct CommunityUIViewCell: View {
                     
                     
                     HStack(alignment: .center){
-                        Image("image1")
+                        Image(SelectPostimage)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 250,height: 250)
@@ -83,6 +86,9 @@ struct CommunityUIViewCell: View {
 //                    Hstack2
                     
                 }
+            }
+            .onAppear {
+                SelectPostimage = Postimage.randomElement() ?? "defaultShoeImage"
             }
             Divider()
         }

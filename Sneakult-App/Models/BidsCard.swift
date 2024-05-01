@@ -8,28 +8,27 @@
 import Foundation
 
 struct BidsCard {
-    var image: [Sneaker]
+    var image: String
+    var title: String
     var seller: String
+    var currentBid: String
     var time: Date
     
-    init(image: [Sneaker], seller: String, time: Date) {
+    init(image: String, title: String, seller: String, currentBid: String, time: Date) {
         self.image = image
+        self.title = title
         self.seller = seller
+        self.currentBid = currentBid
         self.time = time
     }
 }
 class BidCardDataModel {
     var bidcard : [BidsCard] = []
     init(){
-        let sneaker1 = Sneaker(productId: UUID(), productName: "Nike Air Force 1", brand: "Nike", category: "Sneakers", size: "US 10", color: "White", isBoxAvailable: true)
-        let sneaker2 = Sneaker(productId: UUID(), productName: "Adidas Stan Smith", brand: "Adidas", category: "Sneakers", size: "US 9", color: "Green", isBoxAvailable: false)
-        let sneaker3 = Sneaker(productId: UUID(), productName: "Jordan 1 Retro High", brand: "Jordan", category: "Sneakers", size: "US 11", color: "Black/Red", isBoxAvailable: true)
         
-        let image1 = [sneaker1, sneaker2]
-        let image2 = [sneaker3]
-        
-        let bidsCard1 = BidsCard(image: image1, seller: "Seller1", time: Date())
-        let bidsCard2 = BidsCard(image: image2, seller: "Seller2", time: Date())
+       
+        let bidsCard1 = BidsCard(image: "image1", title: "Nike Dunk Low", seller: "Selena", currentBid: "₹12000", time: Date.now)
+        let bidsCard2 = BidsCard(image: "image1", title: "Nike Dunk High", seller: "Rajesh", currentBid: "₹34000", time: Date.now)
         
         bidcard.append(contentsOf: [bidsCard1,bidsCard2])
         
@@ -38,8 +37,8 @@ class BidCardDataModel {
 }
 
 
-func createBidsCard(image: [Sneaker], seller: String, time: Date) -> BidsCard {
-    return BidsCard(image: image, seller: seller, time: time)
+func createBidsCard(image: String, title: String, seller: String, currentBid: String, time: Date) -> BidsCard {
+    return BidsCard(image: image, title: title, seller: seller, currentBid: currentBid, time: time)
 }
 
 

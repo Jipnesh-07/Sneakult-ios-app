@@ -12,11 +12,13 @@ import Foundation
 struct Card {
     var image: String
     var text: String
+    var sellerName: String
     var price: Int
     
-    init(image: String, text: String, price: Int) {
+    init(image: String, text: String, sellerName: String, price: Int) {
         self.image = image
         self.text = text
+        self.sellerName = sellerName
         self.price = price
     }
 }
@@ -24,16 +26,19 @@ struct Card {
 class CardDataModel {
     var cards : [Card] = []
     init () {
-        let card1 = Card(image: "image1.jpg", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", price: 50)
-        let card2 = Card(image: "image2.jpg", text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", price: 75)
-        let card3 = Card(image: "image3.jpg", text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", price: 100)
+        let card1 = Card(image: "shoe2", text: "Lorem ipsum dolor sit", sellerName: "Riya", price: 50)
+        let card2 = Card(image: "shoe8", text: "Sed do eiusmod tempor ", sellerName: "Bhana", price: 75)
+        let card3 = Card(image: "shoe10", text: "Ut enim ad minim veniam, .", sellerName: "Matheew", price: 100)
         
         cards.append(contentsOf: [card1,card2,card3])
     }
-}
+    
+    func getAllCards() -> [Card] {
+        return self.cards
+    }
 
-func createCard(image: String, text: String, price: Int) -> Card {
-    return Card(image: image, text: text, price: price)
+    func createCard(image: String, text: String, sellerName: String, price: Int) -> Card {
+        return Card(image: image, text: text, sellerName: sellerName, price: price)
+    }
 }
-
 

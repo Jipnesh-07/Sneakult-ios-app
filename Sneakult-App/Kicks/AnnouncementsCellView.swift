@@ -12,7 +12,7 @@ struct AnnouncementsCellView: View {
     @State private var selectShoe: String = ""
     
     var body: some View {
-        NavigationLink(destination: DetailView()) {
+        
             
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(.white)
@@ -47,7 +47,7 @@ struct AnnouncementsCellView: View {
                 }
                 .shadow(radius: 8)
             
-        }
+        
 
         .onAppear {
             selectShoe = shoe.randomElement() ?? "defaultShoeImage"

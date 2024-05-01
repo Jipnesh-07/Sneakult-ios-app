@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NewArrivalCellView: View {
+    
+    
+    
     @State private var Seller = ""
     @State private var shoe: [String] = ["New2", "New3",  "Shoe7", "Shoe8", "Shoe10","shoes"]
     @State private var selectShoe: String = ""
@@ -23,7 +26,7 @@ struct NewArrivalCellView: View {
                         .clipped()
                         .cornerRadius(6)
                     
-                    Text("Jordan Retro 6G")
+                    Text("Nike Dunk Low")
                         .font(.headline)
                         .fontWeight(.semibold)
                         .foregroundColor(.black)
@@ -33,7 +36,7 @@ struct NewArrivalCellView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
                     
-                    Text("₹19000")
+                    Text("₹23000")
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(.accent)
@@ -63,3 +66,7 @@ struct NewArrivalCellView_Previews: PreviewProvider {
     }
 }
 #endif
+
+//#Preview{
+//    NewArrivalCellView(kick: )
+//}

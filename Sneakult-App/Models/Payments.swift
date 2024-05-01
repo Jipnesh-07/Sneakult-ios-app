@@ -39,11 +39,11 @@ class PaymentsDataModel{
     var payments : [Payments] = []
     
     init(){
-        let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", image: "iamge1", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
-        let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", image: "image1", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
-        let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", image: "image1", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [],payments: [])
         
         let payment1 = Payments(cardNo: 123456789, mmyy: 1211, cvv: 123, userid: user1, country: "USA", Address: "123 Main St", city: "New York", state: "NY", postalCode: 10001)
         let payment2 = Payments(cardNo: 987654321, mmyy: 1104, cvv: 456, userid: user2, country: "USA", Address: "456 Elm St", city: "Los Angeles", state: "CA", postalCode: 90001)

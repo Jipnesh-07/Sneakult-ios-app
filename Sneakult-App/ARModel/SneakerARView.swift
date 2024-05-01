@@ -19,7 +19,6 @@ struct SneakerARView: View {
                 
             
         }
-        .padding()
     }
 }
 

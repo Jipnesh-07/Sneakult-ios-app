@@ -4,6 +4,7 @@ struct User {
     private var id: UUID
     private var name: String
     private var email: String
+    private var image: String
     private var isEmailVerified: Bool
     private var location: String
     private var createdAt: Date
@@ -13,14 +14,13 @@ struct User {
     private var reviews: [Reviews]
     private var followers: [User]
     private var following: [User]
-    private var orders: [Orders]
-    private var bids: [Bid]
     private var payments: [Payments]
     
-    init(name: String, id: UUID, email: String, isEmailVerified: Bool, location: String, createdAt: Date, userName: String, listings: [Listings], posts: [Post], reviews: [Reviews], followers: [User], following: [User], orders: [Orders], bids: [Bid], payments: [Payments]) {
+    init(name: String, id: UUID, email: String, image : String, isEmailVerified: Bool, location: String, createdAt: Date, userName: String, listings: [Listings], posts: [Post], reviews: [Reviews], followers: [User], following: [User], payments: [Payments]) {
         self.name = name
         self.id = id
         self.email = email
+        self.image = image
         self.isEmailVerified = isEmailVerified
         self.location = location
         self.createdAt = createdAt
@@ -30,8 +30,7 @@ struct User {
         self.reviews = reviews
         self.followers = followers
         self.following = following
-        self.orders = orders
-        self.bids = bids
+        
         self.payments = payments
     }
     
@@ -45,11 +44,11 @@ class UserDataModel {
     
     init() {
       
-        let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", image: "image1", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
-        let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", image: "image1", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
-        let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [], orders: [], bids: [], payments: [])
+        let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", image: "image1", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
         users.append(contentsOf: [user1, user2, user3])
     }

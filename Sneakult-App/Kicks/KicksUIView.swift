@@ -41,13 +41,12 @@ struct KicksUIView: View {
                 .padding(.horizontal)
                 
                 VStack(alignment: .leading){
-                    HStack{
+                    HStack(spacing: 170){
                         Text("New Arrival")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                             .padding(.horizontal)
-                        
                         
                         
                         Button{
@@ -65,7 +64,9 @@ struct KicksUIView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(0...4, id: \.self) { _ in
-                                NewArrivalCellView()
+                                NavigationLink(destination: SneakerDetailView()){
+                                    NewArrivalCellView()
+                                }
                                     .frame(width: 150,height: 230)
                             }
                         }
