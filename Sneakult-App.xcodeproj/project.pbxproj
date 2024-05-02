@@ -10,7 +10,7 @@
 		3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF562BE379A1006912B2 /* Sneaker2.usdz */; };
 		3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF572BE379A1006912B2 /* Sneaker3.usdz */; };
 		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
-		3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* ContentView.swift */; };
+		3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* MainContentView.swift */; };
 		3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */; };
 		3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */; };
 		3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */; };
@@ -42,6 +42,8 @@
 		3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08992BE1108900BAD404 /* BidsCard.swift */; };
 		3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089D2BE1109700BAD404 /* Payments.swift */; };
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
+		3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */; };
+		3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */; };
 		3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D34872BE2683F00C07741 /* ScannerView.swift */; };
 		3F8D34A42BE28E1900C07741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8D34A32BE28E1900C07741 /* Assets.xcassets */; };
 		3F98A1EB2BE292C900BCE953 /* sneaker_pegasustrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F98A1EA2BE292C800BCE953 /* sneaker_pegasustrail.usdz */; };
@@ -61,12 +63,22 @@
 		3FFB1F312BE25FA200A19AAB /* sneaker_airforce.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB1F302BE25FA200A19AAB /* sneaker_airforce.scn */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3FBE89522BE3ACB100F5DC7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FBE894E2BE3ACB100F5DC7A /* GuidedCapture.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 70D2F6EB2A339DD500EFA0D8;
+			remoteInfo = GuidedCapture;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3F08BF562BE379A1006912B2 /* Sneaker2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker2.usdz; sourceTree = "<group>"; };
 		3F08BF572BE379A1006912B2 /* Sneaker3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker3.usdz; sourceTree = "<group>"; };
 		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakult_AppApp.swift; sourceTree = "<group>"; };
-		3F1E08462BE0C40200BAD404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F1E08462BE0C40200BAD404 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSneakerListing.swift; sourceTree = "<group>"; };
@@ -98,11 +110,14 @@
 		3F1E08992BE1108900BAD404 /* BidsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsCard.swift; sourceTree = "<group>"; };
 		3F1E089D2BE1109700BAD404 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsView.swift; sourceTree = "<group>"; };
+		3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
 		3F8D34872BE2683F00C07741 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		3F8D34A32BE28E1900C07741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F98A1EA2BE292C800BCE953 /* sneaker_pegasustrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_pegasustrail.usdz; sourceTree = "<group>"; };
 		3F98A1EC2BE292D200BCE953 /* sneaker_pegasustrail.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sneaker_pegasustrail.scn; sourceTree = "<group>"; };
 		3F98A20A2BE2B46600BCE953 /* CommunityUIViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityUIViewCell2.swift; sourceTree = "<group>"; };
+		3FBE894E2BE3ACB100F5DC7A /* GuidedCapture.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GuidedCapture.xcodeproj; path = ../../Downloads/ScanningObjectsUsingObjectCapture/GuidedCapture.xcodeproj; sourceTree = "<group>"; };
 		3FE001DF2BE1F9F400B72505 /* WishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListView.swift; sourceTree = "<group>"; };
 		3FE001E12BE1FA0100B72505 /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		3FE001E72BE21DAB00B72505 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -131,7 +146,7 @@
 		3F1E08382BE0C40200BAD404 = {
 			isa = PBXGroup;
 			children = (
-				3F8D34A32BE28E1900C07741 /* Assets.xcassets */,
+				3FBE894E2BE3ACB100F5DC7A /* GuidedCapture.xcodeproj */,
 				3F1E08432BE0C40200BAD404 /* Sneakult-App */,
 				3F1E08422BE0C40200BAD404 /* Products */,
 			);
@@ -158,7 +173,7 @@
 				3F1E08542BE0C4A000BAD404 /* Bag */,
 				3F1E08522BE0C47100BAD404 /* Community */,
 				3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */,
-				3F1E08462BE0C40200BAD404 /* ContentView.swift */,
+				3F1E08462BE0C40200BAD404 /* MainContentView.swift */,
 				3F1E084A2BE0C40300BAD404 /* Preview Content */,
 				3F1E08682BE0C7D600BAD404 /* MainView.swift */,
 			);
@@ -168,6 +183,7 @@
 		3F1E084A2BE0C40300BAD404 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3F8D34A32BE28E1900C07741 /* Assets.xcassets */,
 				3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -227,6 +243,8 @@
 				3F1E085E2BE0C63200BAD404 /* ProfileEditView.swift */,
 				3F1E08602BE0C69000BAD404 /* PaymentsView.swift */,
 				3F1E08622BE0C6A500BAD404 /* SettingsView.swift */,
+				3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */,
+				3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */,
 				3F8D34872BE2683F00C07741 /* ScannerView.swift */,
 			);
 			path = Profile;
@@ -248,6 +266,14 @@
 				3FFB1F2A2BE2379300A19AAB /* Announcements.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3FBE894F2BE3ACB100F5DC7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FBE89532BE3ACB100F5DC7A /* GuidedCapture.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3FE6806B2BE21896002D93CC /* Userlog */ = {
@@ -329,12 +355,28 @@
 			mainGroup = 3F1E08382BE0C40200BAD404;
 			productRefGroup = 3F1E08422BE0C40200BAD404 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3FBE894F2BE3ACB100F5DC7A /* Products */;
+					ProjectRef = 3FBE894E2BE3ACB100F5DC7A /* GuidedCapture.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3F1E08402BE0C40200BAD404 /* Sneakult-App */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3FBE89532BE3ACB100F5DC7A /* GuidedCapture.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = GuidedCapture.app;
+			remoteRef = 3FBE89522BE3ACB100F5DC7A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3F1E083F2BE0C40200BAD404 /* Resources */ = {
@@ -366,11 +408,12 @@
 				3F1E088A2BE1102600BAD404 /* User.swift in Sources */,
 				3F1E08692BE0C7D600BAD404 /* MainView.swift in Sources */,
 				3F1E087D2BE0CCBD00BAD404 /* CommunityProfileView.swift in Sources */,
+				3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */,
 				3F1E08732BE0C97100BAD404 /* BiddingPageView.swift in Sources */,
 				3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */,
 				3F1E08942BE1106A00BAD404 /* Post.swift in Sources */,
 				3FFB1F292BE22E7300A19AAB /* SneakerDetailView.swift in Sources */,
-				3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */,
+				3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */,
 				3FE680762BE219CA002D93CC /* TopSeller.swift in Sources */,
 				3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */,
 				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
@@ -384,6 +427,7 @@
 				3F1E08612BE0C69000BAD404 /* PaymentsView.swift in Sources */,
 				3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */,
 				3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */,
+				3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */,
 				3F1E08A02BE110A400BAD404 /* Card.swift in Sources */,
 				3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */,
 				3F1E08922BE1106000BAD404 /* Community.swift in Sources */,

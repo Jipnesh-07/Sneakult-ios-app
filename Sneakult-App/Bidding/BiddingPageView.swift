@@ -24,7 +24,7 @@ struct BiddingPageView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
                     
-                    Text("\(shoe.currentBid)")
+                    Text("Current Bidding Price")
                         .foregroundColor(Color.gray)
                     
                     Image("\(shoe.image)")
@@ -43,7 +43,7 @@ struct BiddingPageView: View {
                         Text("Product Value")
                             .foregroundColor(.gray)
                             .font(.footnote)
-                        Text("₹8000")
+                        Text("₹\(shoe.productValue)")
                             .font(.title3)
                     }
                     .padding(.leading)
@@ -52,7 +52,7 @@ struct BiddingPageView: View {
                         Text("Size")
                             .foregroundColor(.gray)
                             .font(.footnote)
-                        Text("UK 4.5")
+                        Text("UK \(shoe.size)")
                             .font(.title3)
                     }
                     .padding(.leading)
@@ -61,7 +61,7 @@ struct BiddingPageView: View {
                         Text("Color")
                             .foregroundColor(.gray)
                             .font(.footnote)
-                        Text("Black/grey")
+                        Text(shoe.colour)
                             .font(.title3)
                     }
                     
@@ -125,7 +125,7 @@ struct BiddingPageView: View {
                             .foregroundColor(.gray)
                             .padding(.leading)
                         
-                        Text("₹8097")
+                        Text(shoe.currentBid)
                             .foregroundColor(.gray)
                             .font(.title3)
     //                        .padding()

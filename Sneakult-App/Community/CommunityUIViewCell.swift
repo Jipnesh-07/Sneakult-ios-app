@@ -3,7 +3,8 @@ import SwiftUI
 struct CommunityUIViewCell: View {
     
     @State private var post: Post?
-    
+    @State private var isLiked: Bool = false
+
     var body: some View {
         VStack {
             if let post = post {
@@ -40,7 +41,7 @@ struct CommunityUIViewCell: View {
                         
                         Image(post.image)
                             .resizable()
-                            .scaledToFit()
+        
                             .frame(width: 300, height: 200)
                             .clipShape(Rectangle())
                             .cornerRadius(9.0)
@@ -48,9 +49,10 @@ struct CommunityUIViewCell: View {
                         HStack(spacing: 16) {
                             Button(action: {
                                 // Toggle the liked state
+                                isLiked.toggle()
                             }) {
-                                Image(systemName: "heart.fill")
-                                    .foregroundColor(Color.red)
+                                Image(systemName: isLiked ? "heart.fill" : "heart")
+                                    .foregroundColor(isLiked ? Color.red : Color.black)
                             }
                             Button(action: {
                                 // Action for comment button

@@ -32,7 +32,7 @@ struct NewSneakerListing: View {
                         }
                     VStack(alignment: .leading) {
                         Text("Add Sneaker Photo")
-                        Text("Max 5 mb")
+                        Text("Max. 5MB").bold()
                     }
                     .padding(30)
                 }
@@ -146,6 +146,7 @@ struct NewSneakerListing: View {
                     }),
                     .default(Text("Open Scanner"), action: {
                         // Action to open scanner
+//                         ContentView()
                     }),
                     .cancel()
                 ])
