@@ -31,15 +31,15 @@ struct Post {
 class PostDataModel{
     var posts : [Post] = []
     init(){
-        let post1: Post = Post(userName: "User One", time: "Date()", image: "image1", caption: "Sample Caption", likes: 3, share: "")
+        let post1: Post = Post(userName: "Jatin Bansal", time: "Date()", image: "image1", caption: "These Kicks are Trending😎", likes: 3, share: "")
         
-        let post2: Post = Post(userName: "User Two", time: "Date()", image: "image2", caption: "Sample Caption 2", likes: 3, share: "")
+        let post2: Post = Post(userName: "Tanishk sahni", time: "Date()", image: "image2", caption: "I like The ColorScheme😍🌈", likes: 3, share: "")
         
-        let post3: Post = Post(userName: "User Three", time: "Date()", image: "image3", caption: "Sample Caption 3", likes: 3, share: "")
+        let post3: Post = Post(userName: "Pratham Mehta", time: "Date()", image: "image3", caption: "🥺", likes: 3, share: "")
         
-        let post4: Post = Post(userName: "User Four", time: "Date()", image: "image4", caption: "Sample Caption 4", likes: 3, share: "")
+        let post4: Post = Post(userName: "Udhaw Wadhwan", time: "Date()", image: "image4", caption: "Sample Caption 4", likes: 3, share: "")
         
-        let post5: Post = Post(userName: "User Five", time: "Date()", image: "image5", caption: "Sample Caption 5", likes: 3, share: "")
+        let post5: Post = Post(userName: "Isha Yadav", time: "Date()", image: "image5", caption: "Sample Caption 5", likes: 3, share: "")
         
         posts.append(contentsOf: [post1, post2, post3, post4, post5])
     }

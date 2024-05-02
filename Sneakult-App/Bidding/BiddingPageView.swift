@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct BiddingPageView: View {
+    
+    var shoe: BidsCard
+    var bids = BidCardDataModel().getAllBidCards()
+    
     var body: some View {
        ScrollView {
             VStack {
@@ -9,24 +13,26 @@ struct BiddingPageView: View {
                     Text("15 Seconds Remaining")
                 }
                 .padding(10)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                .frame(maxWidth: .infinity)
                 .background(Color.gray)
                 
                 
                 VStack{
-                    Text("₹8097")
+                    Text("₹\(shoe.currentBid)")
                         .padding(.top, 4)
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
-                    Text("Current Bidding Price")
+                    
+                    Text("\(shoe.currentBid)")
                         .foregroundColor(Color.gray)
-                    Image("shoes")
+                    
+                    Image("\(shoe.image)")
                         .resizable()
                         .frame(width: 100, height: 100)
                         .aspectRatio(contentMode: .fit)
                         
-                    Text("Nike Air Force Retro A1")
+                    Text("\(shoe.title)")
                         .fontWeight(.bold)
                         .font(.title2)
                         .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
@@ -163,5 +169,5 @@ struct BiddingPageView: View {
 }
 
 #Preview {
-    BiddingPageView()
+    BiddingPageView(shoe: BidCardDataModel().getAllBidCards()[0])
 }

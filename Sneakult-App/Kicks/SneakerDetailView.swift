@@ -9,13 +9,12 @@ import SwiftUI
 import SceneKit
 
 struct SneakerDetailView: View {
-    
-    @State var scene: SCNScene? = .init(named: "sneaker_airforce.scn")
+    @State var scene: SCNScene? = .init(named: "sneaker_airforce.usdz")
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Jordan Retro 6 G")
+                Text("Nike Dunk Low")
                     .font(.largeTitle)
                     .foregroundStyle(Color.accentColor)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -50,7 +49,7 @@ struct SneakerDetailView: View {
                         }
                     }
                     Spacer()
-                    Text("₹19340")
+                    Text("₹23000")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                 }
