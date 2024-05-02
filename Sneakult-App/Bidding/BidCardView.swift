@@ -2,7 +2,11 @@
 import SwiftUI
 
 struct BidCardView: View {
+    @State private var UserImage: [String] = ["image1","shoe1","shoes"]
+    @State private var SelectUserName: String = ""
     var body: some View {
+        
+
         
             HStack {
                 ZStack(alignment: .topTrailing) {

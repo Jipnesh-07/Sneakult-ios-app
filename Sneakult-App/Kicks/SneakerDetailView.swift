@@ -37,7 +37,7 @@ struct SneakerDetailView: View {
                             Text("7")
                                 .frame(width: 24, height: 24)
                                 .foregroundColor(.white)
-                                .background(Color(.accent))
+                                .background(Color(.systemGray))
                                 .clipShape(Circle())
                             Text("8")                                .frame(width: 24, height: 24)
                                 .foregroundColor(.white)
@@ -63,7 +63,8 @@ struct SneakerDetailView: View {
                         .fontWeight(.semibold)
 
                 })
-                .frame(width: 330, height: 25)
+                .frame(width: 350, height: 25)
+                
                 .padding(12)
                 
 

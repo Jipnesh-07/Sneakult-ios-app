@@ -1,27 +1,17 @@
-//
-//  AnnouncementsCellView.swift
-//  Sneakult
-//
-//  Created by IOS Development on 25/04/24.
-//
-
 import SwiftUI
 
 struct AnnouncementsCellView: View {
-    @State private var shoe: [String] = [ "Shoe2", "Shoe7", "Shoe8", "Shoe10", "shoes"]
-    @State private var selectShoe: String = ""
+    @State private var selectedAnnouncement: Announcements?
     
     var body: some View {
-        
-            
-            RoundedRectangle(cornerRadius: 20)
-                .foregroundColor(.white)
-                .frame(width: 300, height: 130)
-//                .shadow(radius: 10)
-                .opacity(2)
-                .overlay{
-                    HStack{
-                        Image(selectShoe)
+        RoundedRectangle(cornerRadius: 20)
+            .foregroundColor(.white)
+            .frame(width: 300, height: 130)
+            .opacity(2)
+            .overlay {
+                if let announcement = selectedAnnouncement {
+                    HStack {
+                        Image(announcement.image)
                             .resizable()
                             .scaledToFill()
                             .frame(width: 150, height: 130)
@@ -30,27 +20,27 @@ struct AnnouncementsCellView: View {
                             .frame(maxWidth: .infinity)
                         
                         VStack(alignment: .leading, spacing: 4) {
-                            Text("Weekly Highest Bid")
+                            Text(announcement.text)
                                 .foregroundColor(Color(.accent))
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
                             
-                            Text("₹809990")
+                            Text(announcement.secondaryText)
                                 .font(.headline)
-                                .foregroundColor(.black)
                                 .foregroundColor(.gray)
                         }
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity)
                     }
                 }
-                .shadow(radius: 8)
-            
+            }
+            .shadow(radius: 8)
         
-
         .onAppear {
-            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
+            let announcementsDataModel = AnnouncementsDataModel()
+            let allAnnouncements = announcementsDataModel.announcements
+            self.selectedAnnouncement = allAnnouncements.randomElement()
         }
     }
 }
@@ -68,3 +58,4 @@ struct AnnouncementsCellView_Previews: PreviewProvider {
     }
 }
 #endif
+

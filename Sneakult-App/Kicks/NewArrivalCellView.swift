@@ -9,49 +9,44 @@ import SwiftUI
 
 struct NewArrivalCellView: View {
     
+    @State private var selectedCard: Card?
     
-    
-    @State private var Seller = ""
-    @State private var shoe: [String] = ["New2", "New3",  "Shoe7", "Shoe8", "Shoe10","shoes"]
-    @State private var selectShoe: String = ""
-
     var body: some View {
-        
-            ScrollView{
-                VStack(alignment: .leading) {
-                    Image(selectShoe)
+        ScrollView {
+            VStack(alignment: .leading) {
+                if let card = selectedCard {
+                    Image(card.image)
                         .resizable()
                         .frame(width: 150, height: 150)
                         .clipShape(Rectangle())
                         .clipped()
                         .cornerRadius(6)
                     
-                    Text("Nike Dunk Low")
+                    Text(card.text)
                         .font(.headline)
                         .fontWeight(.semibold)
                         .foregroundColor(.black)
-                        
-                    Text("By @Selena")
+                    
+                    Text("By @\(card.sellerName)")
                         .font(.footnote)
                         .fontWeight(.semibold)
                         .foregroundColor(.gray)
                     
-                    Text("₹23000")
+                    Text("₹\(card.price)")
                         .font(.headline)
                         .fontWeight(.bold)
                         .foregroundColor(.accent)
-                    
-                    
-                    
-                    
                 }
-                
             }
-                .onAppear {
-            selectShoe = shoe.randomElement() ?? "defaultShoeImage"
+        }
+        .onAppear {
+            let cardDataModel = CardDataModel()
+            let allCards = cardDataModel.getAllCards()
+            self.selectedCard = allCards.randomElement()
         }
     }
 }
+
 
 struct DetailView1: View {
     var body: some View {
@@ -67,6 +62,3 @@ struct NewArrivalCellView_Previews: PreviewProvider {
 }
 #endif
 
-//#Preview{
-//    NewArrivalCellView(kick: )
-//}
