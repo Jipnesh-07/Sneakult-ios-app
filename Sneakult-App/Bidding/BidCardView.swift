@@ -20,7 +20,10 @@ struct BidCardView: View {
                     Text(bidcard.time)
                         .padding(4)
                         .foregroundColor(Color(.black))
-                    .background(Color(.secondarySystemBackground))                }
+                        .opacity(0.8)
+//                        .shadow(radius: 1)
+                    
+                    .background(Color(red: 220/255, green: 220/255, blue: 220/255))                }
                 VStack(alignment: .leading) {
                     Text(bidcard.title)
                         .font(.title3)

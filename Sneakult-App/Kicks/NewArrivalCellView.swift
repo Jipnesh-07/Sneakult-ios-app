@@ -48,16 +48,6 @@ struct NewArrivalCellView: View {
 }
 
 
-struct DetailView1: View {
-    var body: some View {
-        Text("Detail View")
-    }
-}
 
-//struct NewArrivalCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewArrivalCellView(cards[0])
-//    }
-//}
-//#endif
+
 

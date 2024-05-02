@@ -1,8 +1,10 @@
 import SwiftUI
+import SceneKit
 
 struct KicksUIView: View {
     
     var cards = CardDataModel().getAllCards()
+    var cardNames = CardDataModel().getAllCardSceneNames()
     let cardsCount: Int = CardDataModel().getAllCards().count
     
     var announcements = AnnouncementsDataModel().getAllAnnouncements()
@@ -78,7 +80,7 @@ struct KicksUIView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(0..<cardsCount) { index in
-                                    NavigationLink(destination: SneakerDetailView()) {
+                                    NavigationLink(destination: SneakerDetailView(card: cards[index], scene: SCNScene(named: cardNames[index])!)) {
                                         NewArrivalCellView(card: cards[index])
                                     }
                                 }

@@ -2,14 +2,15 @@ import SwiftUI
 
 struct CommunityUIViewCell: View {
     
-    @State private var post: Post?
+//    @State private var post: Post?
     @State private var isLiked: Bool = false
+    var postview: Post
 
     var body: some View {
         VStack {
-            if let post = post {
+      
                 HStack(alignment: .top, spacing: 12) {
-                    Image(post.image)
+                    Image(postview.image)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 40, height: 40)
@@ -18,12 +19,12 @@ struct CommunityUIViewCell: View {
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
                             NavigationLink(destination: CommunityProfileView()) {
-                                Text(post.userName)
+                                Text(postview.userName)
                                     .font(.title3)
                                     .fontWeight(.semibold)
                             }
                             Spacer()
-                            Text(post.time)
+                            Text(postview.time)
                                 .font(.caption)
                                 .foregroundColor(Color(.systemGray3))
                             Button(action: {
@@ -33,16 +34,16 @@ struct CommunityUIViewCell: View {
                                     .foregroundColor(Color(.darkGray))
                             }
                         }
-                        Text(post.caption)
+                        Text(postview.caption)
                             .font(.headline)
                             .fontWeight(.medium)
                             .foregroundColor(Color(.secondaryLabel))
                             .multilineTextAlignment(.leading)
                         
-                        Image(post.image)
+                        Image(postview.image)
                             .resizable()
-        
-                            .frame(width: 300, height: 200)
+//                            .scaledToFit()
+                            .frame(width: 250, height: 200)
                             .clipShape(Rectangle())
                             .cornerRadius(9.0)
                         
@@ -71,20 +72,20 @@ struct CommunityUIViewCell: View {
                 }
                 .padding()
                 Divider()
-            }
+            
         }
-        .onAppear {
-            let postDataModel = PostDataModel()
-            let allPosts = postDataModel.getAllPosts()
-            self.post = allPosts.randomElement()
-        }
+//        .onAppear {
+//            let postDataModel = PostDataModel()
+//            let allPosts = postDataModel.getAllPosts()
+//            self.post = allPosts.randomElement()
+//        }
     }
 }
 
 #if DEBUG
 struct CommunityUIViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        CommunityUIViewCell()
+        CommunityUIViewCell(postview: PostDataModel().getAllPosts()[0])
     }
 }
 #endif

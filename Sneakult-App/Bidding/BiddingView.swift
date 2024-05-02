@@ -49,7 +49,7 @@ struct BiddingView: View {
                                             
                                             .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.1))
                     //                        .padding(.horizontal, 16)
-                                            .shadow(radius: 15)
+//                                            .shadow(radius: 5)
                                             .padding(.bottom, 8)
                                     }
                                 }

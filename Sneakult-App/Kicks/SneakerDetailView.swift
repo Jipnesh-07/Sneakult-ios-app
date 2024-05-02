@@ -9,23 +9,27 @@ import SwiftUI
 import SceneKit
 
 struct SneakerDetailView: View {
-    @State var scene: SCNScene? = .init(named: "sneaker_airforce.usdz")
+    //    var scene2 : Card
+    var card : Card
+    @State var scene: SCNScene
+    // @State var scene = SCNScene(named: "Sneaker2.usdz")
+    // var scene = SCNScene(named: card3DName)
+    // var sc
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Text("Nike Dunk Low")
+                Text(card.text)
                     .font(.largeTitle)
                     .foregroundStyle(Color.accentColor)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 Text("Limited Edition especially for Golf Players")
                     .font(.subheadline)
-                
-                
+                Text("By @\(card.sellerName)")
                 
                 CustomSceneView(scene: $scene)
                     .frame(width: .infinity, height: 350)
-//                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                //                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                 HStack {
                     VStack(spacing: 4){
                         Text("Size UK:")
@@ -49,7 +53,7 @@ struct SneakerDetailView: View {
                         }
                     }
                     Spacer()
-                    Text("₹23000")
+                    Text("₹\(card.price)")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                 }
@@ -60,24 +64,27 @@ struct SneakerDetailView: View {
                     Text("Add")
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
-
+                    
                 })
                 .frame(width: 350, height: 25)
                 
                 .padding(12)
                 
-
+                
                 .background(Color(red: 43/255, green: 100/255, blue: 79/255))
                 .cornerRadius(13)
                 
             }
             .padding(20)
         }
-    
+        
         .navigationBarTitleDisplayMode(.inline)
+//        .onAppear({
+//            self.card3DName = card.scene?.rootNode.name ?? ""
+//        })
     }
 }
 
 #Preview {
-    SneakerDetailView()
+    SneakerDetailView(card: CardDataModel().getAllCards()[0])
 }
