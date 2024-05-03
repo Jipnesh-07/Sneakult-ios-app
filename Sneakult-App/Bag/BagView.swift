@@ -13,23 +13,15 @@ struct BagView: View {
             Text("My Cart")
                 .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
                 .font(.title)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                .fontWeight(.bold)
                 .padding(19)
             
             Cart()
-            
-            
             
             Spacer()
         }
     }
 }
-
-#Preview {
-    BagView()
-}
-
-
 
 struct Cart: View {
     @State private var quantity = 1
@@ -48,21 +40,17 @@ struct Cart: View {
                 Text("Light Pink")
                     .foregroundColor(.gray)
                 
-                
-                HStack {
-                    Stepper("",value: $quantity, in: 0...130)
-                }
-//                .padding()
-              
-                           
-                        
-                    
-                
+                Stepper("Qty: \(quantity)", value: $quantity, in: 0...130)
+                    .padding(.top, 8)
             }
             .padding()
-            
         }
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary))
+        .safeAreaPadding()
     }
+        
 }
 
+#Preview {
+    BagView()
+}

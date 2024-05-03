@@ -94,7 +94,7 @@ struct Signup: View {
             .onSubmit {
                 // validate(password: password)
             }
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding()
             .frame(width: 350, height: 45)
             .cornerRadius(10)

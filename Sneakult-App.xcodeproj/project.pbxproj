@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186918732BE38E7000E5E3EB /* PaymentCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */; };
+		186918762BE3916400E5E3EB /* settingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918752BE3916400E5E3EB /* settingView.swift */; };
+		186918782BE40BA000E5E3EB /* languageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918772BE40BA000E5E3EB /* languageSettings.swift */; };
+		1869187A2BE4105300E5E3EB /* TermsAndUsesSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918792BE4105300E5E3EB /* TermsAndUsesSetting.swift */; };
+		1869187C2BE4114600E5E3EB /* ChangePasswordSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869187B2BE4114600E5E3EB /* ChangePasswordSettings.swift */; };
+		1869187E2BE4140900E5E3EB /* AboutAppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869187D2BE4140900E5E3EB /* AboutAppSetting.swift */; };
+		186918802BE4152700E5E3EB /* PrivacyPolicySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */; };
+		186918822BE415BB00E5E3EB /* ContactSupportSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */; };
+		186918842BE4165700E5E3EB /* SendFeedBackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */; };
 		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
 		3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* ContentView.swift */; };
 		3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */; };
@@ -62,6 +71,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCellView.swift; sourceTree = "<group>"; };
+		186918752BE3916400E5E3EB /* settingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingView.swift; sourceTree = "<group>"; };
+		186918772BE40BA000E5E3EB /* languageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageSettings.swift; sourceTree = "<group>"; };
+		186918792BE4105300E5E3EB /* TermsAndUsesSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndUsesSetting.swift; sourceTree = "<group>"; };
+		1869187B2BE4114600E5E3EB /* ChangePasswordSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordSettings.swift; sourceTree = "<group>"; };
+		1869187D2BE4140900E5E3EB /* AboutAppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppSetting.swift; sourceTree = "<group>"; };
+		1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicySetting.swift; sourceTree = "<group>"; };
+		186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportSetting.swift; sourceTree = "<group>"; };
+		186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedBackSetting.swift; sourceTree = "<group>"; };
 		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakult_AppApp.swift; sourceTree = "<group>"; };
 		3F1E08462BE0C40200BAD404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +146,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186918712BE38E1600E5E3EB /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		186918742BE38F3100E5E3EB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				186918752BE3916400E5E3EB /* settingView.swift */,
+				186918772BE40BA000E5E3EB /* languageSettings.swift */,
+				186918792BE4105300E5E3EB /* TermsAndUsesSetting.swift */,
+				1869187B2BE4114600E5E3EB /* ChangePasswordSettings.swift */,
+				1869187D2BE4140900E5E3EB /* AboutAppSetting.swift */,
+				1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */,
+				186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */,
+				186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3F1E08382BE0C40200BAD404 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +189,8 @@
 		3F1E08432BE0C40200BAD404 /* Sneakult-App */ = {
 			isa = PBXGroup;
 			children = (
+				186918742BE38F3100E5E3EB /* Settings */,
+				186918712BE38E1600E5E3EB /* Payment */,
 				3FFB1F232BE2187200A19AAB /* ARModel */,
 				3FE6806C2BE218AF002D93CC /* Onboarding */,
 				3FE6806B2BE21896002D93CC /* Userlog */,
@@ -357,14 +400,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1869187C2BE4114600E5E3EB /* ChangePasswordSettings.swift in Sources */,
 				3F1E08632BE0C6A500BAD404 /* SettingsView.swift in Sources */,
 				3F1E08902BE1105900BAD404 /* Sneaker.swift in Sources */,
 				3F1E08792BE0CA7900BAD404 /* FilterCardView.swift in Sources */,
 				3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */,
+				1869187A2BE4105300E5E3EB /* TermsAndUsesSetting.swift in Sources */,
 				3F1E088A2BE1102600BAD404 /* User.swift in Sources */,
 				3F1E08692BE0C7D600BAD404 /* MainView.swift in Sources */,
 				3F1E087D2BE0CCBD00BAD404 /* CommunityProfileView.swift in Sources */,
 				3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */,
+				1869187E2BE4140900E5E3EB /* AboutAppSetting.swift in Sources */,
 				3F1E08732BE0C97100BAD404 /* BiddingPageView.swift in Sources */,
 				3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */,
 				3F1E08942BE1106A00BAD404 /* Post.swift in Sources */,
@@ -375,6 +421,7 @@
 				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
 				3FE680722BE2198D002D93CC /* OnBoardingView.swift in Sources */,
 				3F1E086F2BE0C82900BAD404 /* BiddingView.swift in Sources */,
+				186918842BE4165700E5E3EB /* SendFeedBackSetting.swift in Sources */,
 				3FE001E82BE21DAB00B72505 /* Login.swift in Sources */,
 				3FE680702BE21947002D93CC /* Signup.swift in Sources */,
 				3FE680742BE219C2002D93CC /* TopBrands.swift in Sources */,
@@ -384,15 +431,20 @@
 				3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */,
 				3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */,
 				3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */,
+				186918732BE38E7000E5E3EB /* PaymentCardCellView.swift in Sources */,
 				3F1E08A02BE110A400BAD404 /* Card.swift in Sources */,
 				3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */,
+				186918782BE40BA000E5E3EB /* languageSettings.swift in Sources */,
 				3F1E08922BE1106000BAD404 /* Community.swift in Sources */,
 				3F1E085F2BE0C63200BAD404 /* ProfileEditView.swift in Sources */,
 				3F1E086D2BE0C82100BAD404 /* BagView.swift in Sources */,
+				186918802BE4152700E5E3EB /* PrivacyPolicySetting.swift in Sources */,
 				3F1E08752BE0C9A500BAD404 /* NewArrivalCellView.swift in Sources */,
 				3F1E08962BE1107400BAD404 /* Reviews.swift in Sources */,
 				3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */,
+				186918822BE415BB00E5E3EB /* ContactSupportSetting.swift in Sources */,
 				3F98A20B2BE2B46700BCE953 /* CommunityUIViewCell2.swift in Sources */,
+				186918762BE3916400E5E3EB /* settingView.swift in Sources */,
 				3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */,
 				3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */,
 				3FFB1F252BE2189200A19AAB /* SneakerARView.swift in Sources */,

@@ -79,10 +79,10 @@ struct ProfileView: View {
                     NavigationLink(destination: LogoutView()) { // Added NavigationLink for Logout
                         Label("My Bids", systemImage: "rectangle.portrait.and.arrow.right")
                     }
-                    NavigationLink(destination: PaymentsView()) {
+                    NavigationLink(destination: PaymentCardCellView()) {
                         Label("Payments", systemImage: "creditcard")
                     }
-                    NavigationLink(destination: SettingsView()) {
+                    NavigationLink(destination: settingsView()) {
                         Label("Settings", systemImage: "gear")
                     }
                 }
