@@ -9,12 +9,9 @@ import SwiftUI
 import SceneKit
 
 struct SneakerDetailView: View {
-    //    var scene2 : Card
+    
     var card : Card
-    @State var scene: SCNScene
-    // @State var scene = SCNScene(named: "Sneaker2.usdz")
-    // var scene = SCNScene(named: card3DName)
-    // var sc
+    @State var scene = SCNScene(named: "Sneaker2.usdz")
     
     var body: some View {
         ScrollView {

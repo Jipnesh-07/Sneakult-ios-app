@@ -80,7 +80,7 @@ struct KicksUIView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(0..<cardsCount) { index in
-                                    NavigationLink(destination: SneakerDetailView(card: cards[index], scene: SCNScene(named: cardNames[index])!)) {
+                                    NavigationLink(destination: SneakerDetailView(card: cards[index])) {
                                         NewArrivalCellView(card: cards[index])
                                     }
                                 }
