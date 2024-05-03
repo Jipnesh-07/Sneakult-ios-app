@@ -9,21 +9,19 @@ import SwiftUI
 
 struct CommunityView: View{
     
-    @State private var allPosts = PostDataModel().getAllPosts()
+//    @State private var allPosts = PostDataModel().getAllPosts()
     @State private var SearchTitle: String = ""
     @State private var isEditing = false
+    var posts = PostDataModel().getAllPosts()
+    let posttCount : Int = PostDataModel().getAllPosts().count
     
     var body: some View{
         NavigationStack{
             ScrollView(showsIndicators: false){
                 LazyVStack{
-//                    ForEach(0...3, id: \.self){ _ in CommunityUIViewCell()
-//                    }
-                    CommunityUIViewCell()
-                    CommunityUIViewCell2()
-                    CommunityUIViewCell()
-                    CommunityUIViewCell()
-                    CommunityUIViewCell2()
+                    ForEach(0..<posttCount, id: \.self){ index in CommunityUIViewCell(postview: posts[index])
+                    }
+                    
 //
                 }
             }

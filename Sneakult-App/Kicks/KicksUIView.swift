@@ -1,8 +1,17 @@
 import SwiftUI
+import SceneKit
 
 struct KicksUIView: View {
+    
+    var cards = CardDataModel().getAllCards()
+    var cardNames = CardDataModel().getAllCardSceneNames()
+    let cardsCount: Int = CardDataModel().getAllCards().count
+    
+    var announcements = AnnouncementsDataModel().getAllAnnouncements()
+    let announcementsCount: Int = AnnouncementsDataModel().getAllAnnouncements().count
+    
     @State private var searchText: String = ""
-    @State private var isFilterViewPresented = false 
+    @State private var isFilterViewPresented = false
     @State private var GridImage: [String] = [ "image1", "image2","image4", "image5"]
     @State private var SelectGridImage: String = ""
     
@@ -10,6 +19,12 @@ struct KicksUIView: View {
     var body: some View {
         NavigationView {
             ScrollView{VStack(alignment: .leading, spacing: 10) { // Add spacing between VStack elements
+                
+                Text("Hello John")
+                    .font(.largeTitle)
+                    .padding(.leading,16)
+                    .padding(.top,30)
+                    .fontWeight(.bold)
                 HStack {
                     HStack(spacing: -10) {
                         Image(systemName: "magnifyingglass")
@@ -61,17 +76,19 @@ struct KicksUIView: View {
                         
                     }
                     
+                
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(0...4, id: \.self) { _ in
-                                NavigationLink(destination: SneakerDetailView()){
-                                    NewArrivalCellView()
+                            HStack {
+                                ForEach(0..<cardsCount) { index in
+                                    NavigationLink(destination: SneakerDetailView(card: cards[index])) {
+                                        NewArrivalCellView(card: cards[index])
+                                    }
                                 }
-                                    .frame(width: 150,height: 230)
                             }
-                        }
-                        .padding(.horizontal)
+                            .padding()
                     }
+                    
+                   
                     
                     Text("Announcements")
                         .font(.title2)
@@ -82,8 +99,8 @@ struct KicksUIView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(0...3, id: \.self) { _ in
-                                AnnouncementsCellView()
+                            ForEach(0..<announcementsCount, id: \.self) { index in
+                                AnnouncementsCellView(announcement: announcements[index])
                                     .frame(width: 300, height: 170)
                                     .opacity(8)
                                     .background(Color(.white))// Adjust frame size to fit the cell properly
@@ -140,7 +157,7 @@ struct KicksUIView: View {
                     
                     .padding()
                     .edgesIgnoringSafeArea(.all)
-                    .navigationTitle("Hello John")
+                    .navigationBarTitleDisplayMode(.inline)
                     
                     
                     
@@ -151,7 +168,7 @@ struct KicksUIView: View {
                 
                 
             }
-            .navigationTitle("Hello John")
+
                 .padding(.top, -6)} // Move the whole VStack slightly upward
         }
     }
@@ -167,10 +184,14 @@ struct NewArrivalCellView1: View {
     }
 }
 
-#if DEBUG
-struct KicksUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        KicksUIView()
-    }
+#Preview {
+    KicksUIView()
 }
-#endif
+
+//#if DEBUG
+//struct KicksUIView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        KicksUIView()
+//    }
+//}
+//#endif

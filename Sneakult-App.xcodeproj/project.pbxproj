@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF562BE379A1006912B2 /* Sneaker2.usdz */; };
+		3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF572BE379A1006912B2 /* Sneaker3.usdz */; };
 		186918732BE38E7000E5E3EB /* PaymentCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */; };
 		186918762BE3916400E5E3EB /* settingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918752BE3916400E5E3EB /* settingView.swift */; };
 		186918782BE40BA000E5E3EB /* languageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918772BE40BA000E5E3EB /* languageSettings.swift */; };
@@ -17,7 +19,7 @@
 		186918822BE415BB00E5E3EB /* ContactSupportSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */; };
 		186918842BE4165700E5E3EB /* SendFeedBackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */; };
 		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
-		3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* ContentView.swift */; };
+		3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* MainContentView.swift */; };
 		3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */; };
 		3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */; };
 		3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */; };
@@ -68,9 +70,13 @@
 		3FFB1F2B2BE2379300A19AAB /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB1F2A2BE2379300A19AAB /* Announcements.swift */; };
 		3FFB1F2F2BE25E6600A19AAB /* sneaker_airforce.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB1F2E2BE25E6600A19AAB /* sneaker_airforce.usdz */; };
 		3FFB1F312BE25FA200A19AAB /* sneaker_airforce.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3FFB1F302BE25FA200A19AAB /* sneaker_airforce.scn */; };
+		C851FCBD2BE408A900EA0EAE /* SocketNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C851FCBC2BE408A900EA0EAE /* SocketNetwork.swift */; };
+		C851FCC02BE40C0C00EA0EAE /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = C851FCBF2BE40C0C00EA0EAE /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F08BF562BE379A1006912B2 /* Sneaker2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker2.usdz; sourceTree = "<group>"; };
+		3F08BF572BE379A1006912B2 /* Sneaker3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker3.usdz; sourceTree = "<group>"; };
 		186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCellView.swift; sourceTree = "<group>"; };
 		186918752BE3916400E5E3EB /* settingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingView.swift; sourceTree = "<group>"; };
 		186918772BE40BA000E5E3EB /* languageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageSettings.swift; sourceTree = "<group>"; };
@@ -82,7 +88,7 @@
 		186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedBackSetting.swift; sourceTree = "<group>"; };
 		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakult_AppApp.swift; sourceTree = "<group>"; };
-		3F1E08462BE0C40200BAD404 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F1E08462BE0C40200BAD404 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F1E08592BE0C4FF00BAD404 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3F1E085C2BE0C56A00BAD404 /* NewSneakerListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSneakerListing.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 		3FFB1F2A2BE2379300A19AAB /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
 		3FFB1F2E2BE25E6600A19AAB /* sneaker_airforce.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_airforce.usdz; sourceTree = "<group>"; };
 		3FFB1F302BE25FA200A19AAB /* sneaker_airforce.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = sneaker_airforce.scn; sourceTree = "<group>"; };
+		C851FCBC2BE408A900EA0EAE /* SocketNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C851FCC02BE40C0C00EA0EAE /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +180,6 @@
 		3F1E08382BE0C40200BAD404 = {
 			isa = PBXGroup;
 			children = (
-				3F8D34A32BE28E1900C07741 /* Assets.xcassets */,
 				3F1E08432BE0C40200BAD404 /* Sneakult-App */,
 				3F1E08422BE0C40200BAD404 /* Products */,
 			);
@@ -189,6 +196,7 @@
 		3F1E08432BE0C40200BAD404 /* Sneakult-App */ = {
 			isa = PBXGroup;
 			children = (
+				C851FCBB2BE4089200EA0EAE /* Networking */,
 				186918742BE38F3100E5E3EB /* Settings */,
 				186918712BE38E1600E5E3EB /* Payment */,
 				3FFB1F232BE2187200A19AAB /* ARModel */,
@@ -201,7 +209,7 @@
 				3F1E08542BE0C4A000BAD404 /* Bag */,
 				3F1E08522BE0C47100BAD404 /* Community */,
 				3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */,
-				3F1E08462BE0C40200BAD404 /* ContentView.swift */,
+				3F1E08462BE0C40200BAD404 /* MainContentView.swift */,
 				3F1E084A2BE0C40300BAD404 /* Preview Content */,
 				3F1E08682BE0C7D600BAD404 /* MainView.swift */,
 			);
@@ -211,6 +219,7 @@
 		3F1E084A2BE0C40300BAD404 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				3F8D34A32BE28E1900C07741 /* Assets.xcassets */,
 				3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -317,6 +326,8 @@
 		3FFB1F232BE2187200A19AAB /* ARModel */ = {
 			isa = PBXGroup;
 			children = (
+				3F08BF562BE379A1006912B2 /* Sneaker2.usdz */,
+				3F08BF572BE379A1006912B2 /* Sneaker3.usdz */,
 				3F98A1EA2BE292C800BCE953 /* sneaker_pegasustrail.usdz */,
 				3F98A1EC2BE292D200BCE953 /* sneaker_pegasustrail.scn */,
 				3FFB1F302BE25FA200A19AAB /* sneaker_airforce.scn */,
@@ -324,6 +335,14 @@
 				3FFB1F242BE2189200A19AAB /* SneakerARView.swift */,
 			);
 			path = ARModel;
+			sourceTree = "<group>";
+		};
+		C851FCBB2BE4089200EA0EAE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C851FCBC2BE408A900EA0EAE /* SocketNetwork.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +361,9 @@
 			dependencies = (
 			);
 			name = "Sneakult-App";
+			packageProductDependencies = (
+				C851FCBF2BE40C0C00EA0EAE /* SocketIO */,
+			);
 			productName = "Sneakult-App";
 			productReference = 3F1E08412BE0C40200BAD404 /* Sneakult-App.app */;
 			productType = "com.apple.product-type.application";
@@ -370,6 +392,9 @@
 				Base,
 			);
 			mainGroup = 3F1E08382BE0C40200BAD404;
+			packageReferences = (
+				C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 3F1E08422BE0C40200BAD404 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,9 +410,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F98A1ED2BE292D200BCE953 /* sneaker_pegasustrail.scn in Resources */,
+				3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */,
 				3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */,
 				3F98A1EB2BE292C900BCE953 /* sneaker_pegasustrail.usdz in Resources */,
 				3FFB1F312BE25FA200A19AAB /* sneaker_airforce.scn in Resources */,
+				3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */,
 				3FFB1F2F2BE25E6600A19AAB /* sneaker_airforce.usdz in Resources */,
 				3F8D34A42BE28E1900C07741 /* Assets.xcassets in Resources */,
 			);
@@ -415,7 +442,7 @@
 				3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */,
 				3F1E08942BE1106A00BAD404 /* Post.swift in Sources */,
 				3FFB1F292BE22E7300A19AAB /* SneakerDetailView.swift in Sources */,
-				3F1E08472BE0C40200BAD404 /* ContentView.swift in Sources */,
+				3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */,
 				3FE680762BE219CA002D93CC /* TopSeller.swift in Sources */,
 				3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */,
 				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
@@ -447,6 +474,7 @@
 				186918762BE3916400E5E3EB /* settingView.swift in Sources */,
 				3F1E086B2BE0C7F400BAD404 /* CommunityView.swift in Sources */,
 				3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */,
+				C851FCBD2BE408A900EA0EAE /* SocketNetwork.swift in Sources */,
 				3FFB1F252BE2189200A19AAB /* SneakerARView.swift in Sources */,
 				3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */,
 				3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */,
@@ -660,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C851FCBF2BE40C0C00EA0EAE /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F1E08392BE0C40200BAD404 /* Project object */;
 }
