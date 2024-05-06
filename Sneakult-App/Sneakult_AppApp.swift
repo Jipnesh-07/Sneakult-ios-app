@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Sneakult_AppApp: App {
+    var newSocket = SocketNetwork()
+
     var body: some Scene {
         WindowGroup {
             MainContentView()
