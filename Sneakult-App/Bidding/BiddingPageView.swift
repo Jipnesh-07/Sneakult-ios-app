@@ -2,11 +2,13 @@ import SwiftUI
 
 struct BiddingPageView: View {
     
+    @ObservedObject var service = SocketNetworkManager()
     var shoe: BidsCard
     var bids = BidCardDataModel().getAllBidCards()
     
+    
     var body: some View {
-       ScrollView {
+        ScrollView {
             VStack {
                 HStack{
                     Image(systemName: "clock")
@@ -31,7 +33,7 @@ struct BiddingPageView: View {
                         .resizable()
                         .frame(width: 100, height: 100)
                         .aspectRatio(contentMode: .fit)
-                        
+                    
                     Text("\(shoe.title)")
                         .fontWeight(.bold)
                         .font(.title2)
@@ -67,7 +69,7 @@ struct BiddingPageView: View {
                     
                     .padding(.leading)
                     .padding()
-        
+                    
                 }
                 
                 VStack (alignment : .leading){
@@ -75,96 +77,106 @@ struct BiddingPageView: View {
                         .font(.title2)
                 }
                 
-                VStack{
-                    HStack {
-                        HStack{
-                            Text("01")
-                            Text("Jatin Bansal")
-                        }
-                        Spacer()
-                        Text("₹8697")
+                VStack {
+                    ForEach(service.messages, id: \.self.id) { message in
+                        BidCell(price: message.text, user: message.user)
                     }
-                    .padding(.vertical, 20)
-                    HStack {
-                        HStack{
-                            Text("01")
-                            Text("Jatin Bansal")
-                        }
-                        Spacer()
-                        Text("₹8697")
-                    }
-                    .padding(.vertical, 20)
-                    HStack {
-                        HStack{
-                            Text("01")
-                            Text("Jatin Bansal")
-                        }
-                        Spacer()
-                        Text("₹8697")
-                    }
-                    .padding(.vertical, 20)
-                    HStack {
-                        HStack{
-                            Text("01")
-                            Text("Jatin Bansal")
-                        }
-                        Spacer()
-                        Text("₹8697")
-                    }
-                    .padding(.vertical, 20)
-                }
-                .padding(.horizontal, 30)
-            
-              
-                
-                HStack {
-                    Button(action: {
-                        //Todo: Perform Action
-                    }, label: {
-                        Image(systemName: "minus.square.fill")
-                            .foregroundColor(.gray)
-                            .padding(.leading)
-                        
-                        Text(shoe.currentBid)
-                            .foregroundColor(.gray)
-                            .font(.title3)
-    //                        .padding()
-                        
-                        
-                        Image(systemName: "plus.square.fill")
-                            .foregroundColor(.gray)
-                            .padding(.trailing)
-                    })
-                    .frame(maxWidth: .infinity, maxHeight: 25)
-                    .padding(12)
-    //                .background(.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
-    //                .cornerRadius(16)
-
+                    // }
+                    /* ForEach(service.messages, id: \.self) { message in
+                     Text("Hello")
+                     } */
                     
-                    Button(action: {
-                        //Todo: Perform Action
-                    }, label: {
-                        Text("Place Bid")
-                            .foregroundColor(.white)
-                            .font(.title2)
-                        
-                    })
-                    .frame(maxWidth: .infinity, maxHeight: 25)
-                    .padding(12)
+                    /* VStack{
+                     HStack {
+                     HStack{
+                     Text("01")
+                     Text("Jatin Bansal")
+                     }
+                     Spacer()
+                     Text("₹8697")
+                     }
+                     .padding(.vertical, 20)
+                     HStack {
+                     HStack{
+                     Text("01")
+                     Text("Jatin Bansal")
+                     }
+                     Spacer()
+                     Text("₹8697")
+                     }
+                     .padding(.vertical, 20)
+                     HStack {
+                     HStack{
+                     Text("01")
+                     Text("Jatin Bansal")
+                     }
+                     Spacer()
+                     Text("₹8697")
+                     }
+                     .padding(.vertical, 20)
+                     HStack {
+                     HStack{
+                     Text("01")
+                     Text("Jatin Bansal")
+                     }
+                     Spacer()
+                     Text("₹8697")
+                     }
+                     .padding(.vertical, 20)
+                     }
+                     .padding(.horizontal, 30) */
                     
-                    .background(Color(red: 43/255, green: 100/255, blue: 79/255))
-                    .cornerRadius(16)
+                    
+                    
+                    HStack {
+                        Button(action: {
+                            //Todo: Perform Action
+                        }, label: {
+                            Image(systemName: "minus.square.fill")
+                                .foregroundColor(.gray)
+                                .padding(.leading)
+                            
+                            Text(shoe.currentBid)
+                                .foregroundColor(.gray)
+                                .font(.title3)
+                            //                        .padding()
+                            
+                            
+                            Image(systemName: "plus.square.fill")
+                                .foregroundColor(.gray)
+                                .padding(.trailing)
+                        })
+                        .frame(maxWidth: .infinity, maxHeight: 25)
+                        .padding(12)
+                        //                .background(.black)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
+                        //                .cornerRadius(16)
+                        
+                        
+                        Button(action: {
+                            //Todo: Perform Action
+                        }, label: {
+                            Text("Place Bid")
+                                .foregroundColor(.white)
+                                .font(.title2)
+                            
+                        })
+                        .frame(maxWidth: .infinity, maxHeight: 25)
+                        .padding(12)
+                        
+                        .background(Color(red: 43/255, green: 100/255, blue: 79/255))
+                        .cornerRadius(16)
+                    }
+                    .padding()
+                    
+                    
+                    Spacer()
+                    
                 }
-                .padding()
-                
-                
-                Spacer()
-                
             }
+            .navigationBarTitleDisplayMode(.inline)
         }
-       .navigationBarTitleDisplayMode(.inline)
     }
 }
 

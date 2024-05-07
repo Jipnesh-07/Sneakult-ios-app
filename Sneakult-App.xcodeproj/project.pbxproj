@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF562BE379A1006912B2 /* Sneaker2.usdz */; };
-		3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF572BE379A1006912B2 /* Sneaker3.usdz */; };
 		186918732BE38E7000E5E3EB /* PaymentCardCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */; };
 		186918762BE3916400E5E3EB /* settingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918752BE3916400E5E3EB /* settingView.swift */; };
 		186918782BE40BA000E5E3EB /* languageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918772BE40BA000E5E3EB /* languageSettings.swift */; };
@@ -18,6 +16,8 @@
 		186918802BE4152700E5E3EB /* PrivacyPolicySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */; };
 		186918822BE415BB00E5E3EB /* ContactSupportSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */; };
 		186918842BE4165700E5E3EB /* SendFeedBackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */; };
+		3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF562BE379A1006912B2 /* Sneaker2.usdz */; };
+		3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF572BE379A1006912B2 /* Sneaker3.usdz */; };
 		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
 		3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08462BE0C40200BAD404 /* MainContentView.swift */; };
 		3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1E084B2BE0C40300BAD404 /* Preview Assets.xcassets */; };
@@ -51,6 +51,8 @@
 		3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08992BE1108900BAD404 /* BidsCard.swift */; };
 		3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089D2BE1109700BAD404 /* Payments.swift */; };
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
+		3F259B5B2BEA27C600C2C0E0 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */; };
+		3F259B5D2BEA3B5100C2C0E0 /* BidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */; };
 		3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */; };
 		3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */; };
 		3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D34872BE2683F00C07741 /* ScannerView.swift */; };
@@ -58,6 +60,7 @@
 		3F98A1EB2BE292C900BCE953 /* sneaker_pegasustrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F98A1EA2BE292C800BCE953 /* sneaker_pegasustrail.usdz */; };
 		3F98A1ED2BE292D200BCE953 /* sneaker_pegasustrail.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3F98A1EC2BE292D200BCE953 /* sneaker_pegasustrail.scn */; };
 		3F98A20B2BE2B46700BCE953 /* CommunityUIViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F98A20A2BE2B46600BCE953 /* CommunityUIViewCell2.swift */; };
+		3F9D87B62BEA40F200D5BFF5 /* USDZScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 3F9D87B52BEA40F200D5BFF5 /* USDZScanner */; };
 		3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001DF2BE1F9F400B72505 /* WishListView.swift */; };
 		3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E12BE1FA0100B72505 /* CheckOutView.swift */; };
 		3FE001E82BE21DAB00B72505 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE001E72BE21DAB00B72505 /* Login.swift */; };
@@ -75,8 +78,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F08BF562BE379A1006912B2 /* Sneaker2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker2.usdz; sourceTree = "<group>"; };
-		3F08BF572BE379A1006912B2 /* Sneaker3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker3.usdz; sourceTree = "<group>"; };
 		186918722BE38E7000E5E3EB /* PaymentCardCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCardCellView.swift; sourceTree = "<group>"; };
 		186918752BE3916400E5E3EB /* settingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingView.swift; sourceTree = "<group>"; };
 		186918772BE40BA000E5E3EB /* languageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = languageSettings.swift; sourceTree = "<group>"; };
@@ -86,6 +87,8 @@
 		1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicySetting.swift; sourceTree = "<group>"; };
 		186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportSetting.swift; sourceTree = "<group>"; };
 		186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedBackSetting.swift; sourceTree = "<group>"; };
+		3F08BF562BE379A1006912B2 /* Sneaker2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker2.usdz; sourceTree = "<group>"; };
+		3F08BF572BE379A1006912B2 /* Sneaker3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker3.usdz; sourceTree = "<group>"; };
 		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sneakult_AppApp.swift; sourceTree = "<group>"; };
 		3F1E08462BE0C40200BAD404 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		3F1E08992BE1108900BAD404 /* BidsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidsCard.swift; sourceTree = "<group>"; };
 		3F1E089D2BE1109700BAD404 /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payments.swift; sourceTree = "<group>"; };
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidCell.swift; sourceTree = "<group>"; };
 		3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsView.swift; sourceTree = "<group>"; };
 		3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
 		3F8D34872BE2683F00C07741 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C851FCC02BE40C0C00EA0EAE /* SocketIO in Frameworks */,
+				3F9D87B62BEA40F200D5BFF5 /* USDZScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 				3F1E086E2BE0C82900BAD404 /* BiddingView.swift */,
 				3F1E08702BE0C91A00BAD404 /* BidCardView.swift */,
 				3F1E08722BE0C97100BAD404 /* BiddingPageView.swift */,
+				3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */,
 			);
 			path = Bidding;
 			sourceTree = "<group>";
@@ -341,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				C851FCBC2BE408A900EA0EAE /* SocketNetwork.swift */,
+				3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -363,6 +371,7 @@
 			name = "Sneakult-App";
 			packageProductDependencies = (
 				C851FCBF2BE40C0C00EA0EAE /* SocketIO */,
+				3F9D87B52BEA40F200D5BFF5 /* USDZScanner */,
 			);
 			productName = "Sneakult-App";
 			productReference = 3F1E08412BE0C40200BAD404 /* Sneakult-App.app */;
@@ -394,6 +403,7 @@
 			mainGroup = 3F1E08382BE0C40200BAD404;
 			packageReferences = (
 				C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */,
+				3F9D87B42BEA40F200D5BFF5 /* XCRemoteSwiftPackageReference "USDZScanner" */,
 			);
 			productRefGroup = 3F1E08422BE0C40200BAD404 /* Products */;
 			projectDirPath = "";
@@ -444,6 +454,7 @@
 				3FFB1F292BE22E7300A19AAB /* SneakerDetailView.swift in Sources */,
 				3F1E08472BE0C40200BAD404 /* MainContentView.swift in Sources */,
 				3FE680762BE219CA002D93CC /* TopSeller.swift in Sources */,
+				3F259B5D2BEA3B5100C2C0E0 /* BidCell.swift in Sources */,
 				3F1E089E2BE1109700BAD404 /* Payments.swift in Sources */,
 				3FE001E02BE1F9F400B72505 /* WishListView.swift in Sources */,
 				3FE680722BE2198D002D93CC /* OnBoardingView.swift in Sources */,
@@ -458,6 +469,7 @@
 				3F1E087B2BE0CCA300BAD404 /* CommunityUIViewCell.swift in Sources */,
 				3F1E085A2BE0C4FF00BAD404 /* ProfileView.swift in Sources */,
 				3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */,
+				3F259B5B2BEA27C600C2C0E0 /* MessageModel.swift in Sources */,
 				186918732BE38E7000E5E3EB /* PaymentCardCellView.swift in Sources */,
 				3F1E08A02BE110A400BAD404 /* Card.swift in Sources */,
 				3F1E088E2BE1104000BAD404 /* SellerDetails.swift in Sources */,
@@ -619,6 +631,8 @@
 				DEVELOPMENT_TEAM = FLP7J4H463;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Sneakult;
+				INFOPLIST_KEY_NSCameraUsageDescription = "this app uses";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -648,6 +662,8 @@
 				DEVELOPMENT_TEAM = FLP7J4H463;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Sneakult;
+				INFOPLIST_KEY_NSCameraUsageDescription = "this app uses";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -690,6 +706,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F9D87B42BEA40F200D5BFF5 /* XCRemoteSwiftPackageReference "USDZScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/USDZScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
 		C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
@@ -701,6 +725,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F9D87B52BEA40F200D5BFF5 /* USDZScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F9D87B42BEA40F200D5BFF5 /* XCRemoteSwiftPackageReference "USDZScanner" */;
+			productName = USDZScanner;
+		};
 		C851FCBF2BE40C0C00EA0EAE /* SocketIO */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C851FCBE2BE40C0C00EA0EAE /* XCRemoteSwiftPackageReference "socket" */;

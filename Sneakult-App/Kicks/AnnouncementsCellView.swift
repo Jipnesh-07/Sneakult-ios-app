@@ -4,7 +4,7 @@ struct AnnouncementsCellView: View {
 //    @State private var selectedAnnouncement: Announcements?
     var announcement : Announcements
     var body: some View {
-        RoundedRectangle(cornerRadius: 20)
+        RoundedRectangle(cornerRadius: 11)
             .foregroundColor(.white)
             .frame(width: 300, height: 130)
             .opacity(2)
@@ -16,7 +16,7 @@ struct AnnouncementsCellView: View {
                             .scaledToFill()
                             .frame(width: 150, height: 130)
                             .clipShape(Rectangle())
-                            .cornerRadius(20)
+                            .cornerRadius(11)
                             .frame(maxWidth: .infinity)
                         
                         VStack(alignment: .leading, spacing: 4) {
@@ -35,7 +35,8 @@ struct AnnouncementsCellView: View {
                     }
                 
             }
-            .shadow(radius: 8)
+            .shadow(radius: 2)
+            .opacity(4)
         
 //        .onAppear {
 //            let announcementsDataModel = AnnouncementsDataModel()

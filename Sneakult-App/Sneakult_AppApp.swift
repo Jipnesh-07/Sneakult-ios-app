@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Sneakult_AppApp: App {
-    var newSocket = SocketNetwork()
+    var newSocket = SocketNetworkManager()
 
     var body: some Scene {
         WindowGroup {

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct BiddingView: View {
     
-    
+    var service = SocketNetworkManager()
     @State private var searchText = ""
     @State private var selectedSegment = 0
-    var bids = BidCardDataModel().getAllBidCards()
-    let bidsCardCount: Int = BidCardDataModel().getAllBidCards().count
     
-     
+    var rooms: [String] = [String]()
+    
+    var bids = BidCardDataModel().getAllBidCards()
+    var bidsCardCount: Int = 0
     
     var body: some View {
         NavigationStack  {
@@ -27,7 +28,7 @@ struct BiddingView: View {
                         Text("Popular").tag(2)
                     }
                     .pickerStyle(.segmented)
-//                    .padding(.horizontal, 16)
+                    //                    .padding(.horizontal, 16)
                     
                     Text("Ongoing Bids")
                         .font(.title2)
@@ -36,38 +37,38 @@ struct BiddingView: View {
                         .padding(.top, 8)
                     
                     
-                  
-
+                    
+                    
                     
                     if selectedSegment == 0 {
                         ScrollView(.vertical){
                             VStack{
-                                ForEach(0..<bidsCardCount) { index in
+                                ForEach(0..<service.roomCount) { index in
                                     NavigationLink(destination: BiddingPageView(shoe: bids[index])) {
                                         BidCardView(bidcard: bids[index])
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            
+                                        
                                             .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.1))
-                    //                        .padding(.horizontal, 16)
-//                                            .shadow(radius: 5)
+                                        //                        .padding(.horizontal, 16)
+                                        //                                            .shadow(radius: 5)
                                             .padding(.bottom, 8)
                                     }
                                 }
                             }
                         }
                     }
-                       
+                    
                     
                     if selectedSegment == 1 {
                         ScrollView(.vertical){
                             VStack{
-                                ForEach(2..<bidsCardCount) { index in
+                                ForEach(2..<service.roomCount) { index in
                                     NavigationLink(destination: BiddingPageView(shoe: bids[index])) {
                                         BidCardView(bidcard: bids[index])
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            
+                                        
                                             .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.1))
-                    //                        .padding(.horizontal, 16)
+                                        //                        .padding(.horizontal, 16)
                                             .shadow(radius: 15)
                                             .padding(.bottom, 8)
                                     }
@@ -75,7 +76,7 @@ struct BiddingView: View {
                             }
                         }
                     }
-                      
+                    
                     
                     if selectedSegment == 2{
                         ScrollView(.vertical){
@@ -84,9 +85,9 @@ struct BiddingView: View {
                                     NavigationLink(destination: BiddingPageView(shoe: bids[index])) {
                                         BidCardView(bidcard: bids[index])
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
-                                            
+                                        
                                             .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.1))
-                    //                        .padding(.horizontal, 16)
+                                        //                        .padding(.horizontal, 16)
                                             .shadow(radius: 15)
                                             .padding(.bottom, 8)
                                     }
@@ -94,21 +95,6 @@ struct BiddingView: View {
                             }
                         }
                     }
-                      
-                    
-//                    BidCardView()
-//                        .frame(height: 180)
-//                        .clipShape(RoundedRectangle(cornerRadius: 12))
-//                        .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
-////                        .padding(.horizontal, 16)
-//                        .padding(.bottom, 6)
-                    
-//                    BidCardView()
-//                        .frame(height: 180)
-//                        .clipShape(RoundedRectangle(cornerRadius: 12))
-//                        .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
-////                        .padding(.horizontal, 16)
-//                        .padding(.bottom, 8)
                     
                 }
                 .padding(.horizontal, 16)
@@ -116,6 +102,9 @@ struct BiddingView: View {
             }
         }
         .searchable(text: $searchText)
+        .onAppear() {
+            
+        }
     }
 }
 

@@ -16,7 +16,7 @@ struct FilterCardView: View {
                 .foregroundColor(Color.white)
                 .opacity(2)
                 .blur(radius: 10)
-                .frame(width: 300, height: 300)
+                .frame(width: 300, height: 800)
             VStack(alignment: .leading, spacing: 1) {
                 ScrollView (showsIndicators: false){
                     FilterSectionView(title: "Brand", options: ["Nike", "Adidas","New Balance", "Vans", "Puma", "Reebok"])
@@ -33,16 +33,18 @@ struct FilterCardView: View {
                 .font(.body)
                 .foregroundColor(.white)
                 .padding()
-                .background(Color.blue)
+                .background(Color(.accent))
                 .cornerRadius(8)
             }
-            .padding()
-            .background(Color.white)
-            .cornerRadius(16)
-            .shadow(radius: 5)
-            .frame(width: 350, height: 450)
+            .padding(.top,45)
+//            .padding()
+//            .background(Color.white)
+//            .cornerRadius(16)
+//            .shadow(radius: 5)
+//            .frame(width: 350, height: 450)
         }
         .padding()
+//        .padding(.top,45)
         .sheet(isPresented: $isFilterSheetPresented) {
             FilterCardView()
         }
@@ -73,7 +75,7 @@ struct FilterSectionView: View {
             Button("Clear Selection") {
                 selectedOptions.removeAll()
             }
-            .foregroundColor(.blue)
+            .foregroundColor(Color(.accent))
             .padding(.top, 10)
         }
     }
@@ -88,7 +90,7 @@ struct FilterOptionRow: View {
             .foregroundColor(isSelected ? .white : .primary)
             .padding(.vertical, 8)
             .padding(.horizontal, 16)
-            .background(isSelected ? Color.blue : Color.gray.opacity(0.1))
+            .background(isSelected ? Color.accent : Color.gray.opacity(0.1))
             .cornerRadius(8)
             .onTapGesture {
                 action()

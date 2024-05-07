@@ -4,7 +4,7 @@ import SceneKit
 struct KicksUIView: View {
     
     var cards = CardDataModel().getAllCards()
-    var cardNames = CardDataModel().getAllCardSceneNames()
+//    var cardNames = CardDataModel().getAllCardSceneNames()
     let cardsCount: Int = CardDataModel().getAllCards().count
     
     var announcements = AnnouncementsDataModel().getAllAnnouncements()
@@ -26,17 +26,18 @@ struct KicksUIView: View {
                     .padding(.top,30)
                     .fontWeight(.bold)
                 HStack {
-                    HStack(spacing: -10) {
+                    HStack(spacing: -8) {
                         Image(systemName: "magnifyingglass")
                             .padding(.leading)
                             .foregroundColor(.gray)
                         TextField("Search", text: $searchText)
                             .padding()
                             .foregroundColor(.gray)
-                            .frame(height: 35)
+                            .frame( height: 35)
                     }
                     .background(Color(.systemGray6))
                     .cornerRadius(12)
+//                    .frame(maxWidth: .infinity)
                     
                     Button(action: {
                         isFilterViewPresented.toggle() // Toggle the state to present or dismiss the modal view
@@ -56,7 +57,7 @@ struct KicksUIView: View {
                 .padding(.horizontal)
                 
                 VStack(alignment: .leading){
-                    HStack(spacing: 170){
+                    HStack(spacing: 180){
                         Text("New Arrival")
                             .font(.title2)
                             .fontWeight(.bold)
@@ -64,31 +65,31 @@ struct KicksUIView: View {
                             .padding(.horizontal)
                         
                         
-                        Button{
-                            
-                        } label:{
-                            Text("View all")
-                            
-                        }
-                        
+//                        Button{
+//
+//                        } label:{
+//                            Text("View all")
+//
+//                        }
+//
                         //
                         
                         
                     }
                     
-                
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(0..<cardsCount) { index in
-                                    NavigationLink(destination: SneakerDetailView(card: cards[index])) {
-                                        NewArrivalCellView(card: cards[index])
-                                    }
+                        HStack {
+                            ForEach(0..<cardsCount) { index in
+                                NavigationLink(destination: SneakerDetailView(card: cards[index])) {
+                                    NewArrivalCellView(card: cards[index])
                                 }
                             }
-                            .padding()
+                        }
+                        .padding()
                     }
                     
-                   
+                    
                     
                     Text("Announcements")
                         .font(.title2)
@@ -98,7 +99,7 @@ struct KicksUIView: View {
                         .padding(.vertical,-5)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
+                        HStack(spacing: 16) {
                             ForEach(0..<announcementsCount, id: \.self) { index in
                                 AnnouncementsCellView(announcement: announcements[index])
                                     .frame(width: 300, height: 170)
@@ -168,7 +169,7 @@ struct KicksUIView: View {
                 
                 
             }
-
+                
                 .padding(.top, -6)} // Move the whole VStack slightly upward
         }
     }
@@ -188,10 +189,3 @@ struct NewArrivalCellView1: View {
     KicksUIView()
 }
 
-//#if DEBUG
-//struct KicksUIView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        KicksUIView()
-//    }
-//}
-//#endif

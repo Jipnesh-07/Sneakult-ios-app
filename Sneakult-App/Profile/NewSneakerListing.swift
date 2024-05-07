@@ -1,11 +1,6 @@
-////
-////  NewSneakerListing.swift
-////  Sneakult
-////
-////  Created by STUDENT on 25/04/24.
-////
-//
+
 import SwiftUI
+import USDZScanner
 
 struct NewSneakerListing: View {
     @State private var title = "Nike Air Force 1"
@@ -17,10 +12,13 @@ struct NewSneakerListing: View {
     @State private var bidPrice = "17000"
     @State private var showActionSheet = false
     
+    @State var isScanObjectPresenting = false
+    @State var url: URL?
+    
     var body: some View {
         ScrollView{
             VStack {
-             
+                
                 
                 HStack {
                     Image(systemName: "plus.circle")
@@ -33,8 +31,23 @@ struct NewSneakerListing: View {
                     VStack(alignment: .leading) {
                         Text("Add Sneaker Photo")
                         Text("Max. 5MB").bold()
+                        
+                        
+                        Button("Scan Object") {
+                            isScanObjectPresenting = true
+                        }
+                        
+                        if let url {
+                            Text(url.absoluteString)
+                        }
                     }
                     .padding(30)
+                    .sheet(isPresented: $isScanObjectPresenting, content: {
+                        USDZScanner { url in
+                            self.url = url
+                            isScanObjectPresenting = false
+                        }
+                    })
                 }
                 
                 VStack(alignment: .leading) {
@@ -43,7 +56,7 @@ struct NewSneakerListing: View {
                     TextField("Title", text: $title)
                         .padding(8)
                         .cornerRadius(10)
-                   
+                    
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                     
@@ -53,7 +66,7 @@ struct NewSneakerListing: View {
                     TextField("Title", text: $category)
                         .padding(8)
                         .cornerRadius(10)
-               
+                    
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                     
@@ -65,7 +78,7 @@ struct NewSneakerListing: View {
                             TextField("Title", text: $brand)
                                 .padding(8)
                                 .cornerRadius(10)
-                       
+                            
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
@@ -76,7 +89,7 @@ struct NewSneakerListing: View {
                             TextField("Title", text: $size)
                                 .padding(8)
                                 .cornerRadius(10)
-                       
+                            
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
@@ -88,7 +101,7 @@ struct NewSneakerListing: View {
                         .padding(8)
                         .cornerRadius(10)
                     
-          
+                    
                         .clipShape(RoundedRectangle(cornerRadius: 8))
                         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                     
@@ -99,7 +112,7 @@ struct NewSneakerListing: View {
                                 .padding(.top, 8)
                             TextField("Title", text: $salePrice)
                                 .padding(8)
-                         
+                            
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
@@ -110,7 +123,7 @@ struct NewSneakerListing: View {
                             TextField("Title", text: $bidPrice)
                                 .padding(8)
                                 .cornerRadius(10)
-                       
+                            
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                             
@@ -145,12 +158,12 @@ struct NewSneakerListing: View {
                         // Action to add photos
                     }),
                     .default(Text("Open Scanner"), action: {
-                        // Action to open scanner
-//                         ContentView()
+                        //                        vm.selectedUSDZSource = .objectCapture
                     }),
                     .cancel()
                 ])
             }
+            
         }
     }
 }
