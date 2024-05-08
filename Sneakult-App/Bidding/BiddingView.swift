@@ -12,7 +12,8 @@ struct BiddingView: View {
     var service = SocketNetworkManager()
     @State private var searchText = ""
     @State private var selectedSegment = 0
-    
+    @State private var isEditing = false
+
     var rooms: [String] = [String]()
     
     var bids = BidCardDataModel().getAllBidCards()
@@ -43,7 +44,7 @@ struct BiddingView: View {
                     if selectedSegment == 0 {
                         ScrollView(.vertical){
                             VStack{
-                                ForEach(0..<service.roomCount) { index in
+                                ForEach(0..<11) { index in
                                     NavigationLink(destination: BiddingPageView(shoe: bids[index])) {
                                         BidCardView(bidcard: bids[index])
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -62,7 +63,7 @@ struct BiddingView: View {
                     if selectedSegment == 1 {
                         ScrollView(.vertical){
                             VStack{
-                                ForEach(2..<service.roomCount) { index in
+                                ForEach(2..<8) { index in
                                     NavigationLink(destination: BiddingPageView(shoe: bids[index])) {
                                         BidCardView(bidcard: bids[index])
                                             .clipShape(RoundedRectangle(cornerRadius: 12))
@@ -99,9 +100,27 @@ struct BiddingView: View {
                 }
                 .padding(.horizontal, 16)
                 .navigationTitle("Bidding")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isEditing.toggle()
+                        }) {
+                            Image(systemName: "plus.circle")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                        }
+                    }
+                }
+                .sheet(isPresented: $isEditing) {
+                    AddNewBidView()
+                }
+                
             }
+            
         }
         .searchable(text: $searchText)
+    
+        
         .onAppear() {
             
         }

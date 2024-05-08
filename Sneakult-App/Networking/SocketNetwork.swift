@@ -79,9 +79,10 @@ final class SocketNetworkManager: ObservableObject {
     @Published var messages: [MessageModel] = [MessageModel]()
     @Published var rooms: [String] = [String]()
     @Published var roomCount: Int = 0
+    let socket: SocketIOClient
     
     init() {
-        let socket = manager.defaultSocket
+        socket = manager.defaultSocket
         
         
         socket.connect()
@@ -106,8 +107,8 @@ final class SocketNetworkManager: ObservableObject {
         
         socket.on(clientEvent: .connect) { (data, ack) in
             print("Connected!")
-            socket.emit("joinRoom", "New Room")
-            socket.on("message") { data, ack in
+            self.socket.emit("joinRoom", "New Room")
+            self.socket.on("message") { data, ack in
                 for item in data {
                     print(item)
                 }
@@ -131,6 +132,18 @@ final class SocketNetworkManager: ObservableObject {
     }
     
     func getAllRooms() -> [String] { return self.rooms }
+    
+    func makeBid(bidAmount: String) {
+        self.socket.emit("joinRoom", "New Room")
+        let jsonEncoder = JSONEncoder()
+        if let encodedData = try? jsonEncoder.encode(MessageModel(id: UUID(), text: bidAmount, user: "Arun")) {
+            print("JSON DATA :- \(encodedData.base64EncodedString())")
+        } else {
+            print("Do not work")
+        }
+        
+        self.socket.emit("sendMessage", ["text": bidAmount, "user": "Some User"])
+    }
 }
 
 var newSocket = SocketNetworkManager()

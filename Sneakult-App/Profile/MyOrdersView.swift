@@ -15,9 +15,9 @@ struct MyOrdersView: View {
             ScrollView{
                 VStack(spacing: 30){
                     OrdersView()
-                    OrdersView()
+            
                     HStack(spacing : 15){
-                        Image("nike")
+                        Image("Bidimg1")
                             .resizable()
                             .frame(width: 120, height: 120)
                             .cornerRadius(8)
@@ -55,7 +55,7 @@ struct OrdersView: View {
     var body: some View {
        
         HStack(spacing : 15){
-            Image("nike")
+            Image("Bidimg9")
                 .resizable()
                 .frame(width: 120, height: 120)
                 .cornerRadius(8)
@@ -64,9 +64,9 @@ struct OrdersView: View {
                     .font(.title3)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
-                Text("Your Bid : ₹8097")
+                Text("Size: US 7")
                     .foregroundColor(.gray)
-                Text("Time Left : 52sec")
+                Text("Price: ₹14,908")
                     .foregroundColor(.gray)
             }
             .padding()

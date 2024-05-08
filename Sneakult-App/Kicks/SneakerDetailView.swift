@@ -4,6 +4,7 @@ import SceneKit
 struct SneakerDetailView: View {
     var card: Card
     @State var scene: SCNScene?
+    @State private var selectedSize = 7
     
     var body: some View {
         ScrollView {
@@ -31,7 +32,7 @@ struct SneakerDetailView: View {
                             Text("7")
                                 .frame(width: 24, height: 24)
                                 .foregroundColor(.white)
-                                .background(Color(.systemGray))
+                                .background(Color(.accent))
                                 .clipShape(Circle())
                             Text("8")
                                 .frame(width: 24, height: 24)

@@ -1,8 +1,14 @@
+//
+//  AddNewBidView.swift
+//  Sneakult-App
+//
+//  Created by STUDENT on 08/05/24.
+//
 
 import SwiftUI
 import USDZScanner
-
-struct NewSneakerListing: View {
+struct AddNewBidView: View {
+    
     @State private var title = "Nike Air Force 1"
     @State private var category = "Sneakers"
     @State private var brand = "Nike"
@@ -14,7 +20,6 @@ struct NewSneakerListing: View {
     
     @State var isScanObjectPresenting = false
     @State var url: URL?
-    
     var body: some View {
         ScrollView{
             VStack {
@@ -108,7 +113,7 @@ struct NewSneakerListing: View {
                     
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("Sale Price")
+                            Text("Product Value")
                                 .padding(.top, 8)
                             TextField("Title", text: $salePrice)
                                 .padding(8)
@@ -123,13 +128,13 @@ struct NewSneakerListing: View {
 //                            TextField("Title", text: $bidPrice)
 //                                .padding(8)
 //                                .cornerRadius(10)
-//                            
+//
 //                                .clipShape(RoundedRectangle(cornerRadius: 8))
 //                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
-//                            
-//                            
+//
+//
 //                        }
-//                        
+//
                     }
                 }
                 
@@ -173,9 +178,6 @@ struct NewSneakerListing: View {
     }
 }
 
-
-struct NewSneakerListing_Previews: PreviewProvider {
-    static var previews: some View {
-        NewSneakerListing()
-    }
+#Preview {
+    AddNewBidView()
 }

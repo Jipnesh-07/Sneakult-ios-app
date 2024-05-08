@@ -23,12 +23,12 @@ struct CommunityProfileEditView: View {
                             Text("Name")
                                 .fontWeight(.semibold)
                             
-                            Text("John Attari")
+                            Text("Mathew Wade")
                             
                         }
                         Spacer()
 
-                        Image("image1")
+                        Image("sample 1")
                             .resizable()
                             .frame(width: 40, height: 40)
                             .clipShape(Circle())

@@ -13,12 +13,12 @@ struct BidCell: View {
     
     var body: some View {
         HStack {
-            Text("₹ \(price)")
-                .bold()
-                .font(.largeTitle)
-            Spacer()
             Text("\(user)")
                 .foregroundStyle(.secondary)
+            Spacer()
+            Text("₹ \(price)")
+                .bold()
+                .font(.headline)
             
         }
         .padding()

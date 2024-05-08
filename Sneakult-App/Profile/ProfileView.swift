@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @State private var isEditing = false 
     var body: some View {
         NavigationStack {
             List {
@@ -73,10 +75,10 @@ struct ProfileView: View {
                 }
             
                 Section {
-                    NavigationLink(destination: ProfileEditView()) {
+                    NavigationLink(destination: MyOrdersView()) {
                         Label("My Order", systemImage: "person.crop.circle")
                     }
-                    NavigationLink(destination: LogoutView()) { // Added NavigationLink for Logout
+                    NavigationLink(destination: MyBidsView()) { // Added NavigationLink for Logout
                         Label("My Bids", systemImage: "rectangle.portrait.and.arrow.right")
                     }
                     NavigationLink(destination: PaymentCardCellView()) {
@@ -91,6 +93,20 @@ struct ProfileView: View {
             .listSectionSpacing(40)
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                // "Edit" Button
+                                Button("Edit") {
+                                    isEditing.toggle() // Toggle the state variable to show/hide the edit view
+                                }
+                                .font(.headline)
+                                .foregroundColor(.accent)
+            //                    .padding(.top,-20)
+                            }
+                        }
+            .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
+                        CommunityProfileEditView() // Replace EditView with your actual edit view
+                    }
         }
         
     }

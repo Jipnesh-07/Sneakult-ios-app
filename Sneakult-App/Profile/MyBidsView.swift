@@ -12,11 +12,11 @@ struct MyBidsView: View {
 
     var body: some View {
         VStack {
-            Text("My Bids")
-                .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding()
+//            Text("My Bids")
+//                .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
+//                .font(.title2)
+//                .fontWeight(.bold)
+//                .padding()
             
             Picker(selection: $selectedSegment, label: Text("")) {
                 Text("Active").tag(0)
@@ -29,7 +29,7 @@ struct MyBidsView: View {
             
             if selectedSegment == 0 {
                 HStack(spacing : 15){
-                    Image("nike")
+                    Image("Bidimg3")
                         .resizable()
                         .frame(width: 120, height: 120)
                         .cornerRadius(8)
@@ -59,7 +59,7 @@ struct MyBidsView: View {
            if selectedSegment == 1 {
                
                HStack(spacing : 15){
-                   Image("nike")
+                   Image("Bidimg1")
                        .resizable()
                        .frame(width: 120, height: 120)
                        .cornerRadius(8)
@@ -87,6 +87,8 @@ struct MyBidsView: View {
     
             }
         }
+        .navigationTitle("MyBids")
+        .navigationBarTitleDisplayMode(.inline)
          
 
         }

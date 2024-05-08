@@ -1,94 +1,3 @@
-//import SwiftUI
-//
-//struct CommunityUIViewCell: View {
-//    
-////    @State private var post: Post?
-//    @State private var isLiked: Bool = false
-//    var postview: Post
-//
-//    var body: some View {
-//        VStack {
-//      
-//                HStack(alignment: .top, spacing: 12) {
-//                    Image(postview.image)
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(width: 40, height: 40)
-//                        .clipShape(Circle())
-//                    
-//                    VStack(alignment: .leading, spacing: 4) {
-//                        HStack {
-//                            NavigationLink(destination: CommunityProfileView()) {
-//                                Text(postview.userName)
-//                                    .font(.title3)
-//                                    .fontWeight(.semibold)
-//                            }
-//                            Spacer()
-//                            Text(postview.time)
-//                                .font(.caption)
-//                                .foregroundColor(Color(.systemGray3))
-//                            Button(action: {
-//                                // Action for ellipsis button
-//                            }) {
-//                                Image(systemName: "ellipsis")
-//                                    .foregroundColor(Color(.darkGray))
-//                            }
-//                        }
-//                        Text(postview.caption)
-//                            .font(.headline)
-//                            .fontWeight(.medium)
-//                            .foregroundColor(Color(.secondaryLabel))
-//                            .multilineTextAlignment(.leading)
-//                        
-//                        Image(postview.image)
-//                            .resizable()
-////                            .scaledToFit()
-//                            .frame(width: 250, height: 200)
-//                            .clipShape(Rectangle())
-//                            .cornerRadius(9.0)
-//                        
-//                        HStack(spacing: 16) {
-//                            Button(action: {
-//                                // Toggle the liked state
-//                                isLiked.toggle()
-//                            }) {
-//                                Image(systemName: isLiked ? "heart.fill" : "heart")
-//                                    .foregroundColor(isLiked ? Color.red : Color.black)
-//                            }
-//                            Button(action: {
-//                                // Action for comment button
-//                            }) {
-//                                Image(systemName: "bubble.right")
-//                            }
-//                            Button(action: {
-//                                // Action for share button
-//                            }) {
-//                                Image(systemName: "paperplane")
-//                            }
-//                        }
-//                        .foregroundColor(.black)
-//                        .padding(.vertical, 8)
-//                    }
-//                }
-//                .padding()
-//                Divider()
-//            
-//        }
-////        .onAppear {
-////            let postDataModel = PostDataModel()
-////            let allPosts = postDataModel.getAllPosts()
-////            self.post = allPosts.randomElement()
-////        }
-//    }
-//}
-//
-//#if DEBUG
-//struct CommunityUIViewCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CommunityUIViewCell(postview: PostDataModel().getAllPosts()[0])
-//    }
-//}
-//#endif
 
 
 import SwiftUI
@@ -101,82 +10,82 @@ struct CommunityUIViewCell: View {
     @State private var numberOfShares: Int = 0
     
     var postview: Post
-
+    
     var body: some View {
         VStack {
-      
-                HStack(alignment: .top, spacing: 12) {
+            
+            HStack(alignment: .top, spacing: 12) {
+                Image(postview.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 45, height: 45)
+                    .clipShape(Circle())
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        NavigationLink(destination: CommunityProfileView(posts: PostDataModel().getAllPosts()[0])) {
+                            Text(postview.userName)
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                        }
+                        Spacer()
+                        Text(postview.time)
+                            .font(.caption)
+                            .foregroundColor(Color(.systemGray3))
+                        Button(action: {
+                            // Action for ellipsis button
+                        }) {
+                            Image(systemName: "ellipsis")
+                                .foregroundColor(Color(.darkGray))
+                        }
+                    }
+                    Text(postview.caption)
+                        .font(.headline)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color(.secondaryLabel))
+                        .multilineTextAlignment(.leading)
+                    
                     Image(postview.image)
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: 45, height: 45)
-                        .clipShape(Circle())
+                        .frame(width: 300, height: 200)
+                        .clipShape(Rectangle())
+                        .cornerRadius(9.0)
                     
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack {
-                            NavigationLink(destination: CommunityProfileView()) {
-                                Text(postview.userName)
-                                    .font(.title3)
-                                    .fontWeight(.semibold)
+                    HStack(spacing: 16) {
+                        Button(action: {
+                            // Toggle the liked state
+                            isLiked.toggle()
+                            // Update number of likes
+                            if isLiked {
+                                numberOfLikes += 1
+                            } else {
+                                numberOfLikes -= 1
                             }
-                            Spacer()
-                            Text(postview.time)
-                                .font(.caption)
-                                .foregroundColor(Color(.systemGray3))
-                            Button(action: {
-                                // Action for ellipsis button
-                            }) {
-                                Image(systemName: "ellipsis")
-                                    .foregroundColor(Color(.darkGray))
-                            }
+                        }) {
+                            Image(systemName: isLiked ? "heart.fill" : "heart")
+                                .foregroundColor(isLiked ? Color.red : Color.black)
                         }
-                        Text(postview.caption)
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .foregroundColor(Color(.secondaryLabel))
-                            .multilineTextAlignment(.leading)
-                        
-                        Image(postview.image)
-                            .resizable()
-                            .frame(width: 300, height: 200)
-                            .clipShape(Rectangle())
-                            .cornerRadius(9.0)
-                        
-                        HStack(spacing: 16) {
-                            Button(action: {
-                                // Toggle the liked state
-                                isLiked.toggle()
-                                // Update number of likes
-                                if isLiked {
-                                    numberOfLikes += 1
-                                } else {
-                                    numberOfLikes -= 1
-                                }
-                            }) {
-                                Image(systemName: isLiked ? "heart.fill" : "heart")
-                                    .foregroundColor(isLiked ? Color.red : Color.black)
-                            }
-                            Text("\(numberOfLikes)")
-                            Button(action: {
-                                // Action for comment button
-                                numberOfComments += 1 // For example, incrementing comments
-                            }) {
-                                Image(systemName: "bubble.right")
-                            }
-                            Text("\(numberOfComments)")
-                            Button(action: {
-                                // Action for share button
-                                numberOfShares += 1 // For example, incrementing shares
-                            }) {
-                                Image(systemName: "paperplane")
-                            }
-                            Text("\(numberOfShares)")
+                        Text("\(numberOfLikes)")
+                        Button(action: {
+                            // Action for comment button
+                            numberOfComments += 1 // For example, incrementing comments
+                        }) {
+                            Image(systemName: "bubble.right")
                         }
-                        .foregroundColor(.black)
-                        .padding(.vertical, 8)
+                        Text("\(numberOfComments)")
+                        Button(action: {
+                            // Action for share button
+                            numberOfShares += 1 // For example, incrementing shares
+                        }) {
+                            Image(systemName: "paperplane")
+                        }
+                        Text("\(numberOfShares)")
                     }
+                    .foregroundColor(.black)
+                    .padding(.vertical, 8)
                 }
-                .padding(.horizontal, 10)
+            }
+            .padding(.horizontal, 10)
             Divider()
             
         }

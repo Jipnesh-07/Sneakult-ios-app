@@ -8,20 +8,42 @@
 import SwiftUI
 
 struct BagView: View {
+    @State private var isFavoriteTapped = false // Step 2
+    
     var body: some View {
-        VStack {
-            Text("My Cart")
-                .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(19)
+        NavigationStack {
+            VStack {
+                // Your existing content here
+                
+                HStack(alignment: .top) {
+                    // Other views
+                }
+                .padding()
+                
+                Cart()
+                
+                Spacer()
+            }
+            .navigationTitle("Bag")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isFavoriteTapped.toggle() // Step 3
+                    }) {
+                        Image(systemName: isFavoriteTapped ? "heart.fill" : "heart.fill")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
+                }
+            }
             
-            Cart()
-            
-            Spacer()
+            NavigationLink(destination: WishListView(), isActive: $isFavoriteTapped) {
+                EmptyView() // Step 4
+            }
         }
     }
 }
+
 
 struct Cart: View {
     @State private var quantity = 1

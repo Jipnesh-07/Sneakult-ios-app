@@ -155,7 +155,7 @@ struct BiddingPageView: View {
                         
                         
                         Button(action: {
-                            //Todo: Perform Action
+                            SocketNetworkManager().makeBid(bidAmount: "500")
                         }, label: {
                             Text("Place Bid")
                                 .foregroundColor(.white)

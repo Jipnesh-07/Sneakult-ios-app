@@ -6,11 +6,6 @@ import SwiftUI
 struct WishListView: View {
     var body: some View {
         VStack(spacing: 20) {
-            Text("My Wishlist")
-                .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
-                .font(.title2)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .padding(.bottom,30)
             
             Checkoutcard()
             
@@ -19,6 +14,8 @@ struct WishListView: View {
             Spacer()
         }
         .padding(35)
+        .navigationBarTitle("Wishlist")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

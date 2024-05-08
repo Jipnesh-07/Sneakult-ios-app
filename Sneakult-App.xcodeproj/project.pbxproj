@@ -53,6 +53,7 @@
 		3F1E08A02BE110A400BAD404 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E089F2BE110A400BAD404 /* Card.swift */; };
 		3F259B5B2BEA27C600C2C0E0 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */; };
 		3F259B5D2BEA3B5100C2C0E0 /* BidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */; };
+		3F4DA4EF2BEAC37D00D29F7D /* AddNewBidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DA4EE2BEAC37D00D29F7D /* AddNewBidView.swift */; };
 		3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */; };
 		3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */; };
 		3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D34872BE2683F00C07741 /* ScannerView.swift */; };
@@ -125,6 +126,7 @@
 		3F1E089F2BE110A400BAD404 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidCell.swift; sourceTree = "<group>"; };
+		3F4DA4EE2BEAC37D00D29F7D /* AddNewBidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBidView.swift; sourceTree = "<group>"; };
 		3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsView.swift; sourceTree = "<group>"; };
 		3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
 		3F8D34872BE2683F00C07741 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				3F1E08702BE0C91A00BAD404 /* BidCardView.swift */,
 				3F1E08722BE0C97100BAD404 /* BiddingPageView.swift */,
 				3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */,
+				3F4DA4EE2BEAC37D00D29F7D /* AddNewBidView.swift */,
 			);
 			path = Bidding;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				3FE001E22BE1FA0100B72505 /* CheckOutView.swift in Sources */,
 				C851FCBD2BE408A900EA0EAE /* SocketNetwork.swift in Sources */,
 				3FFB1F252BE2189200A19AAB /* SneakerARView.swift in Sources */,
+				3F4DA4EF2BEAC37D00D29F7D /* AddNewBidView.swift in Sources */,
 				3F1E08812BE0CD0800BAD404 /* CommunityProfileEditView.swift in Sources */,
 				3F1E085D2BE0C56A00BAD404 /* NewSneakerListing.swift in Sources */,
 				3F1E089A2BE1108900BAD404 /* BidsCard.swift in Sources */,
@@ -625,10 +629,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sneakult-App/Preview Content\"";
-				DEVELOPMENT_TEAM = FLP7J4H463;
+				DEVELOPMENT_TEAM = NFYDD48YG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Sneakult;
@@ -643,8 +648,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jipnesh.Sneakult-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jipnesh.Sneakult;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -656,10 +662,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sneakult-App/Preview Content\"";
-				DEVELOPMENT_TEAM = FLP7J4H463;
+				DEVELOPMENT_TEAM = NFYDD48YG3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Sneakult;
@@ -674,8 +681,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jipnesh.Sneakult-App";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jipnesh.Sneakult;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

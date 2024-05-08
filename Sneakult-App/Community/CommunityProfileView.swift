@@ -16,6 +16,7 @@ struct CommunityProfileView: View {
     @Namespace var animation
     @State private var isEditing = false // Add a state variable to track if edit view is presented
     
+    var posts : Post
     private var filterBarWidth: CGFloat {
         let count = CGFloat(CommunityProfileFilter.allCases.count)
         return UIScreen.main.bounds.width / count - 16
@@ -28,25 +29,25 @@ struct CommunityProfileView: View {
                     HStack(alignment:.top) {
                         VStack(alignment: .leading, spacing: 12 ) {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Steve Jobs")
+                                Text(posts.userName)
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 
-                                Text("JobvalaSteve")
-                                    .font(.subheadline )
+//                                Text("JobvalaSteve")
+//                                    .font(.subheadline )
                                 //                        2nd vstack
                             }
-                            Text("Top Sneaker Enthusiast in California. .")
+                            Text(posts.caption)
                                 .font(.footnote)
                             
-                            Text("2 followers")
+                            Text("2k followers")
                                 .font(.footnote)
                                 .foregroundColor(.gray)
                             //    1st vStack
                         }
                         //               1st Hstack
                         Spacer()
-                        Image("image1")
+                        Image(posts.image)
                             .resizable()
                             .frame(width: 60, height: 60)
                             .clipShape(Circle())
@@ -103,20 +104,22 @@ struct CommunityProfileView: View {
                 }
             }
             .padding(.horizontal)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    // "Edit" Button
-                    Button("Edit") {
-                        isEditing.toggle() // Toggle the state variable to show/hide the edit view
-                    }
-                    .font(.headline)
-                    .foregroundColor(.accent)
-                }
-            }
+//            .toolbar {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//                    // "Edit" Button
+//                    Button("Edit") {
+//                        isEditing.toggle() // Toggle the state variable to show/hide the edit view
+//                    }
+//                    .font(.headline)
+//                    .foregroundColor(.accent)
+////                    .padding(.top,-20)
+//                }
+//            }
         }
-        .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
-            CommunityProfileEditView() // Replace EditView with your actual edit view
-        }
+//        .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
+//            CommunityProfileEditView() // Replace EditView with your actual edit view
+//        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -124,5 +127,5 @@ struct CommunityProfileView: View {
 
 
 #Preview {
-    CommunityProfileView()
+    CommunityProfileView(posts: PostDataModel().getAllPosts()[0])
 }

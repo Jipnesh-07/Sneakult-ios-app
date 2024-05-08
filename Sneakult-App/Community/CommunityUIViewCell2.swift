@@ -27,7 +27,7 @@ struct CommunityUIViewCell2: View {
                 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack{
-                        NavigationLink(destination: CommunityProfileView()) {
+                        NavigationLink(destination: CommunityProfileView(posts: PostDataModel().getAllPosts()[0])) {
                             Text(SelectUserName)
                                 .font(.title3)
                                 .fontWeight(.semibold)

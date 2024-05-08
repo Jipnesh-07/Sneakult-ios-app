@@ -12,15 +12,18 @@ struct KicksUIView: View {
     
     @State private var searchText: String = ""
     @State private var isFilterViewPresented = false
-    @State private var GridImage: [String] = [ "image1", "image2","image4", "image5"]
+    @State private var GridImage: [String] = [ "image1", "image2","image3", "image5"]
+    @State private var GridImage2: [String] = ["image6", "image7", "image8"]
+    @State private var GridImage3: [String] = ["image1", "imaage2", "image4"]
     @State private var SelectGridImage: String = ""
-    
+    @State private var SelectGridImage2: String = ""
+    @State private var SelectGridImage3: String = ""
     
     var body: some View {
         NavigationView {
             ScrollView{VStack(alignment: .leading, spacing: 10) { // Add spacing between VStack elements
                 
-                Text("Hello John")
+                Text("Hello Mathew")
                     .font(.largeTitle)
                     .padding(.leading,16)
                     .padding(.top,30)
@@ -120,39 +123,43 @@ struct KicksUIView: View {
                     
                     
                     ScrollView(.horizontal, showsIndicators: false){
-                        HStack {
-                            
-                            
-                            ForEach(0..<2) { index in
-                                VStack {
-                                    
-                                    Image(SelectGridImage)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 190, height:200)
-                                        .cornerRadius(12)
-                                        .clipped()
-                                    
-                                    Image("image1")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 190, height:200)
-                                        .cornerRadius(12)
-                                        .clipped()
-                                }
-                                .onAppear {
-                                    SelectGridImage = GridImage.randomElement() ?? "defaultShoeImage"
-                                }
+                        NavigationLink(destination: CommunityView()){
+                            HStack {
                                 
-                                // Horizontal image
-                                Image("image3")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(maxWidth: 170, maxHeight: 600)
-                                    .cornerRadius(12)
+                                
+                                ForEach(0..<2) { index in
+                                    VStack {
+                                        
+                                        Image(SelectGridImage)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 190, height:200)
+                                            .cornerRadius(12)
+                                            .clipped()
+                                        
+                                        Image(SelectGridImage2)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 190, height:200)
+                                            .cornerRadius(12)
+                                            .clipped()
+                                    }
+                                    .onAppear {
+                                        SelectGridImage = GridImage.randomElement() ?? "defaultShoeImage"
+                                        SelectGridImage2 = GridImage2.randomElement() ?? "defaultShoeImage"
+                                        SelectGridImage3 = GridImage3.randomElement() ?? "defaultShoeImage"
+                                    }
+                                    
+                                    // Horizontal image
+                                    Image("image3")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(maxWidth: 170, maxHeight: 600)
+                                        .cornerRadius(12)
+                                }
+                                //                                        .clipped()
+                                
                             }
-                            //                                        .clipped()
-                            
                         }
                     }
                     

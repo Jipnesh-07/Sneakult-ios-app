@@ -21,7 +21,7 @@ struct AnnouncementsCellView: View {
                         
                         VStack(alignment: .leading, spacing: 4) {
                             Text(announcement.text)
-                                .foregroundColor(Color(.accent))
+                                .foregroundColor(.black)
                                 .font(.headline)
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
@@ -36,6 +36,7 @@ struct AnnouncementsCellView: View {
                 
             }
             .shadow(radius: 2)
+//            .border(.black)
             .opacity(4)
         
 //        .onAppear {
