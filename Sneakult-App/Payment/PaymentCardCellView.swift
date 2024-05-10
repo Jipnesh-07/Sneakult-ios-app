@@ -11,7 +11,7 @@ struct PaymentCardCellView: View {
     @State private var isAddingCard: Bool = false
     @State private var newCardInfo: PaymentCardInfo = PaymentCardInfo(cardNumber: "", cardHolderName: "", expirationDate: "", bankName: "")
     @State private var showAlert: Bool = false
-
+    
     var body: some View {
         NavigationView {
             if cards.isEmpty {
@@ -66,7 +66,7 @@ struct PaymentCardCellView: View {
             Alert(title: Text("Success"), message: Text("Card added successfully"), dismissButton: .default(Text("OK")))
         }
     }
-
+    
     private var addButton: some View {
         Button(action: {
             isAddingCard.toggle()
@@ -77,7 +77,7 @@ struct PaymentCardCellView: View {
                 .padding()
         }
     }
-
+    
     private func removeCard(at index: Int) {
         cards.remove(at: index)
     }
@@ -88,12 +88,12 @@ struct PaymentCardCellView: View {
         isAddingCard = false
         showAlert = true
     }
-
+    
 }
 
 struct PaymentCardView: View {
     let cardInfo: PaymentCardInfo
-
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
@@ -102,7 +102,7 @@ struct PaymentCardView: View {
                 )
                 .frame(width: 360, height: 230)
                 .padding()
-
+            
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
                     Spacer()
@@ -113,12 +113,12 @@ struct PaymentCardView: View {
                         .padding(.top, 20)
                 }
                 .padding(.horizontal, 20)
-
+                
                 Text("**** **** **** \(cardInfo.cardNumber.suffix(4))")
                     .foregroundColor(.white)
                     .font(.title)
                     .padding(.leading, 25)
-
+                
                 HStack {
                     VStack(alignment: .leading, spacing: 2) {
                         Text("CARDHOLDER")
@@ -151,7 +151,7 @@ struct AddCardView: View {
     @Binding var isAddingCard: Bool
     @Binding var cardInfo: PaymentCardInfo
     var onAddCard: () -> Void
-
+    
     var body: some View {
         NavigationView {
             Form {

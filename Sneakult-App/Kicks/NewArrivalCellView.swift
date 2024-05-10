@@ -19,6 +19,8 @@ struct NewArrivalCellView: View {
                 .clipShape(Rectangle())
                 .clipped()
                 .cornerRadius(6)
+                .background(Color(red: 228/255, green: 239/255, blue: 233/255))
+                .shadow(radius: 1)
             
             Text(card.text)
                 .font(.headline)

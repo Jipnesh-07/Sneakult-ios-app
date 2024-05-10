@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CommunityProfileView: View {
     
-//    @State var posts = PostDataModel().getAllPosts()
+    //    @State var posts = PostDataModel().getAllPosts()
     @State private var selectedFilter: CommunityProfileFilter = .posts
     @State private var caption = ""
     @Environment(\.dismiss) var dismiss
@@ -33,8 +33,8 @@ struct CommunityProfileView: View {
                                     .font(.title2)
                                     .fontWeight(.semibold)
                                 
-//                                Text("JobvalaSteve")
-//                                    .font(.subheadline )
+                                //                                Text("JobvalaSteve")
+                                //                                    .font(.subheadline )
                                 //                        2nd vstack
                             }
                             Text(posts.caption)
@@ -100,25 +100,25 @@ struct CommunityProfileView: View {
                         }
                     }
                     .padding(.vertical, 8)
-//                    .padding(.top,-20)
+                    //                    .padding(.top,-20)
                 }
             }
             .padding(.horizontal)
-//            .toolbar {
-//                ToolbarItem(placement: .navigationBarTrailing) {
-//                    // "Edit" Button
-//                    Button("Edit") {
-//                        isEditing.toggle() // Toggle the state variable to show/hide the edit view
-//                    }
-//                    .font(.headline)
-//                    .foregroundColor(.accent)
-////                    .padding(.top,-20)
-//                }
-//            }
+            //            .toolbar {
+            //                ToolbarItem(placement: .navigationBarTrailing) {
+            //                    // "Edit" Button
+            //                    Button("Edit") {
+            //                        isEditing.toggle() // Toggle the state variable to show/hide the edit view
+            //                    }
+            //                    .font(.headline)
+            //                    .foregroundColor(.accent)
+            ////                    .padding(.top,-20)
+            //                }
+            //            }
         }
-//        .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
-//            CommunityProfileEditView() // Replace EditView with your actual edit view
-//        }
+        //        .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
+        //            CommunityProfileEditView() // Replace EditView with your actual edit view
+        //        }
         .navigationBarTitleDisplayMode(.inline)
     }
 }

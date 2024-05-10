@@ -16,6 +16,7 @@
 		186918802BE4152700E5E3EB /* PrivacyPolicySetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */; };
 		186918822BE415BB00E5E3EB /* ContactSupportSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */; };
 		186918842BE4165700E5E3EB /* SendFeedBackSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */; };
+		3F0891202BEBCF8E00479300 /* KicksViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F08911F2BEBCF8E00479300 /* KicksViewCard.swift */; };
 		3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF562BE379A1006912B2 /* Sneaker2.usdz */; };
 		3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 3F08BF572BE379A1006912B2 /* Sneaker3.usdz */; };
 		3F1E08452BE0C40200BAD404 /* Sneakult_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E08442BE0C40200BAD404 /* Sneakult_AppApp.swift */; };
@@ -54,6 +55,8 @@
 		3F259B5B2BEA27C600C2C0E0 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */; };
 		3F259B5D2BEA3B5100C2C0E0 /* BidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */; };
 		3F4DA4EF2BEAC37D00D29F7D /* AddNewBidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4DA4EE2BEAC37D00D29F7D /* AddNewBidView.swift */; };
+		3F513CF92BEB57B50021F293 /* Sneaker3.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3F513CF82BEB57B50021F293 /* Sneaker3.scn */; };
+		3F513CFB2BEB58430021F293 /* Sneaker2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 3F513CFA2BEB58430021F293 /* Sneaker2.scn */; };
 		3F59A0DD2BE25AD200E3D5B7 /* MyBidsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */; };
 		3F59A0DF2BE25B4C00E3D5B7 /* MyOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */; };
 		3F8D34882BE2683F00C07741 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8D34872BE2683F00C07741 /* ScannerView.swift */; };
@@ -88,6 +91,7 @@
 		1869187F2BE4152700E5E3EB /* PrivacyPolicySetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicySetting.swift; sourceTree = "<group>"; };
 		186918812BE415BB00E5E3EB /* ContactSupportSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportSetting.swift; sourceTree = "<group>"; };
 		186918832BE4165700E5E3EB /* SendFeedBackSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedBackSetting.swift; sourceTree = "<group>"; };
+		3F08911F2BEBCF8E00479300 /* KicksViewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KicksViewCard.swift; sourceTree = "<group>"; };
 		3F08BF562BE379A1006912B2 /* Sneaker2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker2.usdz; sourceTree = "<group>"; };
 		3F08BF572BE379A1006912B2 /* Sneaker3.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Sneaker3.usdz; sourceTree = "<group>"; };
 		3F1E08412BE0C40200BAD404 /* Sneakult-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneakult-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,8 @@
 		3F259B5A2BEA27C600C2C0E0 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		3F259B5C2BEA3B5100C2C0E0 /* BidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BidCell.swift; sourceTree = "<group>"; };
 		3F4DA4EE2BEAC37D00D29F7D /* AddNewBidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewBidView.swift; sourceTree = "<group>"; };
+		3F513CF82BEB57B50021F293 /* Sneaker3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Sneaker3.scn; sourceTree = "<group>"; };
+		3F513CFA2BEB58430021F293 /* Sneaker2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Sneaker2.scn; sourceTree = "<group>"; };
 		3F59A0DC2BE25AD200E3D5B7 /* MyBidsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBidsView.swift; sourceTree = "<group>"; };
 		3F59A0DE2BE25B4C00E3D5B7 /* MyOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersView.swift; sourceTree = "<group>"; };
 		3F8D34872BE2683F00C07741 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 				3F1E08782BE0CA7900BAD404 /* FilterCardView.swift */,
 				3F1E08862BE0F32000BAD404 /* KicksUIView.swift */,
 				3FFB1F282BE22E7300A19AAB /* SneakerDetailView.swift */,
+				3F08911F2BEBCF8E00479300 /* KicksViewCard.swift */,
 			);
 			path = Kicks;
 			sourceTree = "<group>";
@@ -337,7 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				3F08BF562BE379A1006912B2 /* Sneaker2.usdz */,
+				3F513CFA2BEB58430021F293 /* Sneaker2.scn */,
 				3F08BF572BE379A1006912B2 /* Sneaker3.usdz */,
+				3F513CF82BEB57B50021F293 /* Sneaker3.scn */,
 				3F98A1EA2BE292C800BCE953 /* sneaker_pegasustrail.usdz */,
 				3F98A1EC2BE292D200BCE953 /* sneaker_pegasustrail.scn */,
 				3FFB1F302BE25FA200A19AAB /* sneaker_airforce.scn */,
@@ -424,10 +433,12 @@
 			files = (
 				3F98A1ED2BE292D200BCE953 /* sneaker_pegasustrail.scn in Resources */,
 				3F08BF582BE379A1006912B2 /* Sneaker2.usdz in Resources */,
+				3F513CF92BEB57B50021F293 /* Sneaker3.scn in Resources */,
 				3F1E084C2BE0C40300BAD404 /* Preview Assets.xcassets in Resources */,
 				3F98A1EB2BE292C900BCE953 /* sneaker_pegasustrail.usdz in Resources */,
 				3FFB1F312BE25FA200A19AAB /* sneaker_airforce.scn in Resources */,
 				3F08BF592BE379A1006912B2 /* Sneaker3.usdz in Resources */,
+				3F513CFB2BEB58430021F293 /* Sneaker2.scn in Resources */,
 				3FFB1F2F2BE25E6600A19AAB /* sneaker_airforce.usdz in Resources */,
 				3F8D34A42BE28E1900C07741 /* Assets.xcassets in Resources */,
 			);
@@ -444,6 +455,7 @@
 				3F1E08632BE0C6A500BAD404 /* SettingsView.swift in Sources */,
 				3F1E08902BE1105900BAD404 /* Sneaker.swift in Sources */,
 				3F1E08792BE0CA7900BAD404 /* FilterCardView.swift in Sources */,
+				3F0891202BEBCF8E00479300 /* KicksViewCard.swift in Sources */,
 				3F1E08872BE0F32000BAD404 /* KicksUIView.swift in Sources */,
 				1869187A2BE4105300E5E3EB /* TermsAndUsesSetting.swift in Sources */,
 				3F1E088A2BE1102600BAD404 /* User.swift in Sources */,

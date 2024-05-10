@@ -14,9 +14,9 @@ struct languageSettings: View {
         VStack {
             Text("Language")
                 .font(.title)
-                
+            
                 .padding()
-
+            
             List {
                 ForEach(0..<languages.count, id: \.self) { index in
                     Button(action: {
@@ -34,7 +34,7 @@ struct languageSettings: View {
                 }
             }
         }
-//        .navigationBarTitle("Language Settings")
+        //        .navigationBarTitle("Language Settings")
     }
 }
 

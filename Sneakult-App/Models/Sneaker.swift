@@ -9,7 +9,7 @@ struct Sneaker {
     var size: String
     var salePrice: Int
     var bidPrice: Int
-
+    
     
     
     init(productId: UUID, productName: String,productImage: String, brand: String, category: String, size: String, salePrice: Int, bidPrice: Int) {
@@ -43,7 +43,7 @@ class Sneakers{
     func getSneakers() -> [Sneaker]{
         return sneakers
     }
-
+    
     
 }
 

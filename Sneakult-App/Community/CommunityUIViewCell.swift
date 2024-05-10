@@ -21,6 +21,8 @@ struct CommunityUIViewCell: View {
                     .frame(width: 45, height: 45)
                     .clipShape(Circle())
                 
+                
+                
                 VStack(alignment: .leading, spacing: 4) {
                     HStack {
                         NavigationLink(destination: CommunityProfileView(posts: PostDataModel().getAllPosts()[0])) {
@@ -47,7 +49,8 @@ struct CommunityUIViewCell: View {
                     
                     Image(postview.image)
                         .resizable()
-                        .frame(width: 300, height: 200)
+                        .frame(width: 270, height: 200)
+                        .aspectRatio(contentMode: .fit)
                         .clipShape(Rectangle())
                         .cornerRadius(9.0)
                     
@@ -87,6 +90,7 @@ struct CommunityUIViewCell: View {
             }
             .padding(.horizontal, 10)
             Divider()
+                .shadow(radius: 2)
             
         }
     }

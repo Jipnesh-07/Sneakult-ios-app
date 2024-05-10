@@ -10,9 +10,9 @@ import SwiftUI
 struct settingsView: View {
     @State private var option3IsOn = true
     @State private var option4IsOn = false
-
+    
     let appVersion = "1.0" // Define the app version
-
+    
     var body: some View {
         NavigationView {
             List {

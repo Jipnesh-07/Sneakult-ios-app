@@ -15,7 +15,7 @@ struct MyOrdersView: View {
             ScrollView{
                 VStack(spacing: 30){
                     OrdersView()
-            
+                    
                     HStack(spacing : 15){
                         Image("Bidimg1")
                             .resizable()
@@ -53,7 +53,7 @@ struct MyOrdersView: View {
 
 struct OrdersView: View {
     var body: some View {
-       
+        
         HStack(spacing : 15){
             Image("Bidimg9")
                 .resizable()
@@ -74,7 +74,7 @@ struct OrdersView: View {
         
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary))
         .frame(width: .infinity)
-    
-}
+        
+    }
 }
 

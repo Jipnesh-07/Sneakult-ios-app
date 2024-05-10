@@ -23,7 +23,7 @@ struct CheckOutView: View {
             
             Spacer()
         }
-       
+        
     }
 }
 

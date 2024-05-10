@@ -32,7 +32,7 @@ class AnnouncementsDataModel {
     func getAllAnnouncements() -> [Announcements] {
         return self.announcements
     }
-
+    
     func CreateAnnouncments(image: String, text: String, secondaryText: String) -> Announcements {
         return Announcements(image: image, text: text, secondaryText: secondaryText)
     }

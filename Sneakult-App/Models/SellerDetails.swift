@@ -13,7 +13,7 @@ struct SellerDetails {
         self.ratingStar = ratingStar
     }
     
-
+    
 }
 
 class Sellers {

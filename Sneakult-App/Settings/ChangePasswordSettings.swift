@@ -12,7 +12,7 @@ struct ChangePasswordSettings: View {
     @State private var newPassword = ""
     @State private var confirmPassword = ""
     @State private var isPasswordMatchError = false
-
+    
     var body: some View {
         VStack(spacing: 20) {
             SecureField("Current Password", text: $currentPassword)

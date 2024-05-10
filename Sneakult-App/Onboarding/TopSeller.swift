@@ -19,7 +19,7 @@ struct TopSeller: Identifiable, Equatable {
     let followers: Int
     let image: ImageAsset
     var isSelected: Bool = false // Added isSelected property
-
+    
     // Implement Equatable protocol
     static func == (lhs: TopSeller, rhs: TopSeller) -> Bool {
         return lhs.id == rhs.id
@@ -28,7 +28,7 @@ struct TopSeller: Identifiable, Equatable {
 
 struct SellerView: View {
     @State private var selectedSellers: [TopSeller] = [] // State to keep track of selected sellers
-
+    
     let topSellers: [TopSeller] = [
         TopSeller(name: "Singaa", followers: 2200, image: .singaa),
         TopSeller(name: "Jordan Sandhu", followers: 2200, image: .jordanSandhu),
@@ -40,11 +40,11 @@ struct SellerView: View {
         TopSeller(name: "Jordan Sandhu", followers: 2200, image: .jordanSandhu),
         TopSeller(name: "Aryan Bhardwaj", followers: 2200, image: .aryanBhardwaj)
     ]
-
+    
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -67,7 +67,7 @@ struct SellerView: View {
                     }
                 }
                 .padding()
-
+                
                 Button(action: {
                     // Perform action when Next button is tapped
                     print("Next button tapped")
@@ -85,7 +85,7 @@ struct SellerView: View {
             .navigationTitle("Top Sellers")
         }
     }
-
+    
     private func toggleSelection(for seller: TopSeller) {
         if selectedSellers.contains(seller) {
             selectedSellers.removeAll(where: { $0 == seller }) // Deselect if already selected

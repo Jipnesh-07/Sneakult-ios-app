@@ -13,7 +13,7 @@ struct BiddingView: View {
     @State private var searchText = ""
     @State private var selectedSegment = 0
     @State private var isEditing = false
-
+    
     var rooms: [String] = [String]()
     
     var bids = BidCardDataModel().getAllBidCards()
@@ -119,7 +119,7 @@ struct BiddingView: View {
             
         }
         .searchable(text: $searchText)
-    
+        
         
         .onAppear() {
             

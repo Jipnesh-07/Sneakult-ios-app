@@ -12,7 +12,7 @@ struct BiddingPageView: View {
             VStack {
                 HStack{
                     Image(systemName: "clock")
-                    Text("15 Seconds Remaining")
+                    Text("23h Remaining")
                 }
                 .padding(10)
                 .frame(maxWidth: .infinity)
@@ -72,10 +72,10 @@ struct BiddingPageView: View {
                     
                 }
                 
-                VStack (alignment : .leading){
-                    Text("Bid Positions (30 Values)")
-                        .font(.title2)
-                }
+                //                VStack (alignment : .leading){
+                //                    Text("Bid Positions (30 Values)")
+                //                        .font(.title2)
+                //                }
                 
                 VStack {
                     ForEach(service.messages, id: \.self.id) { message in

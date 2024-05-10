@@ -43,7 +43,7 @@ class UserDataModel {
     var users: [User] = []
     
     init() {
-      
+        
         let user1 = User(name: "John Doe", id: UUID(), email: "john@example.com", image: "image1", isEmailVerified: true, location: "New York", createdAt: Date(), userName: "johndoe", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
         let user2 = User(name: "Alice Smith", id: UUID(), email: "alice@example.com", image: "image1", isEmailVerified: true, location: "Los Angeles", createdAt: Date(), userName: "alice_smith", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
@@ -53,19 +53,19 @@ class UserDataModel {
         users.append(contentsOf: [user1, user2, user3])
     }
     
-   
+    
     func addUser(_ user: User) {
         users.append(user)
     }
     
-
+    
     func removeUser(at index: Int) {
         guard index >= 0, index < users.count else {
             return
         }
         users.remove(at: index)
     }
-
     
-
+    
+    
 }

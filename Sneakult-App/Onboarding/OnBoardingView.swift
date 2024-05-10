@@ -24,68 +24,68 @@ struct OnBoardingView: View {
                 }
                 VStack(alignment:.trailing,spacing:-20){
                     
-                HStack(alignment: .top) {
-                    Image(systemName: "person.2")
-                    //                        .resizable()
-                    //                        .frame(width:30, height:25)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding(.horizontal,3)
-                    VStack(alignment: .leading) {
-                        Text("Community")
+                    HStack(alignment: .top) {
+                        Image(systemName: "person.2")
+                        //                        .resizable()
+                        //                        .frame(width:30, height:25)
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
-                        Text("Join our sneaker community to connect, share, and explore the latest trends together")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .lineLimit(3)
+                            .padding(.horizontal,3)
+                        VStack(alignment: .leading) {
+                            Text("Community")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
+                            Text("Join our sneaker community to connect, share, and explore the latest trends together")
+                                .font(.headline)
+                                .fontWeight(.medium)
+                                .lineLimit(3)
+                        }
+                        Spacer() // Add spacer to push text to the right
                     }
-                    Spacer() // Add spacer to push text to the right
-                }
-                .padding()
-                
-                HStack(alignment: .top) {
-                    Image(systemName: "indianrupeesign.arrow.circlepath")
-                    //                        .resizable()
-                    //                        .frame(width:30, height:30)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding(.horizontal,3)
-                    VStack(alignment: .leading) {
-                        Text("Bidding")
+                    .padding()
+                    
+                    HStack(alignment: .top) {
+                        Image(systemName: "indianrupeesign.arrow.circlepath")
+                        //                        .resizable()
+                        //                        .frame(width:30, height:30)
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
-                        Text("Experience the thrill of bidding for your dream kicks in real-time auctions.")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .lineLimit(3)
+                            .padding(.horizontal,3)
+                        VStack(alignment: .leading) {
+                            Text("Bidding")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
+                            Text("Experience the thrill of bidding for your dream kicks in real-time auctions.")
+                                .font(.headline)
+                                .fontWeight(.medium)
+                                .lineLimit(3)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                .padding()
-                
-                HStack (alignment: .top){
-                    Image(systemName: "bell")
-                    //                        .resizable()
-                    //                        .frame(width:30, height:30)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .padding(.horizontal,3)
-                    VStack(alignment: .leading) {
-                        Text("Time Sensitive Notifications")
+                    .padding()
+                    
+                    HStack (alignment: .top){
+                        Image(systemName: "bell")
+                        //                        .resizable()
+                        //                        .frame(width:30, height:30)
                             .font(.title2)
                             .fontWeight(.bold)
-                            .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
-                        Text("Stay ahead of the game with timely notifications on limited releases and exclusive deals")
-                            .font(.headline)
-                            .fontWeight(.medium)
-                            .lineLimit(3)
+                            .padding(.horizontal,3)
+                        VStack(alignment: .leading) {
+                            Text("Time Sensitive Notifications")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
+                            Text("Stay ahead of the game with timely notifications on limited releases and exclusive deals")
+                                .font(.headline)
+                                .fontWeight(.medium)
+                                .lineLimit(3)
+                        }
+                        Spacer()
                     }
-                    Spacer()
-                }
-                .padding()
+                    .padding()
                 }
                 .padding(.top,100)
                 

@@ -117,19 +117,7 @@ struct NewSneakerListing: View {
                                 .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
                         
-//                        VStack(alignment: .leading) {
-//                            Text("Bid Price")
-//                                .padding(.top, 8)
-//                            TextField("Title", text: $bidPrice)
-//                                .padding(8)
-//                                .cornerRadius(10)
-//                            
-//                                .clipShape(RoundedRectangle(cornerRadius: 8))
-//                                .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
-//                            
-//                            
-//                        }
-//                        
+                        
                     }
                 }
                 

@@ -37,19 +37,19 @@ struct FilterCardView: View {
                 .cornerRadius(8)
             }
             .padding(.top,45)
-//            .padding()
-//            .background(Color.white)
-//            .cornerRadius(16)
-//            .shadow(radius: 5)
-//            .frame(width: 350, height: 450)
+            //            .padding()
+            //            .background(Color.white)
+            //            .cornerRadius(16)
+            //            .shadow(radius: 5)
+            //            .frame(width: 350, height: 450)
         }
         .padding()
-//        .padding(.top,45)
+        //        .padding(.top,45)
         .sheet(isPresented: $isFilterSheetPresented) {
             FilterCardView()
         }
         .frame(width: 300, height: 300)
-
+        
     }
 }
 struct FilterSectionView: View {

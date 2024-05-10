@@ -53,14 +53,14 @@ struct CommunityUIViewCell2: View {
                         .multilineTextAlignment(.leading)
                     
                     
-//                                        HStack(alignment: .center){
-//                                            Image(SelectPostimage)
-//                                                .resizable()
-//                                                .scaledToFill()
-//                                                .frame(width: 300,height: 200)
-//                                                .clipShape(Rectangle())
-//                                                .cornerRadius(9.0)
-//                                        }
+                    //                                        HStack(alignment: .center){
+                    //                                            Image(SelectPostimage)
+                    //                                                .resizable()
+                    //                                                .scaledToFill()
+                    //                                                .frame(width: 300,height: 200)
+                    //                                                .clipShape(Rectangle())
+                    //                                                .cornerRadius(9.0)
+                    //                                        }
                     
                     HStack(spacing: 16){
                         Button(action: {

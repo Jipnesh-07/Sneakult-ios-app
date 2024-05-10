@@ -10,7 +10,7 @@ import SwiftUI
 struct SendFeedBackSetting: View {
     @State private var feedbackText = ""
     @State private var isShowingConfirmation = false
-
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Send Feedback")

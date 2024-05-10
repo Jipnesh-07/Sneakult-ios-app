@@ -31,9 +31,9 @@ class ReviewsDataModel{
         
         let user3 = User(name: "Bob Johnson", id: UUID(), email: "bob@example.com", image: "image1", isEmailVerified: true, location: "Chicago", createdAt: Date(), userName: "bobby", listings: [], posts: [], reviews: [], followers: [], following: [], payments: [])
         
-            let review1 = Reviews(user: user1, reviewId: UUID(), time: Date(), stars: 4)
-            let review2 = Reviews(user: user2, reviewId: UUID(), time: Date(), stars: 5)
-            let review3 = Reviews(user: user3, reviewId: UUID(), time: Date(), stars: 3)
+        let review1 = Reviews(user: user1, reviewId: UUID(), time: Date(), stars: 4)
+        let review2 = Reviews(user: user2, reviewId: UUID(), time: Date(), stars: 5)
+        let review3 = Reviews(user: user3, reviewId: UUID(), time: Date(), stars: 3)
         
         reviews.append(contentsOf: [review1,review2,review3])
     }

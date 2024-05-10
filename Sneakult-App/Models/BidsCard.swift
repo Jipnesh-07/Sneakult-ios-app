@@ -36,18 +36,18 @@ class BidCardDataModel {
         
         
         let bidsCard1 = BidsCard(image: "Bidimg1", title: "Nike Dunk Low", seller: "Selena", currentBid: "12000", productValue: "8000", time: "23:48:34", size: 7, colour: "Black/Grey")
-        let bidsCard2 = BidsCard(image: "Bidimg2", title: "Nike Cortez", seller: "Rajesh", currentBid: "809990", productValue: "7685", time: "16:45:45", size: 8, colour: "Blue")
-        let bidsCard3 = BidsCard(image: "Bidimg3", title: "Nike Vaporfly 3", seller: "Rajesh", currentBid: "309879", productValue: "86550", time: "16:45:89", size: 9, colour: "red")
-        let bidsCard4 = BidsCard(image: "Bidimg4", title: "Nike ", seller: "Prabhakar", currentBid: "765491", productValue: "876234", time: "16:45:35", size: 6, colour: "Green")
-        let bidsCard5 = BidsCard(image: "Bidimg5", title: "Nike Zoom Vimereo 5", seller: "Vishnu Bansal", currentBid: "765491", productValue: "45673", time: "16:45:67", size: 8, colour: "Green")
-        let bidsCard6 = BidsCard(image: "Bidimg6", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard7 = BidsCard(image: "Bidimg7", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard8 = BidsCard(image: "Bidimg8", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard9 = BidsCard(image: "Bidimg9", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard10 = BidsCard(image: "Bidimg10", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard11 = BidsCard(image: "Bidimg11", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-        let bidsCard12 = BidsCard(image: "Bidimg12", title: "Nike Zoom Vimereo 5", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
-       
+        let bidsCard2 = BidsCard(image: "Bidimg3", title: "Nike Cortez", seller: "Rajesh", currentBid: "809990", productValue: "7685", time: "16:45:45", size: 8, colour: "Blue")
+        let bidsCard3 = BidsCard(image: "Bidimg6", title: "Nike Vaporfly 3", seller: "Rajesh", currentBid: "309879", productValue: "86550", time: "16:45:89", size: 9, colour: "red")
+        let bidsCard4 = BidsCard(image: "Bidimg5", title: "Nike Retro 6 ", seller: "Prabhakar", currentBid: "765491", productValue: "876234", time: "16:45:35", size: 6, colour: "Green")
+        let bidsCard5 = BidsCard(image: "Bidimg12", title: "Nike Vimereo 5", seller: "Vishnu Bansal", currentBid: "765491", productValue: "45673", time: "16:45:67", size: 8, colour: "Green")
+        let bidsCard6 = BidsCard(image: "Bidimg7", title: "Nike Mica Low", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard7 = BidsCard(image: "Bidimg8", title: "Jordan New 6", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard8 = BidsCard(image: "Bidimg9", title: "Air Jordan s3", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard9 = BidsCard(image: "Bidimg14", title: "Alias Creature", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard10 = BidsCard(image: "Bidimg11", title: "Nike Hulk Finds", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard11 = BidsCard(image: "Bidimg12", title: "Nike SB 5f", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        let bidsCard12 = BidsCard(image: "Bidimg13", title: "Bacca Bucci stakes", seller: "Udhav Wadhwan", currentBid: "765491", productValue: "74658", time: "16:45:23", size: 9, colour: "Amber")
+        
         
         bidcard.append(contentsOf: [bidsCard1,bidsCard2,bidsCard3,bidsCard4,bidsCard5,bidsCard6,bidsCard7,bidsCard8,bidsCard9,bidsCard10,bidsCard11,bidsCard12])
         

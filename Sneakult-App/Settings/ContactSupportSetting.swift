@@ -11,7 +11,7 @@ struct ContactSupportSetting: View {
     let supportEmail = "support@sneakult.com"
     let supportPhoneNumber = "+1 (123) 456-7890"
     let websiteURL = "https://www.sneakult.com"
-
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {

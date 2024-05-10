@@ -11,18 +11,18 @@ struct ProfileView: View {
                         HStack {
                             Image("sample 1")
                                 .resizable()
-                                .frame(width: 75, height: 75)
-                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 60, height: 60)
+                                .scaledToFit()
                                 .clipShape(Circle())
                                 .padding(.trailing, 16)
                             VStack(alignment: .leading) {
-                                Text("Mathew Wade")
+                                Text("John Doe")
                                     .font(.title)
                                     .fontWeight(.semibold)
-                                Text("mathewade@gmail.com")
+                                Text("john09@gmail.com")
                                     .accentColor(.gray)
                             }
-//                            Spacer()
+                            //                            Spacer()
                         }
                         .padding(.vertical, 8)
                         
@@ -73,7 +73,7 @@ struct ProfileView: View {
                     }
                     .padding(8)
                 }
-            
+                
                 Section {
                     NavigationLink(destination: MyOrdersView()) {
                         Label("My Order", systemImage: "person.crop.circle")
@@ -94,19 +94,19 @@ struct ProfileView: View {
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                // "Edit" Button
-                                Button("Edit") {
-                                    isEditing.toggle() // Toggle the state variable to show/hide the edit view
-                                }
-                                .font(.headline)
-                                .foregroundColor(.accent)
-            //                    .padding(.top,-20)
-                            }
-                        }
-            .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
-                        CommunityProfileEditView() // Replace EditView with your actual edit view
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    // "Edit" Button
+                    Button("Edit") {
+                        isEditing.toggle() // Toggle the state variable to show/hide the edit view
                     }
+                    .font(.headline)
+                    .foregroundColor(.accent)
+                    //                    .padding(.top,-20)
+                }
+            }
+            .sheet(isPresented: $isEditing) { // Present modally when isEditing is true
+                CommunityProfileEditView() // Replace EditView with your actual edit view
+            }
         }
         
     }
