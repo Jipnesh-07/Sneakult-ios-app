@@ -72,21 +72,41 @@ final class SocketNetworkManager: ObservableObject {
     
     func getAllRooms() -> [String] { return self.rooms }
     
+    //    func makeBid(bidAmount: String) {
+    //        self.socket.connect()
+    //        self.socket.emit("joinRoom", "New Room")
+    //        let jsonEncoder = JSONEncoder()
+    //        print("Follow Here")
+    //        print(MessageModel(id: UUID(), text: bidAmount, user: "Arun"))
+    //        if let encodedData = try? jsonEncoder.encode(MessageModel(id: UUID(), text: bidAmount, user: "Arun")) {
+    //            print(encodedData)
+    //            print("JSON DATA :- \(encodedData.base64EncodedString())")
+    //            //            self.socket.emit("sendMessage", encodedData)
+    //        } else {
+    //            print("Do not work")
+    //        }
+    //        self.socket.emit("sendMessage", ["user", "text" : "500"])
+    //        //        self.socket.emit("sendMessage", ["user": "Tanishk", "text": "500"])
+    //        //        self.socket.emit("sendMessage", ["text": "500", "user": "Some User"])
+    //    }
     func makeBid(bidAmount: String) {
-        self.socket.connect()
-        self.socket.emit("joinRoom", "New Room")
-        let jsonEncoder = JSONEncoder()
-        
-        if let encodedData = try? jsonEncoder.encode(MessageModel(id: UUID(), text: bidAmount, user: "Arun")) {
-            print("JSON DATA :- \(encodedData.base64EncodedString())")
-        } else {
-            print("Do not work")
+        // Connect to the socket if not already connected
+        if !self.socket.status.active {
+            socket.connect()
         }
         
-        self.socket.emit("sendMessage", ["text": bidAmount, "user": "Some User"])
-        
-        
+        // Wait for the socket to connect before sending the message
+        self.socket.on("connect") { _, _ in
+            let user = "Arun" // Assuming this is the user's name
+            
+            let message = ["user": user, "text": bidAmount]
+            print(message)
+            self.socket.emit("sendMessage", with: [message]) {
+                print("Message sent") // Add your completion logic here if needed
+            }
+        }
     }
+
 }
 
 var newSocket = SocketNetworkManager()

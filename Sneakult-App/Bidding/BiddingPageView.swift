@@ -5,6 +5,7 @@ struct BiddingPageView: View {
     @ObservedObject var service = SocketNetworkManager()
     var shoe: BidsCard
     var bids = BidCardDataModel().getAllBidCards()
+    @State var bidAmount: String = ""
     
     
     var body: some View {
@@ -129,33 +130,40 @@ struct BiddingPageView: View {
                     
                     
                     HStack {
-                        Button(action: {
-                            //Todo: Perform Action
-                        }, label: {
-                            Image(systemName: "minus.square.fill")
-                                .foregroundColor(.gray)
-                                .padding(.leading)
-                            
-                            Text(shoe.currentBid)
-                                .foregroundColor(.gray)
-                                .font(.title3)
-                            //                        .padding()
-                            
-                            
-                            Image(systemName: "plus.square.fill")
-                                .foregroundColor(.gray)
-                                .padding(.trailing)
-                        })
-                        .frame(maxWidth: .infinity, maxHeight: 25)
-                        .padding(12)
-                        //                .background(.black)
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
-                        .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
-                        //                .cornerRadius(16)
+                        TextField(text: $bidAmount, label: {Text("12000")})
+                            .frame(maxWidth: .infinity, maxHeight: 25)
+                            .padding(12)
+                            //                .background(.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
+//                        Button(action: {
+//                            //Todo: Perform Action
+//                        }, label: {
+//                            
+////                            Image(systemName: "minus.square.fill")
+////                                .foregroundColor(.gray)
+////                                .padding(.leading)
+////                            
+////                            Text(shoe.currentBid)
+////                                .foregroundColor(.gray)
+////                                .font(.title3)
+////                            //                        .padding()
+////
+////                            Image(systemName: "plus.square.fill")
+////                                .foregroundColor(.gray)
+//                                .padding(.trailing)
+//                        })
+//                        .frame(maxWidth: .infinity, maxHeight: 25)
+//                        .padding(12)
+//                        //                .background(.black)
+//                        .clipShape(RoundedRectangle(cornerRadius: 12))
+//                        .overlay(RoundedRectangle(cornerRadius: 12).stroke( Color.black, lineWidth: 0.5))
+//                        //                .cornerRadius(16)
+//                        
                         
-                        
                         Button(action: {
-                            SocketNetworkManager().makeBid(bidAmount: "500")
+                            SocketNetworkManager().makeBid(bidAmount: bidAmount)
+                            
                         }, label: {
                             Text("Place Bid")
                                 .foregroundColor(.white)
@@ -180,6 +188,6 @@ struct BiddingPageView: View {
     }
 }
 
-#Preview {
-    BiddingPageView(shoe: BidCardDataModel().getAllBidCards()[0])
-}
+//#Preview {
+//    BiddingPageView(shoe: BidCardDataModel().getAllBidCards()[0])
+//}
