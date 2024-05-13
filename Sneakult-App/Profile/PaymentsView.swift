@@ -7,12 +7,19 @@
 
 import SwiftUI
 
+// Define a SwiftUI View called PaymentsView
 struct PaymentsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // Display a text "Hello, World!" as a placeholder
+        Text("Hello, World!")
     }
 }
 
-#Preview {
-    PaymentsView()
+// Preview provider to display PaymentsView in the preview canvas
+struct PaymentsView_Previews: PreviewProvider {
+    static var previews: some View {
+        // Display a preview of PaymentsView
+        PaymentsView()
+    }
 }
+

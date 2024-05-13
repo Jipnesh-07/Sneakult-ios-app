@@ -9,14 +9,18 @@
 
 import SwiftUI
 
+// Define a SwiftUI View called MyOrdersView
 struct MyOrdersView: View {
     var body: some View {
-        NavigationStack{
-            ScrollView{
-                VStack(spacing: 30){
+        // Use NavigationStack to allow navigation within the view
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 30) {
+                    // Display OrdersView to show individual orders
                     OrdersView()
                     
-                    HStack(spacing : 15){
+                    // Display a sample order
+                    HStack(spacing: 15) {
                         Image("Bidimg1")
                             .resizable()
                             .frame(width: 120, height: 120)
@@ -24,37 +28,36 @@ struct MyOrdersView: View {
                         VStack(alignment: .leading) {
                             Text("Air Jordan 1 Low")
                                 .font(.title3)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
-                            Text("Size : UK 6")
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
+                            Text("Size: UK 6")
                                 .foregroundColor(.gray)
-                            Text("Price : ₹19,695")
+                            Text("Price: ₹19,695")
                                 .foregroundColor(.gray)
                         }
                         .padding()
                     }
-                    
                     .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary))
                     .frame(width: .infinity)
                 }
                 .padding()
-                
             }
-            .navigationTitle("My Orders")
-            .navigationBarTitleDisplayMode(.inline)
-            
+            .navigationTitle("My Orders") // Set navigation title
+            .navigationBarTitleDisplayMode(.inline) // Set navigation bar title display mode
         }
     }
 }
 
+// Preview provider to display MyOrdersView in the preview canvas
 #Preview {
     MyOrdersView()
 }
 
+// Define a SwiftUI View called OrdersView to represent individual orders
 struct OrdersView: View {
     var body: some View {
-        
-        HStack(spacing : 15){
+        // Display a sample order
+        HStack(spacing: 15) {
             Image("Bidimg9")
                 .resizable()
                 .frame(width: 120, height: 120)
@@ -62,8 +65,8 @@ struct OrdersView: View {
             VStack(alignment: .leading) {
                 Text("Air Jordan 1 Low")
                     .font(.title3)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(Color(red:43/255, green:100/255,blue:79/255))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
                 Text("Size: US 7")
                     .foregroundColor(.gray)
                 Text("Price: ₹14,908")
@@ -71,10 +74,7 @@ struct OrdersView: View {
             }
             .padding()
         }
-        
         .overlay(RoundedRectangle(cornerRadius: 8).stroke(Color.secondary))
         .frame(width: .infinity)
-        
     }
 }
-
