@@ -1,15 +1,17 @@
 import SwiftUI
 import SceneKit
 
+// View for the main Kicks UI
 struct KicksUIView: View {
     
+    // Data variables
     var cards = CardDataModel().getAllCards()
-    //    var cardNames = CardDataModel().getAllCardSceneNames()
     let cardsCount: Int = CardDataModel().getAllCards().count
-    @State private var isEditing = false
     var announcements = AnnouncementsDataModel().getAllAnnouncements()
     let announcementsCount: Int = AnnouncementsDataModel().getAllAnnouncements().count
     
+    // State variables
+    @State private var isEditing = false
     @State private var searchText: String = ""
     @State private var isFilterViewPresented = false
     @State private var GridImage: [String] = [ "image1", "image2","image3", "image5"]
@@ -21,14 +23,12 @@ struct KicksUIView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView(showsIndicators: false){
+            ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 1) {
                     
-                    VStack(alignment: .leading){
-                        
-                        
-                        VStack(alignment: .center){
-                            
+                    // Featured section
+                    VStack(alignment: .leading) {
+                        VStack(alignment: .center) {
                             ForEach(0..<1) { index in
                                 NavigationLink(destination: SneakerDetailView(card: cards[1])) {
                                     KicksViewCard(card: cards[1])
@@ -36,15 +36,14 @@ struct KicksUIView: View {
                             }
                         }
                         
-                        HStack{
+                        // New Arrival section
+                        HStack {
                             Text("New Arrival")
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundColor(.black)
                                 .padding(.horizontal)
-                                .padding(.top,20)
-                            
-                            
+                                .padding(.top, 20)
                         }
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
@@ -57,34 +56,30 @@ struct KicksUIView: View {
                             .padding()
                         }
                         
-                        
+                        // Community section
                         Text("Join #SneakultFam")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundColor(.black)
                             .padding(.horizontal)
-                            .padding(.vertical,-5)
+                            .padding(.vertical, -5)
                         
-                        
-                        ScrollView(.horizontal, showsIndicators: false){
-                            NavigationLink(destination: CommunityView()){
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            NavigationLink(destination: CommunityView()) {
                                 HStack {
-                                    
-                                    
                                     ForEach(0..<2) { index in
                                         VStack {
-                                            
                                             Image(SelectGridImage)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
-                                                .frame(width: 190, height:200)
+                                                .frame(width: 190, height: 200)
                                                 .cornerRadius(12)
                                                 .clipped()
                                             
                                             Image(SelectGridImage2)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fill)
-                                                .frame(width: 190, height:200)
+                                                .frame(width: 190, height: 200)
                                                 .cornerRadius(12)
                                                 .clipped()
                                         }
@@ -93,33 +88,22 @@ struct KicksUIView: View {
                                             SelectGridImage2 = GridImage2.randomElement() ?? "defaultShoeImage"
                                             SelectGridImage3 = GridImage3.randomElement() ?? "defaultShoeImage"
                                         }
-                                        
-                                        // Horizontal image
                                         Image("image3")
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
                                             .frame(maxWidth: 170, maxHeight: 600)
                                             .cornerRadius(12)
                                     }
-                                    
                                 }
                             }
                         }
-                        
                         .padding()
                         .edgesIgnoringSafeArea(.all)
-                        
-                        
-                        
                     }
-                    
-                    
-                    
-                    
-                    
                 }
                 .navigationTitle("Hello John")
-                .padding(.top, -6)}
+                .padding(.top, -6)
+            }
             .searchable(text: $searchText)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -139,9 +123,11 @@ struct KicksUIView: View {
     }
 }
 
-
-
-#Preview {
-    KicksUIView()
+// Preview for KicksUIView
+#if DEBUG
+struct KicksUIView_Previews: PreviewProvider {
+    static var previews: some View {
+        KicksUIView()
+    }
 }
-
+#endif

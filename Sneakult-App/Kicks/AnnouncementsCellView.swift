@@ -1,16 +1,17 @@
 import SwiftUI
 
+// View for displaying individual announcements in a cell
 struct AnnouncementsCellView: View {
-    //    @State private var selectedAnnouncement: Announcements?
-    var announcement : Announcements
+    var announcement: Announcements // Data model for the announcement
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 11)
             .foregroundColor(.white)
             .frame(width: 300, height: 130)
             .opacity(2)
             .overlay {
-                
                 HStack {
+                    // Image associated with the announcement
                     Image(announcement.image)
                         .resizable()
                         .scaledToFill()
@@ -19,6 +20,7 @@ struct AnnouncementsCellView: View {
                         .cornerRadius(11)
                         .frame(maxWidth: .infinity)
                     
+                    // Text content of the announcement
                     VStack(alignment: .leading, spacing: 4) {
                         Text(announcement.text)
                             .foregroundColor(.black)
@@ -33,38 +35,21 @@ struct AnnouncementsCellView: View {
                     .padding(.horizontal)
                     .frame(maxWidth: .infinity)
                 }
-                
             }
             .shadow(radius: 2)
-        //            .border(.black)
             .opacity(4)
-        
-        //        .onAppear {
-        //            let announcementsDataModel = AnnouncementsDataModel()
-        //            let allAnnouncements = announcementsDataModel.announcements
-        //            self.selectedAnnouncement = allAnnouncements.randomElement()
-        //        }
     }
 }
 
-struct DetailView: View {
-    var body: some View {
-        Text("Detail View")
-    }
-}
-
-//#if DEBUG
-//struct AnnouncementsCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AnnouncementsCellView()
-//    }
-//}
-//#endif
-
-#Preview{
-    ScrollView(.horizontal){
-        HStack{
-            AnnouncementsCellView(announcement: AnnouncementsDataModel().getAllAnnouncements()[0])
+// Preview for AnnouncementsCellView
+#if DEBUG
+struct AnnouncementsCellView_Previews: PreviewProvider {
+    static var previews: some View {
+        ScrollView(.horizontal) {
+            HStack {
+                AnnouncementsCellView(announcement: AnnouncementsDataModel().getAllAnnouncements()[0])
+            }
         }
     }
 }
+#endif

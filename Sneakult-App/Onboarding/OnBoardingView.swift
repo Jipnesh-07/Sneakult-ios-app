@@ -7,27 +7,30 @@
 
 import SwiftUI
 
+// View for Onboarding screen
 struct OnBoardingView: View {
     var body: some View {
         VStack {
-            // image in background
+            // Background image and content
             VStack {
                 Text("What's in")
                     .foregroundColor(.black)
                     .fontWeight(.semibold)
                     .font(.title)
+                
+                // App name
                 VStack {
                     Text("SNEAKULT")
                         .font(.largeTitle)
                         .fontWeight(.black)
                         .foregroundColor(Color(red: 43/255, green: 100/255, blue: 79/255))
                 }
+                
+                // Features with icons and descriptions
                 VStack(alignment:.trailing,spacing:-20){
-                    
+                    // Community feature
                     HStack(alignment: .top) {
                         Image(systemName: "person.2")
-                        //                        .resizable()
-                        //                        .frame(width:30, height:25)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.horizontal,3)
@@ -41,14 +44,13 @@ struct OnBoardingView: View {
                                 .fontWeight(.medium)
                                 .lineLimit(3)
                         }
-                        Spacer() // Add spacer to push text to the right
+                        Spacer()
                     }
                     .padding()
                     
+                    // Bidding feature
                     HStack(alignment: .top) {
                         Image(systemName: "indianrupeesign.arrow.circlepath")
-                        //                        .resizable()
-                        //                        .frame(width:30, height:30)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.horizontal,3)
@@ -66,10 +68,9 @@ struct OnBoardingView: View {
                     }
                     .padding()
                     
+                    // Notifications feature
                     HStack (alignment: .top){
                         Image(systemName: "bell")
-                        //                        .resizable()
-                        //                        .frame(width:30, height:30)
                             .font(.title2)
                             .fontWeight(.bold)
                             .padding(.horizontal,3)
@@ -89,14 +90,14 @@ struct OnBoardingView: View {
                 }
                 .padding(.top,100)
                 
+                // Get started button
                 Button(action: {
-                    //Todo: Perform Action
+                    // Action on button tap
                 }, label: {
                     Text("Get started")
                         .foregroundColor(.white)
                         .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    
+                        .fontWeight(.bold)
                 })
                 .frame(maxWidth: 300, maxHeight: 40)
                 .padding(12)
@@ -105,13 +106,17 @@ struct OnBoardingView: View {
                 .padding(.top,40)
                 
                 Spacer()
-                
             }
             .padding(.top, 120)
         }
     }
 }
 
-#Preview {
-    OnBoardingView()
+// Preview for OnBoardingView
+#if DEBUG
+struct OnBoardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnBoardingView()
+    }
 }
+#endif

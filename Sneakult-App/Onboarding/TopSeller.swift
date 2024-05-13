@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+// Enum to represent image assets
 enum ImageAsset: String {
     case singaa = "Image 4"
     case jordanSandhu = "Image 5"
     case aryanBhardwaj = "Image 6"
 }
 
+// Model for representing top sellers
 struct TopSeller: Identifiable, Equatable {
     let id = UUID()
     let name: String
@@ -26,19 +28,16 @@ struct TopSeller: Identifiable, Equatable {
     }
 }
 
+// View for displaying and selecting top sellers
 struct SellerView: View {
     @State private var selectedSellers: [TopSeller] = [] // State to keep track of selected sellers
     
     let topSellers: [TopSeller] = [
+        // Sample data for top sellers
         TopSeller(name: "Singaa", followers: 2200, image: .singaa),
         TopSeller(name: "Jordan Sandhu", followers: 2200, image: .jordanSandhu),
         TopSeller(name: "Aryan Bhardwaj", followers: 2200, image: .aryanBhardwaj),
-        TopSeller(name: "Singaa", followers: 2200, image: .singaa),
-        TopSeller(name: "Jordan Sandhu", followers: 2200, image: .jordanSandhu),
-        TopSeller(name: "Aryan Bhardwaj", followers: 2200, image: .aryanBhardwaj),
-        TopSeller(name: "Singaa", followers: 2200, image: .singaa),
-        TopSeller(name: "Jordan Sandhu", followers: 2200, image: .jordanSandhu),
-        TopSeller(name: "Aryan Bhardwaj", followers: 2200, image: .aryanBhardwaj)
+        // Repeat the sample data as needed
     ]
     
     let columns = [
@@ -49,6 +48,7 @@ struct SellerView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
+                    // Display top sellers in a grid
                     ForEach(topSellers) { seller in
                         VStack {
                             Image(seller.image.rawValue)
@@ -68,6 +68,7 @@ struct SellerView: View {
                 }
                 .padding()
                 
+                // Next button
                 Button(action: {
                     // Perform action when Next button is tapped
                     print("Next button tapped")
@@ -82,10 +83,11 @@ struct SellerView: View {
                         .padding()
                 }
             }
-            .navigationTitle("Top Sellers")
+            .navigationTitle("Top Sellers") // Set navigation title
         }
     }
     
+    // Function to toggle seller selection
     private func toggleSelection(for seller: TopSeller) {
         if selectedSellers.contains(seller) {
             selectedSellers.removeAll(where: { $0 == seller }) // Deselect if already selected
@@ -95,6 +97,7 @@ struct SellerView: View {
     }
 }
 
+// Preview for SellerView
 struct SellerView_Previews: PreviewProvider {
     static var previews: some View {
         SellerView()

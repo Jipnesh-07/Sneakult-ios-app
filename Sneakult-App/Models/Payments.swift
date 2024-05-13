@@ -33,8 +33,6 @@ struct Payments {
 }
 
 
-
-
 class PaymentsDataModel{
     var payments : [Payments] = []
     
