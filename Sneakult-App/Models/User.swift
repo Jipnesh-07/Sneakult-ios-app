@@ -59,12 +59,6 @@ class UserDataModel {
     }
     
     
-    func removeUser(at index: Int) {
-        guard index >= 0, index < users.count else {
-            return
-        }
-        users.remove(at: index)
-    }
     
     
     

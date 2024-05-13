@@ -32,7 +32,7 @@ struct KicksViewCard: View {
                         .fontWeight(.medium)
                         .foregroundColor(.black)
                     Spacer()
-                    //                        .padding()
+                    
                 }
                 Spacer()
                 

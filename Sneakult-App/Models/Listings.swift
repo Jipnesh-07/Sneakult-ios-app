@@ -37,11 +37,6 @@ struct Listings {
     }
     
     
-    mutating func removeImage(at index: Int) {
-        guard index >= 0, index < images.count else {
-            return
-        }
-        images.remove(at: index)
-    }
+ 
     
 }

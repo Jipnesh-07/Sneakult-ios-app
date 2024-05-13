@@ -13,7 +13,7 @@ struct BiddingPageView: View {
             VStack {
                 HStack{
                     Image(systemName: "clock")
-                    Text("23h Remaining")
+                    Text("15min Remaining")
                 }
                 .padding(10)
                 .frame(maxWidth: .infinity)
@@ -73,60 +73,12 @@ struct BiddingPageView: View {
                     
                 }
                 
-                //                VStack (alignment : .leading){
-                //                    Text("Bid Positions (30 Values)")
-                //                        .font(.title2)
-                //                }
-                
+        
                 VStack {
                     ForEach(service.messages, id: \.self.id) { message in
                         BidCell(price: message.text, user: message.user)
                     }
-                    // }
-                    /* ForEach(service.messages, id: \.self) { message in
-                     Text("Hello")
-                     } */
-                    
-                    /* VStack{
-                     HStack {
-                     HStack{
-                     Text("01")
-                     Text("Jatin Bansal")
-                     }
-                     Spacer()
-                     Text("₹8697")
-                     }
-                     .padding(.vertical, 20)
-                     HStack {
-                     HStack{
-                     Text("01")
-                     Text("Jatin Bansal")
-                     }
-                     Spacer()
-                     Text("₹8697")
-                     }
-                     .padding(.vertical, 20)
-                     HStack {
-                     HStack{
-                     Text("01")
-                     Text("Jatin Bansal")
-                     }
-                     Spacer()
-                     Text("₹8697")
-                     }
-                     .padding(.vertical, 20)
-                     HStack {
-                     HStack{
-                     Text("01")
-                     Text("Jatin Bansal")
-                     }
-                     Spacer()
-                     Text("₹8697")
-                     }
-                     .padding(.vertical, 20)
-                     }
-                     .padding(.horizontal, 30) */
-                    
+                   
                     
                     
                     HStack {
@@ -188,6 +140,4 @@ struct BiddingPageView: View {
     }
 }
 
-//#Preview {
-//    BiddingPageView(shoe: BidCardDataModel().getAllBidCards()[0])
-//}
+

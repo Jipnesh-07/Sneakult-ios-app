@@ -18,30 +18,22 @@ final class SocketNetworkManager: ObservableObject {
     @Published var messages: [MessageModel] = [MessageModel]()
     @Published var rooms: [String] = [String]()
     @Published var roomCount: Int = 0
+    @Published var currentBid: String = "" // Track the current bid
+    
     let socket: SocketIOClient
     
     init() {
         socket = manager.defaultSocket
         
-        
         socket.connect()
         
         socket.on("updateRooms") { data, ack in
-            /* for object in data {
-             self.messages = (object as AnyObject).text
-             } */
-            print("UPDATE DATA FLOW START")
-            print(data.count)
-            print(data[0])
-            var array = data[0] as? NSArray
-            
-            for item in array! {
-                let strItem = item as? String
-                self.rooms.append(strItem!)
-                self.roomCount += 1
+            if let array = data.first as? [String] {
+                DispatchQueue.main.async {
+                    self.rooms = array
+                    self.roomCount = array.count
+                }
             }
-            print(self.rooms)
-            print("UPDATE DATA FLOW END")
         }
         
         socket.on(clientEvent: .connect) { (data, ack) in
@@ -56,39 +48,29 @@ final class SocketNetworkManager: ObservableObject {
                 if let msgRef = msg as? NSObject {
                     let msgPrice = msgRef.value(forKey: "text")! as? String
                     let msgSender = msgRef.value(forKey: "user")! as? String
-                    if (msgPrice != nil), (msgSender != nil) {
-                        let firstMsg = MessageModel(id:UUID(), text: msgPrice!, user: msgSender!)
-                        self.messages.append(firstMsg)
+                    if let bidPrice = msgPrice, let bidder = msgSender {
+                        DispatchQueue.main.async {
+                            let newBid = MessageModel(id: UUID(), text: bidPrice, user: bidder)
+                            self.messages.append(newBid)
+                            self.updateCurrentBid() // Update the current bid
+                        }
                     }
-                    print(self.messages)
                 } else { print("Cannot parse data") }
                 
                 print("MESSAGES DATA FLOW END")
             }
         }
-        
-        print(messages)
+    }
+    
+    // Function to update the current bid
+    private func updateCurrentBid() {
+        if let highestBid = messages.last?.text {
+            self.currentBid = highestBid
+        }
     }
     
     func getAllRooms() -> [String] { return self.rooms }
     
-    //    func makeBid(bidAmount: String) {
-    //        self.socket.connect()
-    //        self.socket.emit("joinRoom", "New Room")
-    //        let jsonEncoder = JSONEncoder()
-    //        print("Follow Here")
-    //        print(MessageModel(id: UUID(), text: bidAmount, user: "Arun"))
-    //        if let encodedData = try? jsonEncoder.encode(MessageModel(id: UUID(), text: bidAmount, user: "Arun")) {
-    //            print(encodedData)
-    //            print("JSON DATA :- \(encodedData.base64EncodedString())")
-    //            //            self.socket.emit("sendMessage", encodedData)
-    //        } else {
-    //            print("Do not work")
-    //        }
-    //        self.socket.emit("sendMessage", ["user", "text" : "500"])
-    //        //        self.socket.emit("sendMessage", ["user": "Tanishk", "text": "500"])
-    //        //        self.socket.emit("sendMessage", ["text": "500", "user": "Some User"])
-    //    }
     func makeBid(bidAmount: String) {
         // Connect to the socket if not already connected
         if !self.socket.status.active {
@@ -97,7 +79,7 @@ final class SocketNetworkManager: ObservableObject {
         
         // Wait for the socket to connect before sending the message
         self.socket.on("connect") { _, _ in
-            let user = "Arun" // Assuming this is the user's name
+            let user = "John" // Assuming this is the user's name
             
             let message = ["user": user, "text": bidAmount]
             print(message)
@@ -106,10 +88,7 @@ final class SocketNetworkManager: ObservableObject {
             }
         }
     }
-
 }
-
-var newSocket = SocketNetworkManager()
 
 struct SocketView: View {
     @ObservedObject var service = SocketNetworkManager()
@@ -119,12 +98,42 @@ struct SocketView: View {
             Text("Received messages from Bidder : ")
                 .font(.largeTitle)
             ForEach(service.messages, id: \.self.id) { message in
-                Text("Hello")
+                Text("\(message.user): \(message.text)")
             }
+            Text("Current Bid: \(service.currentBid)") // Display the current bid
         }
     }
 }
 
-#Preview {
-    SocketView()
+struct ContentView: View {
+    @StateObject var socketManager = SocketNetworkManager()
+    @State private var bidAmount: String = ""
+    
+    var body: some View {
+        VStack {
+            SocketView(service: socketManager)
+            
+            TextField("Enter Bid Amount", text: $bidAmount)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            Button(action: {
+                socketManager.makeBid(bidAmount: bidAmount)
+            }, label: {
+                Text("Place Bid")
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            })
+        }
+        .padding()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

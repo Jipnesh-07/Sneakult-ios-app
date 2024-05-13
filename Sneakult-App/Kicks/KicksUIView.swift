@@ -22,49 +22,13 @@ struct KicksUIView: View {
     var body: some View {
         NavigationView {
             ScrollView(showsIndicators: false){
-                VStack(alignment: .leading, spacing: 1) { // Add spacing between VStack elements
+                VStack(alignment: .leading, spacing: 1) {
                     
-                    //                Text("Hello Mathew")
-                    //                    .font(.largeTitle)
-                    //                    .padding(.leading,16)
-                    //                    .padding(.top,30)
-                    ////                    .fontWeight(.bold)
-                    //                HStack {
-                    //                    HStack(spacing: -8) {
-                    //                        Image(systemName: "magnifyingglass")
-                    //                            .padding(.leading)
-                    //                            .foregroundColor(.gray)
-                    //                        TextField("Search", text: $searchText)
-                    //                            .padding()
-                    //                            .foregroundColor(.gray)
-                    //                            .frame( height: 35)
-                    //                    }
-                    //                    .background(Color(.systemGray6))
-                    //                    .cornerRadius(12)
-                    ////                    .frame(maxWidth: .infinity)
-                    //                    
-                    //                    Button(action: {
-                    //                        isFilterViewPresented.toggle() // Toggle the state to present or dismiss the modal view
-                    //                    }) {
-                    //                        Image(systemName: "slider.horizontal.3")
-                    //                            .padding()
-                    //                            .frame(width: 40, height: 35)
-                    //                            .foregroundColor(.accentColor)
-                    //                            .background(Color(.systemGray6))
-                    //                            .cornerRadius(12)
-                    //                    }
-                    //                    .padding(.trailing) // Add trailing padding
-                    //                    .sheet(isPresented: $isFilterViewPresented) {
-                    //                        FilterCardView()
-                    //                    }
-                    //                }
-                    //                .padding(.horizontal)
-                    //                
                     VStack(alignment: .leading){
                         
                         
                         VStack(alignment: .center){
-                            //                        KicksViewCard(card: cards[1])
+                            
                             ForEach(0..<1) { index in
                                 NavigationLink(destination: SneakerDetailView(card: cards[1])) {
                                     KicksViewCard(card: cards[1])
@@ -93,27 +57,6 @@ struct KicksUIView: View {
                             .padding()
                         }
                         
-                        //                    
-                        //                    
-                        //                    Text("Announcements")
-                        //                        .font(.title2)
-                        //                        .fontWeight(.bold)
-                        //                        .foregroundColor(.black)
-                        //                        .padding(.horizontal)
-                        //                        .padding(.vertical,-5)
-                        //                    
-                        //                    ScrollView(.horizontal, showsIndicators: false) {
-                        //                        HStack(spacing: 16) {
-                        //                            ForEach(0..<announcementsCount, id: \.self) { index in
-                        //                                AnnouncementsCellView(announcement: announcements[index])
-                        //                                    .frame(width: 300, height: 170)
-                        //                                    .opacity(8)
-                        //                                    .background(Color(.white))// Adjust frame size to fit the cell properly
-                        //                            }
-                        //                        }
-                        //                        .padding(.horizontal)
-                        //                        //                        .padding(.bottom, 10) // Add bottom padding to the Announcements ScrollView
-                        //                    }
                         
                         Text("Join #SneakultFam")
                             .font(.title2)
@@ -158,7 +101,6 @@ struct KicksUIView: View {
                                             .frame(maxWidth: 170, maxHeight: 600)
                                             .cornerRadius(12)
                                     }
-                                    //                                        .clipped()
                                     
                                 }
                             }
@@ -166,7 +108,6 @@ struct KicksUIView: View {
                         
                         .padding()
                         .edgesIgnoringSafeArea(.all)
-                        //                    .navigationBarTitleDisplayMode(.inline)
                         
                         
                         
@@ -198,15 +139,7 @@ struct KicksUIView: View {
     }
 }
 
-//struct NewArrivalCellView1: View {
-//    var body: some View {
-//        Rectangle()
-//            .fill(Color.blue)
-//            .frame(width: 200, height: 200)
-//            .cornerRadius(10)
-//            .padding(5)
-//    }
-//}
+
 
 #Preview {
     KicksUIView()
