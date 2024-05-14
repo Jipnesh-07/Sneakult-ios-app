@@ -81,7 +81,7 @@ struct settingsView: View {
 }
 
 // Preview provider to display settingsView in preview canvas
-struct SettingsView_Previews: PreviewProvider {
+struct SettingsView_Previews1: PreviewProvider {
     static var previews: some View {
         settingsView()
     }
